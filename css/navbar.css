@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 50px!important;
+}
+
+nav {
+    width: 100%!important;
+}
+
+.navbar-nav {
+    width: 100%;
+    margin-left: 72%;
+}
+
+.nav-item1, .nav-item {
+    font-size: 22px;
+}
+
+.nav-link{
+    width: 100%;
+}
+
+.nav-item1 {
+    margin-right: 14%;
+}
+
+.icon {
+    color: rgb(255, 0, 0);
+    margin-right: 4%;
+}
