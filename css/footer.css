@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.liens a {
+    font-weight: bold;
+    font-size: 30px;
+    color: #A09494;
+    margin-bottom: 50px!important;
+}
+
+.liens a:hover{
+    color: rgb(255, 0, 0);
+}
+
+.barre {
+    
+    font-size: 30px;
+    color: #A09494;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.logo-footer {
+    height: 30px!important;
+}
+
+.réseaux {
+    font-size: 60px;
+}
+
+.texte-reseaux {
+    font-weight: bold;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.facebook{
+    color: #3B5998;
+}
+
+.twitter {
+    color: #00ACEE;
+}
+
+
+.lien-fac {
+    margin-right: 50px;
+}
+
+
+.far {
+    font-size: 22px;
+    margin-right: 20px!important;
+}
+
+.lettre {
+    font-size: 35px;
+}
+
+.copy {
+    font-weight: bold!important;
+    font-size: 26px;
+}

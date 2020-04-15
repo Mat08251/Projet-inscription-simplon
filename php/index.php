@@ -6,6 +6,7 @@
     <title>page d'accueil</title>
 </head>
 <body>
-    
+    <?php include ('../includes/navbar.php'); ?>
+    <?php include ('../includes/footer.php'); ?>
 </body>
 </html>
