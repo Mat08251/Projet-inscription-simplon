@@ -1,0 +1,331 @@
+html {
+    width: 100%;
+    height: 25Ovh;
+    background-color: #DCDCDC;
+}
+
+body {
+    background-color:white;
+    width: 70%;
+    height:250vh;
+    margin: auto;
+}
+
+.div_container {
+    display: grid;
+    grid-template-columns:repeat(48, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+    text-align: center;
+}
+
+.div_navbar {
+    grid-column: 1/49;
+    grid-row:1/6;
+   
+}
+.div_titre_formation {
+    grid-column:1/49;
+    grid-row: 3/10;
+    background-color: rgb(219, 9, 9);
+    color: white;
+    font-size: 40px;
+    box-shadow: 10px 5px 5px gray;
+    
+}
+.div_formulaire {
+    grid-column: 4/46;
+    grid-row: 12/14;
+    background-color:#514D4D;
+    font-size: 28px;
+    color:white;
+    box-shadow: 10px 5px 5px black;
+}
+
+.champ_nom {
+    grid-column: 10/26;
+    grid-row:17/20;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#nom {
+    grid-column: 26/42;
+    grid-row:17/20;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+
+}
+
+.champ_prenom {
+    grid-column: 10/26;
+    grid-row:22/25;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#prenom {
+    grid-column: 26/42;
+    grid-row:22/25;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+
+}
+
+.champ_nom_jeune_fille {
+    grid-column: 10/26;
+    grid-row:27/30;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#nom_jeune_fille {
+    grid-column: 26/42;
+    grid-row:27/30;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+
+}
+
+.champ_date_de_naissance {
+    grid-column: 10/26;
+    grid-row:32/35;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#date_de_naissance {
+    grid-column: 26/42;
+    grid-row:32/35;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+
+}
+
+.champ_nationalite {
+    grid-column: 10/26;
+    grid-row:37/40;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#nationalite {
+    grid-column: 26/42;
+    grid-row:37/40;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_sexe {
+    grid-column: 10/26;
+    grid-row:42/45;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#sexe {
+    grid-column: 26/42;
+    grid-row:42/45;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_adresse {
+    grid-column: 10/26;
+    grid-row:47/50;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#adresse {
+    grid-column: 26/42;
+    grid-row:47/50;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_ligne2 {
+    grid-column: 10/26;
+    grid-row:52/55;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#ligne2 {
+    grid-column: 26/42;
+    grid-row:52/55;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_ligne {
+    grid-column: 10/26;
+    grid-row:57/60;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#ligne {
+    grid-column: 26/42;
+    grid-row:57/60;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_pays {
+    grid-column: 10/26;
+    grid-row:62/65;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#pays {
+    grid-column: 26/42;
+    grid-row:62/65;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_code_postal {
+    grid-column: 10/26;
+    grid-row:67/70;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#code_postal {
+    grid-column: 26/42;
+    grid-row:67/70;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_ville {
+    grid-column: 10/26;
+    grid-row:72/75;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#ville {
+    grid-column: 26/42;
+    grid-row:72/75;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_telephone {
+    grid-column: 10/26;
+    grid-row:77/80;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#telephone {
+    grid-column: 26/42;
+    grid-row:77/80;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_mobile {
+    grid-column: 10/26;
+    grid-row:82/85;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#mobile {
+    grid-column: 26/42;
+    grid-row:82/85;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.champ_mail {
+    grid-column: 10/26;
+    grid-row:87/90;
+    background: rgb(219, 219, 225);
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}
+#mail {
+    grid-column: 26/42;
+    grid-row:87/90;
+    background: rgb(248, 248, 252);
+    font-size: 20px;
+    border-radius: 0px 10px  10px 0px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px gray;
+}

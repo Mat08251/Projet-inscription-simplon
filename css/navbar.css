@@ -32,3 +32,13 @@ nav {
     color: rgb(255, 0, 0);
     margin-right: 4%;
 }
+
+@media only screen and (min-width: 300px) and (max-width:812px) {
+    .nav  {
+        width: auto;
+    }
+    
+    .navbar-nav {
+        margin-left: 0%;
+    }
+}
