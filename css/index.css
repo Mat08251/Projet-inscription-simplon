@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.texte1 {
+    margin-top: 6%;
+}
+
+.texte2 {
+    margin-top: 2%;
+}
+
+.texte {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.mot-couleur {
+    color: #FA1919;
+}
+
+.titre-formation {
+    width: 11%;
+    margin-left: 44%;
+    margin-top: 3%;
+    padding: 1%;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #FA1919;
+    color: white;
+}
