@@ -11,23 +11,33 @@
     </head>
 
 <body id="body">
-    
+             
 
-<?php
+<form id="form1" name="form1" method="" action="">
 
-//-------------------------------
-//connexion à la base de données
-//-------------------------------
-include ('include/connect_bdd.php');
+  <label>Sélectionnez un pays :
+    <select name="pays" id="pays">
+        <?php 
+            //-------------------------------
+            //connexion à la base de données
+            //-------------------------------
+            include ('include/connect_bdd.php');
+                //-------------------------------
+                //requête sur les pays
+                //-------------------------------
+                $req = $bdd->prepare("SELECT * FROM pays");
+                $req -> execute();
+                    //----------------------------------------------
+                    //crééer une boucle while pour remplir la liste
+                    //----------------------------------------------
+                    
+                    while($donnees = $req->fetch()) { ?>
 
-$req = $bdd->prepare("SELECT * FROM pays");
-$req -> execute();
-while($donnees = $req->fetch()){
-//Afficher le résultat de la requête 
-echo"<br>";  
-print_r($donnees['pays']);
-echo"</br>"; 
-?>
-<?php   }   ?> 
+        <option value="pays" selected><?php echo $donnees['pays'];?></option>
+        <?php } ?>
+    </select>
+  </label>
 
+
+</form>
 </html>
