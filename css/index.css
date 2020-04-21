@@ -1,6 +1,24 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+}
+
+.titre-accueil {
+    background-color: white;
+    width: 25%;
+    font-size: 90px;
+    margin-top: 28%;
+    padding: 2%;
+    margin-left: -1%;
+}
+
+.accueil {
+    margin: 0%!important;
+    padding: 0%;
+}
+
+.image {
+    width: 100%;
 }
 
 .texte1 {
@@ -13,7 +31,7 @@ body {
 
 .texte {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .mot-couleur {
@@ -21,12 +39,12 @@ body {
 }
 
 .titre-formation {
-    width: 11%;
+    width: 14%;
     margin-left: 44%;
     margin-top: 3%;
     padding: 1%;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     background-color: #FA1919;
     color: white;
 }
@@ -34,7 +52,7 @@ body {
 .formation {
     margin-left: 9%;
     width: 80%;
-    height: 400px;
+    height: 480px;
     margin-bottom: 5%!important;
     margin-top: 5%;
 }
@@ -51,4 +69,24 @@ body {
 
 .btn {
     color: white!important;
+    margin-top: 50px;
+}
+
+.titre-card  {
+    font-size: 40px;
+    background-color: #333333;
+    color: white;
+    width: 70%;
+    padding: 4%;
+    margin-left: 16%;
+    margin-bottom: 50px!important;
+}
+
+.card-text {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.droite {
+    margin-top: 220px;
 }

@@ -18,12 +18,13 @@
     <?php include ('../includes/navbar.php'); ?>
     
 
-    <div class="card">
-            <img src="../images/image1.jpg" alt="image-accueil">
+    <div class="accueil">
+            <img class="image" src="../images/team-work-business-startup 1.png" alt="image-accueil">
         <div class="card-img-overlay">
-            <h5 class="card-title text-white">BIENVENUE</h5>
+            <h5 class="titre-accueil card-title">BIENVENUE</h5>
         </div>
     </div>
+
 
     <div class="container">
         <div class="row">
@@ -56,8 +57,8 @@
             </div>
             <div class="cadre col-md-8">
                 <div class="card-body">
-                    <div class="gauche">
-                    <h5 class="card-title">DEVELOPPEUR WEB</h5>
+                    <div class="gauche text-center">
+                    <h5 class="titre-card card-title">DEVELOPPEUR WEB</h5>
                     <p class="card-text">Début d'inscription : 1/1/2020<br>
                                         Fin d'inscription : 2/1/2020</p>
                     <p class="card-text">Début de la formation : 5/1/2020</p>
@@ -66,7 +67,7 @@
                     </div>                    
                 </div>
                 <div class="card-body">
-                    <div class="droite">
+                    <div class="droite text-center">
                     <p class="card-text">La création d’un compte est obligatoire pour<br>
                                          pretendre a l’inscription de la formation </p>
                     <button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button>
@@ -87,8 +88,8 @@
             </div>
             <div class="cadre col-md-8">
                 <div class="card-body">
-                    <div class="gauche">
-                    <h5 class="card-title">DEVELOPPEUR WEB</h5>
+                    <div class="gauche text-center">
+                    <h5 class="titre-card card-title">DEVELOPPEUR WEB</h5>
                     <p class="card-text">Début d'inscription : 1/1/2020<br>
                                         Fin d'inscription : 2/1/2020</p>
                     <p class="card-text">Début de la formation : 5/1/2020</p>
@@ -97,7 +98,7 @@
                     </div>                    
                 </div>
                 <div class="card-body">
-                    <div class="droite">
+                    <div class="droite text-center">
                     <p class="card-text">La création d’un compte est obligatoire pour<br>
                                          pretendre a l’inscription de la formation </p>
                     <button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button>
@@ -117,8 +118,8 @@
             </div>
             <div class="cadre col-md-8">
                 <div class="card-body">
-                    <div class="gauche">
-                    <h5 class="card-title">DEVELOPPEUR WEB</h5>
+                    <div class="gauche text-center">
+                    <h5 class="titre-card card-title">DEVELOPPEUR WEB</h5>
                     <p class="card-text">Début d'inscription : 1/1/2020<br>
                                         Fin d'inscription : 2/1/2020</p>
                     <p class="card-text">Début de la formation : 5/1/2020</p>
@@ -127,7 +128,7 @@
                     </div>                    
                 </div>
                 <div class="card-body">
-                    <div class="droite">
+                    <div class="droite text-center">
                     <p class="card-text">La création d’un compte est obligatoire pour<br>
                                          pretendre a l’inscription de la formation </p>
                     <button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button>
