@@ -11,33 +11,11 @@
     </head>
 
 <body id="body">
-             
+<a href="traitement/inscription.php">Aller vers : inscription </a>
 
-<form id="form1" name="form1" method="" action="">
-
-  <label>Sélectionnez un pays :
-    <select name="pays" id="pays">
-        <?php 
-            //-------------------------------
-            //connexion à la base de données
-            //-------------------------------
-            include ('include/connect_bdd.php');
-                //-------------------------------
-                //requête sur les pays
-                //-------------------------------
-                $req = $bdd->prepare("SELECT * FROM pays");
-                $req -> execute();
-                    //----------------------------------------------
-                    //crééer une boucle while pour remplir la liste
-                    //----------------------------------------------
-                    
-                    while($donnees = $req->fetch()) { ?>
-
-        <option value="pays" selected><?php echo $donnees['pays'];?></option>
-        <?php } ?>
-    </select>
-  </label>
-
+<?php include('include/dropdown_pays.php');?>
+<br><br>
+<?php include('include/dropdown_nationalite.php');?>
 
 </form>
 </html>
