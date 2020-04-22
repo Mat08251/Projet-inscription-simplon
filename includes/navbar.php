@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
             <li class="nav-item1">
-                <a class="nav-link mr-sm-2" href="#"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
+                <a class="nav-link mr-sm-2" href="../php/index.php"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mr-sm-2" href="#"><span class="icon"><i class="fas fa-user"></i></span>SE CONNECTER</a>

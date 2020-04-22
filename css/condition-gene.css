@@ -1,0 +1,15 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.barre-deco {
+    margin-left: 12.6%;
+    margin-right: 80%;  
+    color: red!important;
+}

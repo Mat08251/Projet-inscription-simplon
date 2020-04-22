@@ -20,10 +20,9 @@
 
     <div class="accueil">
             <img class="image" src="../images/team-work-business-startup 1.png" alt="image-accueil">
-        <div class="card-img-overlay">
             <h5 class="titre-accueil card-title">BIENVENUE</h5>
-        </div>
     </div>
+
 
 
     <div class="container">

@@ -3,22 +3,22 @@ html, body {
     padding: 0;
 }
 
+
 .titre-accueil {
-    background-color: white;
+    background-color: white!important;
+    position: relative;
+    z-index: 1;
     width: 25%;
     font-size: 90px;
-    margin-top: 28%;
+    margin-top: -8%;
     padding: 2%;
     margin-left: -1%;
 }
 
-.accueil {
-    margin: 0%!important;
-    padding: 0%;
-}
 
 .image {
     width: 100%;
+    z-index: 3;
 }
 
 .texte1 {
@@ -70,6 +70,10 @@ html, body {
 .btn {
     color: white!important;
     margin-top: 50px;
+}
+
+.btn:hover {
+    background-color: rgb(190, 21, 21)!important;
 }
 
 .titre-card  {
