@@ -4,13 +4,50 @@ body {
 }
 
 .card {
+    margin-bottom: 2%;
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 4px 5px 0px 0px rgb(153, 153, 153);;
 }
 
 .barre-deco {
     margin-left: 12.6%;
-    margin-right: 80%; 
+    margin-right: 76%; 
     height: 1px;
 }
 
+
+
+
+.form-check {
+    margin-left: 13%;
+}
+
+.form-check-label {
+    font-weight: bold;
+}
+
+.etoile {
+    color: #F01616;
+}
+
+.envoyer {
+    display: flex;
+}
+
+.condition-next {
+    display: block;
+    margin: auto;
+    width: auto;
+    margin-right: 48.5%;
+    padding: 0.2%;
+    border: 1px solid black;
+    border-radius: 8px 8px;
+    margin-bottom: 50px;
+    box-shadow: 2px 4px 0px 0px rgb(153, 153, 153);
+}
+
+.condition-next:hover {
+    background-color: rgb(226, 226, 226)!important;
+}
