@@ -21,33 +21,39 @@
     <?php include ('../includes/sousentete.php'); ?>
     
     <div class="row">
-        <div class="col-md-12">
+        <div class="confirmation col-md-12 text-center">
             <!--code php à intégrer-->
-            <p>Merci Monsieur Dujardin</p>
+            <p>Merci <span class="gras">Monsieur Dujardin</span></p>
+            <hr class="barre-confirmation"/>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-12">
-            <p>Nous vous confirmons la validation de votre inscription</p>
+        <div class="texte-final col-md-12 text-center">
+            <p>Nous vous confirmons la validation de votre inscription<br>
+               à notre formation <span class="mot-cle">"Développeur - se Web & web mobile".</span></p>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-12">
-            <p>Merci Monsieur Dujardin</p>
+        <div class="texte-final col-md-12 text-center">
+            <p>Nous allons étudier votre candidature et vous recontacterons dans les plus brefs délais.<br>
+               Vous pouvez en attendant continuer à  vous entrainer sur les différentes plateforms<br>
+               utilisées précédemment ou/et d'autres de votre choix.</p>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-12">
-            <p>Merci Monsieur Dujardin</p>
+        <div class="texte-final col-md-12 text-center">
+            <p><span class="mot-cle">Un mail de confirmation vient de vous être envoyé.</span><br>
+               Si vous avez des questions, n'hesitez pas à nous contacter.</p>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-12">
-            <p>Merci Monsieur Dujardin</p>
+        <div class="texte-final col-md-12 text-center">
+            <p>Toute l'équipe de Simplon Charleville<br>
+               Vous remercie et vous souhaite une agréable journée</p>
         </div>
     </div>
 
