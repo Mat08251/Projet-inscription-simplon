@@ -77,7 +77,7 @@
             Lu et Approuvé<span class="etoile">*</span>
         </label>    
     </div>
-    <a href="#" class="condition-next text-center"><button type="submit" class="btn ">Suivant >></button></a>
+    <a href="../php/page1-formulaire.php" class="condition-next "><button type="submit" class="btn ">Suivant >></button></a>
     </form>
      <?php include ('../includes/footer.php'); ?>
 </body>

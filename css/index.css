@@ -94,3 +94,62 @@ html, body {
 .droite {
     margin-top: 220px;
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    
+    .titre-card {
+        margin-left: -50%!important;
+        width: 100%;
+    }
+
+    .card-text {
+        margin-left: -50%!important; 
+    }
+
+    .btn {
+        margin-left: -50%!important; 
+    }
+}
+
+@media all and (max-width: 1024px)
+{
+    .formation {
+        height: auto;
+        margin-bottom: 100px!important;
+    }
+
+    .titre-accueil {
+        width: auto;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .titre-formation {
+        width: auto;
+        margin-left: 0%;
+        font-size: 26px;
+    }
+
+    .titre-card {
+        width: auto;
+        font-size: 24px;
+        margin-right: 20px;
+        margin-left: 8%;
+    }
+
+    .droite {
+        margin-top: auto;
+    }
+
+    .cadre {
+        flex-direction: column;
+    }
+
+    .parallax {
+        display: none;
+    }
+
+    .card-img {
+        display: none;
+    }
+}

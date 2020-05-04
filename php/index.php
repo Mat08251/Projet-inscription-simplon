@@ -20,7 +20,7 @@
 
     <div class="accueil">
             <img class="image" src="../images/team-work-business-startup 1.png" alt="image-accueil">
-            <h5 class="titre-accueil card-title">BIENVENUE</h5>
+            <h5 class="titre-accueil card-title col-xm-6">BIENVENUE</h5>
     </div>
 
 
@@ -69,7 +69,7 @@
                     <div class="droite text-center">
                     <p class="card-text">La création d’un compte est obligatoire pour<br>
                                          pretendre a l’inscription de la formation </p>
-                    <button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button>
+                    <button type="button" class="btn  btn-lg" style="background-color: #F01616"><a href="condition-gene.php">INSCRIPTION >></a></button>
                     </div>                    
                 </div>
             </div>
@@ -107,7 +107,7 @@
         </div>
     </div>
 
-    <div class="parallax" data-parallax="scroll" data-z-index="" data-image-src="../images/team-work-business-startup 1.png"></div>
+    <div class="parallax" data-parallax="scroll" data-z-index="2" data-image-src="../images/team-work-business-startup 1.png"></div>
 
     <!--card des formations-->
     <div class="formation card  justify-center" >
