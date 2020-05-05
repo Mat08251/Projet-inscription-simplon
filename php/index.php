@@ -69,7 +69,7 @@
                     <div class="droite text-center">
                     <p class="card-text">La création d’un compte est obligatoire pour<br>
                                          pretendre a l’inscription de la formation </p>
-                    <button type="button" class="btn  btn-lg" style="background-color: #F01616"><a href="condition-gene.php">INSCRIPTION >></a></button>
+                    <a href="condition-gene.php"><button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button></a>
                     </div>                    
                 </div>
             </div>

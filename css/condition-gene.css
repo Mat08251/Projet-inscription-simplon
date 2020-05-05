@@ -32,15 +32,10 @@ body {
     color: #F01616;
 }
 
-.envoyer {
-    display: flex;
-}
-
-a.condition-next {
+.bouton-suivant {
     display: block;
-    margin: auto;
-    width: auto;
-    margin-right: 48.5%;
+    width: 5%;
+    margin-left: 46.5%;
     padding: 0.2%;
     border: 1px solid black;
     border-radius: 8px 8px;
@@ -48,8 +43,11 @@ a.condition-next {
     box-shadow: 2px 4px 0px 0px rgb(153, 153, 153);
 }
 
-
-
-.condition-next:hover {
-    background-color: rgb(226, 226, 226)!important;
+@media all and (max-width: 1024px) {
+    .bouton-suivant {
+        margin-left: 37%;
+        width: 30%;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
 }
