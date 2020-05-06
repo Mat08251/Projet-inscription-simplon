@@ -43,6 +43,13 @@ body {
     box-shadow: 2px 4px 0px 0px rgb(153, 153, 153);
 }
 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .bouton-suivant {
+        width: 15%!important;
+        margin-left: 40%!important;
+    }
+}
+
 @media all and (max-width: 1024px) {
     .bouton-suivant {
         margin-left: 37%;
