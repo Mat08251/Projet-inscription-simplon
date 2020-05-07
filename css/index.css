@@ -21,6 +21,10 @@ html, body {
     z-index: 3;
 }
 
+.image-card {
+    margin-top: 55px;
+}
+
 .texte1 {
     margin-top: 6%;
 }

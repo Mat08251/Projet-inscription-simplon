@@ -51,8 +51,8 @@
     <!--card des formations-->
     <div class="formation card " >
         <div class="row no-gutters">
-            <div class="col-md-4">
-            <img src="..." class="card-img" alt="...">
+            <div class="image-card col-md-4">
+            <img src="../images/codage.jpg" class="card-img" alt="...">
             </div>
             <div class="cadre col-md-8">
                 <div class="card-body">
@@ -82,8 +82,8 @@
     <!--card des formations-->
     <div class="formation card  justify-center" >
         <div class="row no-gutters">
-            <div class="col-md-4">
-            <img src="..." class="card-img" alt="...">
+            <div class="image-card col-md-4">
+            <img src="../images/codage.jpg" class="card-img" alt="...">
             </div>
             <div class="cadre col-md-8">
                 <div class="card-body">
@@ -112,8 +112,8 @@
     <!--card des formations-->
     <div class="formation card  justify-center" >
         <div class="row no-gutters">
-            <div class="col-md-4">
-            <img src="..." class="card-img" alt="...">
+            <div class="image-card col-md-4">
+            <img src="../images/codage.jpg" class="card-img" alt="...">
             </div>
             <div class="cadre col-md-8">
                 <div class="card-body">
