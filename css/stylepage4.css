@@ -1,0 +1,224 @@
+
+body
+{
+    background-color: white;
+    width: 100%;
+    height: 110%;
+    margin: 0px;
+    margin-bottom: 100px;
+    
+}
+h1 {
+    font-size:45px;
+}
+h2 .formulaire
+{
+    font-size:28px;
+}
+h3 
+{
+    font-size: 20px;    
+}
+.div_container {
+    display: grid;
+    grid-template-columns:repeat(48, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+    text-align: center;
+}
+ 
+
+.div_titre_formation {
+    grid-column:1/49;
+    grid-row: 1/8;
+    background-color: rgb(219, 9, 9);
+    color: white;
+    box-shadow: 10px 10px 10px 5px gray;
+}
+.div_formulaire {
+    grid-column: 2/47;
+    grid-row: 10/11;
+    background-color:#514D4D;
+    color:white;
+    box-shadow: 10px 10px 10px  black;
+}
+.information_champs_inscription 
+{
+    grid-column:10/40;
+    grid-row: 12/13;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    column-span: all;
+}
+
+hr 
+{
+    width:50%;
+    margin-top: 70px auto;
+    border: 1px dashed black;
+}
+
+.blocFormulaire
+{
+    grid-column: 4/46;
+    grid-row: 17/125;
+    border: 2px solid red; 
+  
+}
+
+.etape2
+{
+    width: 150px;
+    grid-column: 9/13;
+    grid-row: 16/18;
+    background: white;
+    z-index: 100;
+}
+
+.cadre1,
+.cadre2,
+.cadre3,
+.cadre4
+{
+    box-shadow: 10px 10px 10px gray;
+    border-top: none;
+    border-left: 2px solid black;
+    border-top: 5px solid red;
+    border-radius: 0px 0px 5px 5px;
+    grid-column: 8/42;
+    padding:30px;
+    font-size: 13px;   
+}
+
+.cadre1
+{
+    grid-row: 20/35;   
+}
+.cadre2
+{
+    grid-row: 38/63;
+}
+.cadre3
+{
+    grid-row: 66/91;
+}
+.cadre4
+{
+    grid-row: 94/119;
+}
+
+ 
+
+    
+  
+    textarea
+{       
+        margin-top: 20px;
+        padding: auto;
+        width: 90%;
+        padding :20px;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid red;
+        font-size: 20px;
+        
+      }
+    
+
+button
+{
+    grid-row: 121/123;
+    background: white;
+    color: black;
+    border-radius: 6x 6x 6px 6px;
+    padding: 0.1em auto;
+    box-shadow: 10px 5px 5px gray;
+  
+}
+
+button:focus 
+{ 
+    outline:0;
+}
+
+button:hover 
+{
+    background: red;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: black;
+       
+}
+
+#precedent_submit
+{
+    grid-column:27/33; 
+   
+    font-size:12px;
+    border-radius: 6px;
+    border: 1px solid Gray;
+
+}
+
+#suivant_submit
+{
+    grid-column: 15/22;
+    padding: auto;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+
+.containers {
+    width: 100%;
+    margin-left: 280px!important;
+    margin-top: 50px;
+}
+.progressbar {
+     counter-reset: step;
+     display: flex;
+}
+.progressbar li {
+    list-style-type: none;
+    float: left;
+    width: 15%;
+    position: relative;
+    text-align: center;
+}
+.progressbar li::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px; 
+    border: 2px solid #ddd;
+    display:block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    line-height: 30px;
+    background-color: white;
+
+}
+.progressbar li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+.progressbar li:first-child::after{
+    content: none; 
+}
+.progressbar li.active {
+    color: red;
+}
+.progressbar li.active::before {
+    border-color: red;
+}
+.progressbar li.active + li::after {
+    background-color: red;
+}

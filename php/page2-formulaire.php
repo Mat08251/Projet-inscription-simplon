@@ -6,7 +6,7 @@
     <title>Formulaire d'inscription</title>
     <meta name="description" content="Creation formulaire d'inscription à une formation" />
     <meta http-equiv="content-language" content="fr" />
-    <link href="../css/stylepage3.css" rel='stylesheet' type='text/css' />
+    <link href="../css/stylepage2.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -34,7 +34,7 @@
                 <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
 
                 <div class="blocFormulaire"></div>
-                <div class="etape2"><h2>ETAPE 3</h2></div>
+                <div class="etape2"><h2>ETAPE 2</h2></div>
                 
 
 
@@ -72,7 +72,7 @@
                                     <div class="content-cadre4" >
                                         <textarea id = "info4"  rows = 11 cols = 50 name = "info4"  placeholder = "Votre réponse" required  index = 4  ></textarea> 
                                      </div>
-                </div>
+                                 </div>
 
 
                 <div class= "button1"></div>
@@ -84,16 +84,6 @@
             
             </div>
         </form>
-    </div>
-
-    <div class="containers">
-        <ul class="progressbar ">
-            <li class="active">Etape 1</li>
-            <li class="active">Etape 2</li>
-            <li class="active">Etape 3</li>
-            <li>Etape 4</li>
-            <li>Etape 5</li>
-        </ul>
     </div>
 
     <?php include ('../includes/footer.php'); ?>
