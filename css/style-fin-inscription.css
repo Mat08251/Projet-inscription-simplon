@@ -140,3 +140,16 @@ h2.message_fin
 .progressbar li.active + li::after {
     background-color: red;
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .progressbar {
+        margin-left: 70px!important;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .containers {
+        width: auto;
+        margin-left: 90px!important;
+    }
+}

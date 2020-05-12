@@ -86,6 +86,16 @@
         </form>
     </div>
 
+    <div class="containers">
+        <ul class="progressbar ">
+            <li class="active">Etape 1</li>
+            <li class="active">Etape 2</li>
+            <li class="">Etape 3</li>
+            <li>Etape 4</li>
+            <li>Etape 5</li>
+        </ul>
+    </div>
+
     <?php include ('../includes/footer.php'); ?>
 </body>
 

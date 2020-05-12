@@ -35,6 +35,9 @@
                     </div>
                     <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
 
+                    <div class="blocFormulaire"></div>
+                    <div class="etape2"><h2>ETAPE 1</h2></div>
+
                     <div class="background_image"></div>
 
 

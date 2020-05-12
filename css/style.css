@@ -48,7 +48,7 @@ h3 {
     margin-top: 10px;
     padding-top: 10px;
     grid-column: 3/47;
-    grid-row: 8/8;
+    grid-row: 6/6;
     background-color:#514D4D;
     background-attachment: fixed;
     color:white;
@@ -63,6 +63,23 @@ h3 {
     padding: 5px;
     font-weight: bold;
 
+}
+
+.blocFormulaire
+{
+    grid-column: 4/46;
+    grid-row: 10/80;
+    border: 2px solid red; 
+  
+}
+
+.etape2
+{
+    width: 150px;
+    grid-column: 9/13;
+    grid-row: 9/11;
+    background: white;
+    z-index: 100;
 }
 
 .background_image
@@ -373,4 +390,17 @@ button:hover
 }
 .progressbar li.active + li::after {
     background-color: red;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .progressbar {
+        margin-left: 70px!important;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .containers {
+        width: auto;
+        margin-left: 90px!important;
+    }
 }
