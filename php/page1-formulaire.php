@@ -89,13 +89,14 @@
 
                 
 
-                <div class= "button2"></div>
-                <button name="suivant" type="submit" id="suivant_submit" data submit="...Sending">Suivant</button>
+                
+               
             </div>
+            <a href="../php/page2-formulaire.php" class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
         </form>
     </div>
 
-
+    
     <div class="containers">
         <ul class="progressbar ">
             <li class="active">Etape 1</li>

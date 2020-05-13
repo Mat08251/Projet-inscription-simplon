@@ -37,7 +37,7 @@
     
 
     <div class="accueil">
-            <img class="image" src="../images/team-work-business-startup 1.png" alt="image-accueil">
+            <img class="image" src="images/team-work-business-startup 1.png" alt="image-accueil">
             <h5 class="titre-accueil card-title col-xm-6">BIENVENUE</h5>
     </div>
 

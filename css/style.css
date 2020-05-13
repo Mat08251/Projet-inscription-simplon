@@ -32,9 +32,12 @@ h3 {
     grid-row:1/6; 
 }
 
+h1 {
+    font-size: 70px!important;
+}
+
 
 .div_titre_formation {
-    position: fixed;
     width: 100%;
     grid-column:1/49;
     grid-row: 5/6;
@@ -45,7 +48,7 @@ h3 {
     
 
 .div_formulaire {
-    margin-top: 10px;
+    margin-top: 30px;
     padding-top: 10px;
     grid-column: 3/47;
     grid-row: 6/6;
@@ -58,7 +61,8 @@ h3 {
 
 .information_champs_inscription {
     grid-column:16/35;
-    grid-row: 10/14;
+    grid-row: 8/12;
+    margin-bottom: 120px;
     font-size: 20px;
     padding: 5px;
     font-weight: bold;
@@ -109,6 +113,8 @@ label {
 
 
 input {
+    padding-bottom: 14px !important;
+    margin-bottom: 8px !important;
     border: black;
     background: rgb(235, 235, 240);
     font-size: 20px;
@@ -303,41 +309,19 @@ input:hover {
    
 }
 
-button
-{
-    grid-row: 79/74;
-    background: white;
-    color: black;
-    border-radius: 6x 6x 6px 6px;
-    padding: 0.1em auto;
-    box-shadow: 10px 5px 5px gray;
-  
+.bouton-suivant {
+    display: block;
+    width: 5%;
+    margin-top: -100px;
+    margin-left: 46.5%;
+    padding: 0.2%;
+    border: 1px solid black;
+    border-radius: 8px 8px;
+    margin-bottom: 100px;
+    box-shadow: 2px 4px 0px 0px rgb(153, 153, 153);
 }
 
-button:focus 
-{ 
-    outline:0;
-}
 
-button:hover 
-{
-    background: red;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    border: black;
-       
-}
-
-#suivant_submit
-{
-    grid-column:23/27; 
-   
-    font-size:12px;
-    border-radius: 6px;
-    border: 1px solid Gray;
-   margin-bottom: 50px;
-}
 
 .containers {
     width: 100%;
