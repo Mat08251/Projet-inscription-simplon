@@ -23,7 +23,7 @@
         <form id="form_contact" method="post" action="traitement/insert_contact.php">
 
             <div class="div_container">
-                <div class="div_navbar"></div>
+                
                 <div class="div_titre_formation"><br>
                     <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
                 </div>
