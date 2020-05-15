@@ -8,7 +8,7 @@ html, body {
     background-color: white!important;
     position: relative;
     z-index: 1;
-    width: 25%;
+    width: 30%!important;
     font-size: 90px;
     margin-top: -8%;
     padding: 2%;
@@ -43,7 +43,7 @@ html, body {
 }
 
 .titre-formation {
-    width: 14%;
+    width: 16%;
     margin-left: 44%;
     margin-top: 3%;
     padding: 1%;
@@ -84,7 +84,7 @@ html, body {
     font-size: 40px;
     background-color: #333333;
     color: white;
-    width: 70%;
+    width: 88%;
     padding: 4%;
     margin-left: 16%;
     margin-bottom: 50px!important;
@@ -100,7 +100,10 @@ html, body {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-    
+    .titre-accueil {
+        width: auto;
+    }
+
     .titre-card {
         margin-left: -50%!important;
         width: 100%;
@@ -123,7 +126,7 @@ html, body {
     }
 
     .titre-accueil {
-        width: auto;
+        width: 62%!important;
         font-size: 40px;
         text-align: center;
     }
