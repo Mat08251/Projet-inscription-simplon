@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/inscription.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -25,15 +30,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                 <li class="nav-item1">
-                    <a class="nav-link mr-sm-2" href="../index.php"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
+                    <a class="nav-link mr-sm-2" href="index.php"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-sm-2" href="#"><span class="icon"><i class="fas fa-user"></i></span>SE CONNECTER</a>
+                    <a class="nav-link mr-sm-2" href="#connexion" rel="modal:open"><span class="icon"><i class="fas fa-user"></i></span>SE CONNECTER</a>
                 </li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <?php
+       include('php/modal.php');
+    ?>
     
 
     <div class="accueil">

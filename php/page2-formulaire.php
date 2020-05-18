@@ -75,13 +75,16 @@
                                  </div>
 
 
-                <div class= "button1"></div>
-                <button name="suivant" type="submit" id="suivant_submit" data submit="....Sending">Précédent</button>
+               
+               
             
+            </div>
+            <div class="bouton">
+                <a href="../php/page1-formulaire.php" class="bouton-suivant align-items-center"><button type="button" class="btn  btn-lg">Précédent</button></a>
+                
 
-                <div class= "button2"></div>
-                <button name="precedent" type="submit" id="precedent_submit" data submit="...Sending">Suivant</button>
-            
+                    
+                <a href="../php/page3-formulaire.php" class="bouton-suivant align-items-center"><button type="submit" class="btn  btn-lg">Suivant</button></a>
             </div>
         </form>
     </div>

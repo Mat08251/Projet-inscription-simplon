@@ -11,7 +11,7 @@
                 <a class="nav-link mr-sm-2" href="../index.php"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-sm-2" href="#"><span class="icon"><i class="fas fa-user"></i></span>SE CONNECTER</a>
+                <a class="nav-link mr-sm-2" href="../php/modal.php"><span class="icon"><i class="fas fa-user"></i></span>SE CONNECTER</a>
             </li>
             </ul>
         </div>

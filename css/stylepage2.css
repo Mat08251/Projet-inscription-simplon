@@ -123,55 +123,28 @@ hr
         
       }
     
-
-button
-{
-    grid-row: 121/123;
-    background: white;
-    color: black;
-    border-radius: 6x 6x 6px 6px;
-    padding: 0.1em auto;
-    box-shadow: 10px 5px 5px gray;
-  
+.bouton {
+    margin-left: 28%;
+    margin-top: -4%!important;
+    margin-bottom: 100px;
 }
 
-button:focus 
-{ 
-    outline:0;
+.bouton-suivant {
+    display: inline;
+    margin-left: 14.5%;
+    padding: 0.4%;
+    border: 1px solid black;
+    border-radius: 8px 8px;
+    box-shadow: 2px 4px 0px 0px rgb(153, 153, 153);
 }
 
-button:hover 
-{
-    background: red;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    border: black;
-       
-}
-
-#precedent_submit
-{
-    grid-column:27/33; 
-   
-    font-size:12px;
-    border-radius: 6px;
-    border: 1px solid Gray;
-
-}
-
-#suivant_submit
-{
-    grid-column: 15/22;
-    padding: auto;
-    font-size: 12px;
-    border-radius: 6px;
-    border: 1px solid gray;
+.bouton-suivant:hover {
+    background-color: rgb(219, 219, 219);
 }
 
 .containers {
     width: 100%;
-    margin-left: 280px!important;
+    margin-left: 220px!important;
     margin-top: 50px;
 }
 .progressbar {
@@ -232,5 +205,10 @@ button:hover
     .containers {
         width: auto;
         margin-left: 90px!important;
+    }
+
+    .bouton {
+        margin-left: 20%;
+        margin-top: -8%!important;
     }
 }
