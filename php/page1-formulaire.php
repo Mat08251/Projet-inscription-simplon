@@ -21,8 +21,8 @@
 
 
     <div class="form_contact">
-        <form id="form_contact" method="post" action="mailto:schcrumble@yahoo.fr";
-            target="mailto schcrumble@yahoo.fr">
+        <form id="form_contact"action="../traitement/inscription.php" method="post" >
+
 
             <div class="div_container">
                 <div class="div_navbar"></div>
@@ -92,7 +92,7 @@
                 
                
             </div>
-            <a href="../php/page2-formulaire.php" class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
+            <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
         </form>
     </div>
 
