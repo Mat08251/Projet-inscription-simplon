@@ -11,9 +11,9 @@ body {
 
 .liens a {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 22px;
     color: #A09494;
-    margin-bottom: 50px!important;
+    margin-bottom: 0px!important;
 }
 
 .liens a:hover{
@@ -33,13 +33,13 @@ body {
 }
 
 .réseaux {
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .texte-reseaux {
     font-weight: bold;
     font-size: 19px;
-    margin-top: 20px;
+    margin-top: 6px;
 }
 
 .facebook{
@@ -58,14 +58,14 @@ body {
 
 .far {
     font-size: 22px;
-    margin-right: 20px!important;
+    margin-right: 10px!important;
 }
 
 .lettre {
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .copy {
     font-weight: bold!important;
-    font-size: 26px;
+    font-size: 14px;
 }
