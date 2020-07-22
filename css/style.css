@@ -329,7 +329,7 @@ input:hover {
 .progressbar {
      counter-reset: step;
      display: flex;
-     margin-left: -186px;
+     margin-left: 250px;
 }
 .progressbar li {
     list-style-type: none;

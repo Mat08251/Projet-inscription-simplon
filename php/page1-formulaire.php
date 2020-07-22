@@ -108,15 +108,14 @@ $id_candidat = $_SESSION['id_candidat'];
                 
                
             </div>
-            <<<<<<< HEAD
+          
             <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
-=======
-            <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
->>>>>>> 2da06415a818d5350c6d96d579d6a502b27317f2
+
+         
         </form>
     </div>
 
-    
+ 
     <div class="containers">
         <ul class="progressbar ">
             <li class="active">Etape 1</li>
@@ -126,7 +125,7 @@ $id_candidat = $_SESSION['id_candidat'];
             <li>Etape 5</li>
         </ul>
     </div>
-
+    
 
     <?php include ('../includes/footer.php'); ?>
 </body>
