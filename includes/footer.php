@@ -1,7 +1,7 @@
 
    <div class="footer container-fluid text-center">
        <div class="row">
-           <div class="liens col-md-12 text-center mb-5">
+           <div class="liens col-md-12 text-center mb-2">
                <a href="#">Accueil</a><span class="barre">|</span>
                <a href="#">Contact</a><span class="barre">|</span>
                <a href="#">Connexion</a>

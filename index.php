@@ -94,19 +94,19 @@
             <div class="cadre col-md-8">
                 <div class="card-body">
                     <div class="gauche text-center">
-                    <h5 class="titre-card card-title">DEVELOPPEUR WEB</h5>
-                    <p class="card-text">Début d'inscription : 1/1/2020<br>
-                                        Fin d'inscription : 2/1/2020</p>
-                    <p class="card-text">Début de la formation : 5/1/2020</p>
-                    <p class="card-text">Durée de la formation : 6mois</p>
-                    <button type="button" class="btn  btn-lg" style="background-color: #F01616">En savoir plus >></button>
+                        <h5 class="titre-card card-title">DEVELOPPEUR WEB</h5>
+                        <p class="card-text">Début d'inscription : 1/1/2020<br>
+                                            Fin d'inscription : 2/1/2020</p>
+                        <p class="card-text">Début de la formation : 5/1/2020</p>
+                        <p class="card-text">Durée de la formation : 6mois</p>
+                        <button type="button" class="btn  btn-lg" style="background-color: #F01616">En savoir plus >></button>
                     </div>                    
                 </div>
                 <div class="card-body">
                     <div class="droite text-center">
-                    <p class="card-text">La création d’un compte est obligatoire pour<br>
-                                         pretendre a l’inscription de la formation </p>
-                    <a href="php/condition-gene.php"><button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button></a>
+                        <p class="card-text">La création d’un compte est obligatoire pour<br>
+                                            pretendre a l’inscription de la formation </p>
+                        <a href="php/condition-gene.php"><button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button></a>
                     </div>                    
                 </div>
             </div>
