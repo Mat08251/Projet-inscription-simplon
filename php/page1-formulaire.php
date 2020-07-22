@@ -59,7 +59,14 @@ $id_candidat = $_SESSION['id_candidat'];
                         autofocus>
 
                     <label for="champ_nationalite" class="champ_nationalite">Nationalité</label>
-                    <input placeholder="Nationalité" name="nationalite" id="nationalite" type="text" tabindex="5" required autofocus>
+                    <select class="nationalite" name="nationalite" id="nationalite" required>
+                     <option value="" disabled selected>Sélectionnez un pays</option>
+                        <?php $pays=$bdd->prepare("SELECT * FROM nationalite");
+                        $pays->execute();
+                        while($data=$pays->fetch()){?>
+                        <option name="nationalite" value="<?=$data['id_nationalite']?>"><?=$data['nationalite']?></option>
+                        <?php } $pays->closeCursor();?>
+                     </select>
 
                     <label for="sexe" class="champ_sexe">Sexe</label>
                     <input placeholder="Sexe" name="sexe" id="sexe" type="text" tabindex="6" required autofocus>
