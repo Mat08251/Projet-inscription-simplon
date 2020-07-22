@@ -30,6 +30,16 @@ if($count==0) {
         'mdp' => $mdp,
         'last_log' => $time
     ));
+    $thisusers = $bdd->prepare("SELECT id_candidat FROM candidat WHERE pseudo='$pseudo'");
+    $thisusers->execute();
+    while($data = $thisusers->fetch()) {
+        $id_candidat = $data['id_candidat'];
+    };
+    $id_users = $bdd->prepare("INSERT INTO formulaire (id_candidat) VALUE (:id_candidat)");
+
+    $id_users->execute(array(
+        'id_candidat' => $id_candidat
+    ));
     $_SESSION['pseudo'] = $pseudo;
     mail($mail, $objetinscrip, $messageinscrip);
     header('location: ../php/modal.php?success=1');
