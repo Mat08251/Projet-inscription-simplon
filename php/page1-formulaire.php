@@ -110,11 +110,7 @@ $id_candidat = $_SESSION['id_candidat'];
                 
                
             </div>
-<<<<<<< HEAD
             <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
-=======
-            <a href="page2-formulaire.php" class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
->>>>>>> 9fbb803e0321dbc9bf388c53fc439c92961187f5
         </form>
     </div>
 
