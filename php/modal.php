@@ -1,11 +1,20 @@
+
 <div id="connexion" class="modal">
-        <form id="form_connexion" action="#" method="post">
+<center>  <?php if(isset($_GET['success'])) {
+                if($_GET['success'] == 1) {?>
+                    <div class="alert alert-success" role="alert">
+                    Vous etes bien inscrit.
+                    </div>
+            <?php }}
+            ?>
+            </center>
+        <form id="form_connexion" action="traitement/connectuser.php" method="post">
             <h3 class="titre_form">IDENTIFIANTS</h3>
             <fieldset>
-                <input placeholder="Email.." name="lemail" id="lemail" type="email" tabindex="1" required>
+                <input placeholder="Email.." name="mail" id="mail" type="email" tabindex="1" required>
             </fieldset>
             <fieldset>
-                <input placeholder="Mot de passe.." name="lmdp" id="lmdp" type="password" tabindex="2"
+                <input placeholder="Mot de passe.." name="mdp" id="mdp" type="password" tabindex="2"
                     required>
             </fieldset>
             <fieldset class="space">
@@ -16,7 +25,9 @@
                 <a href="php/inscription.php">Crée un compte</a>
             </fieldset>
             <fieldset>
-                <button name="submit" type="submit">RETOUR</button>
+            <form>
+            <input type = "button" value = "Retour"  onclick = "history.back()" class="mb-5">
+            </form> 
                 <button name="submit" type="submit">SOUMETTRE</button>
             </fieldset>
         </form>

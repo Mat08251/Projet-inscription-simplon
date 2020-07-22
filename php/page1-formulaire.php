@@ -1,6 +1,6 @@
 <?php session_start(); 
-    require('../traitement/connectbdd.php');
-    $id_candidat = $_SESSION['id_candidat'];
+require('../traitement/connectbdd.php');
+$id_candidat = $_SESSION['id_candidat'];
 ?>
 <!Doctype html>
 <html lang="en">
@@ -58,13 +58,14 @@
 
                     <label for="champ_nationalite" class="champ_nationalite">Nationalité</label>
                     <select class="nationalite" name="nationalite" id="nationalite" required>
-                        <option value="" disabled selected>Sélectionnez un pays</option>
-                            <?php $pays=$bdd->prepare("SELECT * FROM nationalite");
-                            $pays->execute();
-                            while($data=$pays->fetch()){?>
+                     <option value="" disabled selected>Sélectionnez un pays</option>
+                        <?php $pays=$bdd->prepare("SELECT * FROM nationalite");
+                        $pays->execute();
+                        while($data=$pays->fetch()){?>
                         <option name="nationalite" value="<?=$data['id_nationalite']?>"><?=$data['nationalite']?></option>
-                            <?php } $pays->closeCursor();?>
+                        <?php } $pays->closeCursor();?>
                      </select>
+
                     <label for="sexe" class="champ_sexe">Sexe</label>
                     <input placeholder="Sexe" name="sexe" id="sexe" type="text" tabindex="6" required autofocus>
 
@@ -79,12 +80,12 @@
 
                     <label for="champ_pays" class="champ_pays">Pays</label>
                     <select class="champ_pays" name="pays" id="pays" required>
-                        <option value="" disabled selected>Sélectionnez un pays</option>
-                            <?php $pays=$bdd->prepare("SELECT * FROM pays");
-                            $pays->execute();
-                            while($data=$pays->fetch()){?>
+                     <option value="" disabled selected>Sélectionnez un pays</option>
+                        <?php $pays=$bdd->prepare("SELECT * FROM pays");
+                        $pays->execute();
+                        while($data=$pays->fetch()){?>
                         <option name="pays" value="<?=$data['id_pays']?>"><?=$data['pays']?></option>
-                            <?php } $pays->closeCursor();?>
+                        <?php } $pays->closeCursor();?>
                      </select>
 
                     <label for="champ_code_postal" class="champ_code_postal">Code Postal</label>
@@ -110,8 +111,8 @@
             <<<<<<< HEAD
             <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
 =======
-            <a href="page2-formulaire.php" class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
->>>>>>> 9fbb803e0321dbc9bf388c53fc439c92961187f5
+            <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
+>>>>>>> 2da06415a818d5350c6d96d579d6a502b27317f2
         </form>
     </div>
 
