@@ -22,7 +22,7 @@
                 <label for="ssouvenir">Se souvenir de moi</label>
             </fieldset>
             <fieldset>
-                <a href="php/inscription.php">Crée un compte</a>
+                <a href="inscription.php">Crée un compte</a>
             </fieldset>
             <fieldset>
             <form>

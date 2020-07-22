@@ -25,7 +25,12 @@ $id_candidat = $_SESSION['id_candidat'];
 
 
     <div class="form_contact">
+<<<<<<< HEAD
         <form id="form_contact"action="../traitement/inscription.php?id=<?=$id_candidat?>" method="post" >
+=======
+        <form id="form_contact"action="../traitement/inscription.php" method="post" >
+
+>>>>>>> 139cafb0e6bcfec2ba4349fd5b138bb9ae08cfca
 
             <div class="div_container">
                 <div class="div_titre_formation">
@@ -108,10 +113,14 @@ $id_candidat = $_SESSION['id_candidat'];
                 
                
             </div>
+<<<<<<< HEAD
           
             <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
 
          
+=======
+            <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
+>>>>>>> 139cafb0e6bcfec2ba4349fd5b138bb9ae08cfca
         </form>
     </div>
 
