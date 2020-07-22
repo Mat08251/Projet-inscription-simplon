@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-    font-size: 70px!important;
+    font-size: 50px!important;
    margin-top: 20px!important;
 }
 
@@ -22,7 +22,7 @@ h3 {
 
 .div_container {
     display: grid;
-    grid-template-columns:repeat(48, 1fr);
+    grid-template-columns:repeat(48, 2fr);
     grid-auto-rows: minmax(20px, auto);
     text-align: center;
 }
@@ -323,7 +323,7 @@ input:hover {
 
 .containers {
     width: 100%;
-    margin-left: 280px!important;
+    margin-left: auto!important;
     margin-top: 50px;
 }
 .progressbar {

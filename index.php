@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,9 +33,18 @@
                 <li class="nav-item1">
                     <a class="nav-link mr-sm-2" href="index.php"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link mr-sm-2" href="#connexion" rel="modal:open"><span class="icon"><i class="fas fa-user"></i></span>SE CONNECTER</a>
-                </li>
+                <?php if(isset($_SESSION['mail'])){ ?>
+                    <li class="nav-item">
+                        <span class="icon"><i class="fas fa-user"></i></span><?= $_SESSION['pseudo']; ?>
+                    </li>
+                    <li class="nav-item">
+                        <a href="traitement/deconnexion_session.php">Deconnexion</a>
+                    </li>
+                <?php }else{ ?>
+                    <li class="nav-item">
+                        <a class="nav-link mr-sm-2" href="#connexion" rel="modal:open"><span class="icon"><i class="fas fa-user"></i></span>SE CONNECTER</a>
+                    </li>
+                <?php } ?>
                 </ul>
             </div>
         </nav>
@@ -46,6 +56,14 @@
     
 
     <div class="accueil">
+        <center>
+            <?php if(isset($_GET['alert'])) {
+                    if($_GET['alert'] == 1) {?>
+                        <div class="alert alert-danger" role="alert">
+                        Les identifiants ne sont pas bon.
+                        </div>
+            <?php }} ?>
+         </center>
             <img class="image" src="images/team-work-business-startup 1.png" alt="image-accueil">
             <h5 class="titre-accueil card-title col-xm-6">BIENVENUE</h5>
     </div>
