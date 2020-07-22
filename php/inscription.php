@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,20 +21,37 @@
 
 
     <div id="inscription">
-        <form id="form_inscription" action="#" method="post">
+    <!-- alert -->
+    <center>
+    <?php if(isset($_GET['alert'])) {
+                if($_GET['alert'] == 1) {?>
+                    <div class="alert alert-danger" role="alert">
+                    Les Mots de Passe ne sont pas identique.
+                    </div>
+                <?php }if($_GET['alert'] == 2) {?>
+                    <div class="alert alert-danger" role="alert">
+                    Ce pseudo exist deja.
+                    </div>
+                    <?php }if($_GET['alert'] == 3) {?>
+                    <div class="alert alert-danger" role="alert">
+                    Cet e-mail est deja utilisé.
+                    </div>
+            <?php }} ?>
+            </center>
+        <form id="form_inscription" action="../traitement/first_inscription.php" method="post">
             <h3 class="titre_form">S'INSCRIRE</h3>
             <fieldset>
-                <input placeholder="Nom.." name="snom" id="snom" type="text" tabindex="1" required autofocus>
+                <input placeholder="Pseudo.." name="pseudo" id="pseudo" type="text" tabindex="1" required autofocus>
             </fieldset>
             <fieldset>
-                <input placeholder="Email.." name="semail" id="semail" type="email" tabindex="3" required>
+                <input placeholder="Email.." name="mail" id="mail" type="email" tabindex="3" required>
             </fieldset>
             <fieldset>
-                <input class="space" placeholder="Mot de passe.." name="smdp" id="smdp" type="password" tabindex="6"
+                <input class="space" placeholder="Mot de passe.." name="mdp" id="mdp" type="password" tabindex="6"
                     required>
             </fieldset>
             <fieldset>
-                <input placeholder="Confirmer le mot de passe.." name="cmdp" id="cmdp" type="password" tabindex="7" required>
+                <input placeholder="Confirmer le mot de passe.." name="mdp2" id="mdp2" type="password" tabindex="7" required>
             </fieldset>
             <fieldset>
                 <button name="submit" type="submit">RETOUR</button>
