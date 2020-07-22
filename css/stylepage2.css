@@ -150,6 +150,7 @@ hr
 .progressbar {
      counter-reset: step;
      display: flex;
+     margin-left: -90px;
 }
 .progressbar li {
     list-style-type: none;

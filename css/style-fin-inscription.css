@@ -58,6 +58,7 @@ h2.message_fin
     text-decoration:underline;
 }
 
+
 @media screen and (min-width: 200px) and (max-width:1000px)
 {
     .cadre1
@@ -96,6 +97,8 @@ h2.message_fin
 .progressbar {
      counter-reset: step;
      display: flex;
+     margin-left: -186px;
+     margin-bottom: 190px;
 }
 .progressbar li {
     list-style-type: none;

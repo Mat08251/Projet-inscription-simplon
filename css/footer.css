@@ -8,12 +8,19 @@ body {
     background-color: #f5f5f5!important;
 }
 
+.liens {
+    margin-left: 16px;
+    margin-right: auto;
+}
+
 
 .liens a {
     font-weight: bold;
     font-size: 22px;
     color: #A09494;
     margin-bottom: 0px!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
 }
 
 .liens a:hover{
