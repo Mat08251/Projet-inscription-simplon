@@ -22,7 +22,7 @@ if ($nbresultats == 1) {
 
     header('location: ../index.php');
 } else {
-    header('location: ../index.php?success=1');
+    header('location: ../index.php?alert=1');
 }
 
 ?>
