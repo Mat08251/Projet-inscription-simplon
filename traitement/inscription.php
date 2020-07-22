@@ -56,4 +56,6 @@ $insc_user->execute(array(
     'id_nationalite' => $nationalite,
     ':last_log' => $time
 ));
+
+header('location: ../php/page2-formulaire.php');
 ?>
