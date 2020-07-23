@@ -42,7 +42,7 @@ if($count==0) {
     ));
     $_SESSION['pseudo'] = $pseudo;
     mail($mail, $objetinscrip, $messageinscrip);
-    header('location: ../php/modal.php?success=1');
+    header('location: ../index.php?success=1');
     }else{
     header('location: ../php/inscription.php?alert=1');
     }

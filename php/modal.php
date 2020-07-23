@@ -26,7 +26,7 @@
             </fieldset>
             <fieldset>
             <form>
-            <input type = "button" value = "Retour"  onclick = "history.back()" class="mb-5">
+                <a href="index.php"><input type = "button" value = "Retour"  onclick = "history.back()" class="mb-5"></a>
             </form> 
                 <button name="submit" type="submit">SOUMETTRE</button>
             </fieldset>

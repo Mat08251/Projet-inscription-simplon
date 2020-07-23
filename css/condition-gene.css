@@ -8,7 +8,7 @@ body {
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 4px 5px 0px 0px rgb(153, 153, 153);;
+    box-shadow: 4px 5px 0px 0px rgba(153, 153, 153, 0.658);;
 }
 
 .barre-deco {

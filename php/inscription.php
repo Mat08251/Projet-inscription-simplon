@@ -54,12 +54,14 @@
                 <input placeholder="Confirmer le mot de passe.." name="mdp2" id="mdp2" type="password" tabindex="7" required>
             </fieldset>
             <fieldset>
-                <button name="submit" type="submit">RETOUR</button>
+                <form>
+                    <a href="../index.php"><button name="submit" type="button">RETOUR</button></a>
+                </form>
                 <button name="submit" type="submit">SOUMETTRE</button>
             </fieldset>
         </form>
     </div>
-ahah
+
   
 
 <?php include ('../includes/footer.php'); ?>
