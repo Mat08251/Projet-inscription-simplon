@@ -56,6 +56,7 @@
     
 
     <div class="accueil">
+    <!-- alert -->
         <center>
             <?php if(isset($_GET['alert'])) {
                     if($_GET['alert'] == 1) {?>
@@ -63,7 +64,16 @@
                         Les identifiants ne sont pas bon.
                         </div>
             <?php }} ?>
-         </center>
+
+            <!-- success -->
+            <?php if(isset($_GET['success'])) {
+                if($_GET['success'] == 1) {?>
+                    <div class="alert alert-success" role="alert">
+                    Vous etes bien inscrit.
+                    </div>
+            <?php }}
+            ?>
+            </center>
             <img class="image" src="images/team-work-business-startup 1.png" alt="image-accueil">
             <h5 class="titre-accueil card-title col-xm-6">BIENVENUE</h5>
     </div>

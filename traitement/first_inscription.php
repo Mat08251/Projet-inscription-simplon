@@ -40,9 +40,14 @@ if($count==0) {
     $id_users->execute(array(
         'id_candidat' => $id_candidat
     ));
-    $_SESSION['pseudo'] = $pseudo;
+    
     mail($mail, $objetinscrip, $messageinscrip);
-    header('location: ../php/modal.php?success=1');
+
+    $_SESSION['mail'] = $mail;
+    $_SESSION['pseudo'] = $pseudo;
+    $_SESSION['id_candidat'] = $id_candidat;
+
+    header('location: ../index.php?success=1');
     }else{
     header('location: ../php/inscription.php?alert=1');
     }

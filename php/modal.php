@@ -1,13 +1,6 @@
 
 <div id="connexion" class="modal">
-<center>  <?php if(isset($_GET['success'])) {
-                if($_GET['success'] == 1) {?>
-                    <div class="alert alert-success" role="alert">
-                    Vous etes bien inscrit.
-                    </div>
-            <?php }}
-            ?>
-            </center>
+
         <form id="form_connexion" action="traitement/connectuser.php" method="post">
             <h3 class="titre_form">IDENTIFIANTS</h3>
             <fieldset>
@@ -22,7 +15,7 @@
                 <label for="ssouvenir">Se souvenir de moi</label>
             </fieldset>
             <fieldset>
-                <a href="inscription.php">Crée un compte</a>
+                <a href="php/inscription.php">Crée un compte</a>
             </fieldset>
             <fieldset>
             <form>

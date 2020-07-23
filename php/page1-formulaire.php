@@ -81,7 +81,7 @@ $id_candidat = $_SESSION['id_candidat'];
                     <input placeholder="N°, bis,.." name="ligne2" id="ligne2" type="text" tabindex="9" required autofocus>
 
                     <label for="champ_ligne" class="champ_ligne">Complément d'adresse</label>
-                    <input placeholder="Bat, étage, autres" name="ligne" id="ligne" type="text" tabindex="10" required autofocus>
+                    <input placeholder="Bat, étage, autres" name="ligne" id="ligne" type="text" tabindex="10" autofocus>
 
                     <label for="champ_pays" class="champ_pays">Pays</label>
                     <select class="champ_pays" name="pays" id="pays" required>
