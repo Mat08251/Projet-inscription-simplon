@@ -61,16 +61,17 @@ $id = $_SESSION['id_candidat'];  ?>
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 1");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 1");
                             $message->execute();
 
                             $msg = $message->fetch();
                        ?>
-                    <textarea id="info1" name="reponse1" rows=6 name="info1" placeholder="Votre réponse" required index=4><?= $msg['message']; ?></textarea>
+                    <textarea id="info1" name="reponse1" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                     <?php  ?>
                 </div>
                 <?php $req->closeCursor(); 
                       $message->closeCursor();?>
+
 
                 <?php
                             $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 2");
@@ -88,7 +89,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
                             $msg = $message->fetch();
                        ?>
-                    <textarea id="info1" name="reponse2" rows=6 name="info1" placeholder="Votre réponse" required index=4><?= $msg['message'] ?></textarea>
+                    <textarea id="info1" name="reponse2" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
                 <?php $req->closeCursor(); 
                       $message->closeCursor();?>
@@ -109,7 +110,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
                             $msg = $message->fetch();
                        ?>
-                    <textarea id="info1" name="reponse3" rows=6 name="info1" placeholder="Votre réponse" required index=4><?= $msg['message'] ?></textarea>
+                    <textarea id="info1" name="reponse3" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
                 <?php $req->closeCursor();
                       $message->closeCursor();?>
@@ -130,7 +131,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
                             $msg = $message->fetch();
                        ?>
-                    <textarea id="info1" name="reponse4" rows=6 name="info1" placeholder="Votre réponse" required index=4><?= $msg['message'] ?></textarea>
+                    <textarea id="info1" name="reponse4" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
                 <?php $req->closeCursor(); 
                       $message->closeCursor();?>
