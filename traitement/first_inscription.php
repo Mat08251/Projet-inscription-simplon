@@ -35,11 +35,10 @@ if($count==0) {
     while($data = $thisusers->fetch()) {
         $id_candidat = $data['id_candidat'];
     };
-    $id_users = $bdd->prepare("INSERT INTO formulaire (id_candidat) VALUE (:id_candidat)");
+    
+    mail($mail, $objetinscrip, $messageinscrip);
 
-    $id_users->execute(array(
-        'id_candidat' => $id_candidat
-    ));
+    $_SESSION['mail'] = $mail;
     $_SESSION['pseudo'] = $pseudo;
     mail($mail, $objetinscrip, $messageinscrip);
     header('location: ../index.php?success=1');
