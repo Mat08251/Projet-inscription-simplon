@@ -35,11 +35,6 @@ if($count==0) {
     while($data = $thisusers->fetch()) {
         $id_candidat = $data['id_candidat'];
     };
-    $id_users = $bdd->prepare("INSERT INTO formulaire (id_candidat) VALUE (:id_candidat)");
-
-    $id_users->execute(array(
-        'id_candidat' => $id_candidat
-    ));
     
     mail($mail, $objetinscrip, $messageinscrip);
 
