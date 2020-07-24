@@ -138,8 +138,8 @@ $id = $_SESSION['id_candidat'];  ?>
                         
             </div>
             <div class="bouton">
-                <a href="../php/page1-formulaire.php" class="bouton-suivant align-items-center"><button type="button"
-                        class="btn  btn-lg"><span class="texte-bouton text-center">Précédent</span></button></a>
+                <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"
+                        class="btn  btn-lg pt-1"><span class="texte-bouton text-center">Précédent</span></button></a>
 
 
 
