@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+require('../traitement/connectbdd.php');
+session_start();
+$id = $_SESSION['id_candidat'];  ?>
 <!Doctype html>
 <html lang="en">
 
@@ -46,61 +49,82 @@
                     <h2>ETAPE 4</h2>
                 </div>
 
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 9");
+                            $req->execute();
 
+                            $donnees = $req->fetch();
+                       ?>
 
                 <div class="cadre1">
-                    <p class="question">Quel est votre niveau d'anglais ?</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
 
                     <hr>
-                    <div>
-                        <input type="checkbox" id="tb" name="tb" value="tb">
-                        <label for="tb">Tres bien</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="b" name="b" value="b">
-                        <label for="b">Bien</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="i" name="i" value="i">
-                        <label for="i">Intermédiare</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="d" name="d" value="d">
-                        <label for="d">Débutant</label>
-                    </div>
+                    <select class="nationalite" name="nationalite" id="nationalite" required>
+                     <option value="" disabled selected>Sélectionnez votre niveau</option>
+                        <option name="langue1" value="Tres bien">Tres bien</option>
+                        <option name="langue2" value="Bien">Bien</option>
+                        <option name="langue3" value="Intermédiare">Intermédiare</option>
+                        <option name="langue4" value="Débutant">Débutant</option>
+                     </select>
                 </div>
 
+
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 10");
+                            $req->execute();
+
+                            $donnees = $req->fetch();
+                       ?>
+
                 <div class="cadre2">
-                    <p class="question">Quel est le dernier diplome que vous ayez obtenu ?</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
                     <hr>
 
                     <select>
-                        <option>Sans diplôme</option>
-                        <option>Brevet des collèges</option>
-                        <option>CAP / BEP</option>
-                        <option>BAC</option>
+                    <option value="" disabled selected>Sélectionnez votre diplôme</option>
+                        <option name="diplome1" value="Sans diplôme">Sans diplôme</option>
+                        <option name="diplome2" value="Brevet des collèges">Brevet des collèges</option>
+                        <option name="diplome3" value="CAP / BEP">CAP / BEP</option>
+                        <option name="diplome4" value="BAC">BAC</option>
                     </select>
                 </div>
 
+
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 11");
+                            $req->execute();
+
+                            $donnees = $req->fetch();
+                       ?>
+
                 <div class="cadre3">
-                    <p class="question">Etes vous disponible a temps plein des la pré-rentrée ?</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
 
                     <hr>
-
+                    
                     <div>
-                        <input type="checkbox" id="o" name="o" value="o">
+                        <input type="radio" id="o" name="disponibilite" value="oui">
                         <label for="o">Oui</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="n" name="n" value="n">
+                        <input type="radio" id="n" name="disponibilite" value="non">
                         <label for="n">Non</label>
                     </div>
 
 
                 </div>
 
+
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 12");
+                            $req->execute();
+
+                            $donnees = $req->fetch();
+                       ?>
+
                 <div class="cadre4">
-                    <p class="question">Sinon, quelles sont vos contraintes ?</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
                     <hr>
 
 
@@ -109,8 +133,17 @@
                             index=4></textarea>
                     </div>
                 </div>
+
+
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 13");
+                            $req->execute();
+
+                            $donnees = $req->fetch();
+                       ?>
+
                 <div class="cadre5">
-                    <p class="question">Statut (plusieurs réponses possibles)</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
                     <hr>
 
 
