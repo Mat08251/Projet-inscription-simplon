@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php require('../traitement/connectbdd.php');
+session_start();
+$id = $_SESSION['id_candidat'];  ?>
 <!Doctype html>
 <html lang="en">
 
@@ -7,6 +9,7 @@
     <title>Formulaire d'inscription</title>
     <meta name="description" content="Creation formulaire d'inscription à une formation" />
     <meta http-equiv="content-language" content="fr" />
+    <META HTTP-EQUIV="Refresh" CONTENT="30;URL=../index.php">
     <link href="../css/style-fin-inscription.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -28,11 +31,14 @@
                 <div class="div_formulaire">
                     <h2>VALIDATION DE VOTRE INSCRIPTION EN LIGNE<h2>
                 </div>
+                <?php
+                $nom_user = $bdd->prepare("SELECT * FROM candidat WHERE id_candidat = '$id'");
+                $nom_user->execute();
 
-
-
+                $nom = $nom_user->fetch();
+                ?>
                 <div class="cadre1">
-                    <h2>Merci Monsieur</h2><h1>Dujardin,</h1>
+                    <h2>Merci Monsieur</h2><h1><?=$nom['nom']?>,</h1>
                     <h3> Nous vous confirmons la validation de votre inscription
                         à la formation “ Développeur - se Web & web mobile ”.<br>
                     </h3>
@@ -73,6 +79,8 @@
 <?php include ('../includes/footer.php'); ?>
 
 <script src="https://unpkg.com/scrollreveal"></script>
+
+
 </body>
 
 </html>

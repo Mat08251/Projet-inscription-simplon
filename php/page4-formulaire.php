@@ -31,7 +31,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <?php include ('../includes/navbar.php'); ?>
 
     <div class="form_contact">
-        <form id="form_contact" method="post" action="traitement/insert_contact.php">
+        <form id="form_contact" method="post" action="../traitement/insert_page4.php">
 
             <div class="div_container">
                 <div class="div_navbar"></div>
@@ -60,7 +60,7 @@ $id = $_SESSION['id_candidat'];  ?>
                     <p class="question"><?= $donnees['question'] ?></p><br>
 
                     <hr>
-                    <select class="nationalite" name="nationalite" id="nationalite" required>
+                    <select class="reponse9" name="reponse9" id="reponse9" required>
                      <option value="" disabled selected>Sélectionnez votre niveau</option>
                         <option name="langue1" value="Tres bien">Tres bien</option>
                         <option name="langue2" value="Bien">Bien</option>
@@ -81,7 +81,7 @@ $id = $_SESSION['id_candidat'];  ?>
                     <p class="question"><?= $donnees['question'] ?></p><br>
                     <hr>
 
-                    <select>
+                    <select class="reponse10" name="reponse10" id="reponse10">
                     <option value="" disabled selected>Sélectionnez votre diplôme</option>
                         <option name="diplome1" value="Sans diplôme">Sans diplôme</option>
                         <option name="diplome2" value="Brevet des collèges">Brevet des collèges</option>
@@ -104,11 +104,11 @@ $id = $_SESSION['id_candidat'];  ?>
                     <hr>
                     
                     <div>
-                        <input type="radio" id="o" name="disponibilite" value="oui">
+                        <input type="radio" id="o" name="reponse11" value="oui">
                         <label for="o">Oui</label>
                     </div>
                     <div>
-                        <input type="radio" id="n" name="disponibilite" value="non">
+                        <input type="radio" id="n" name="reponse11" value="non">
                         <label for="n">Non</label>
                     </div>
 
@@ -129,7 +129,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
 
                     <div class="content-cadre4">
-                        <textarea id="info4" rows=11 cols=50 name="info4" placeholder="Votre réponse" required
+                        <textarea id="info4" rows=11 name="reponse12" cols=50 name="info4" placeholder="Votre réponse" required
                             index=4></textarea>
                     </div>
                 </div>
@@ -148,36 +148,29 @@ $id = $_SESSION['id_candidat'];  ?>
 
 
                     <div>
-                        <input type="checkbox" id="eleve_etudiant" name="eleve_etudiant" value="eleve_etudiant">
-                        <label for="eleve_etudiant">Eleve ou étudiant</label>
+                        <input type="checkbox" id="eleve_etudiant" name="reponse[]" value="Eleve ou étudiant">Eleve ou étudiant</input>
+                        
                     </div>
                     <div>
-                        <input type="checkbox" id="Salarie" name="Salarie" value="Salarie">
-                        <label for="Salarie">Salarié</label>
+                        <input type="checkbox" id="Salarie" name="reponse[]" value="Salarie">Salarie</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="i_pole_emploi" name="i_pole_emploi" value="i_pole_emploi">
-                        <label for="i_pole_emploi">Demandeur d'emploi indemnisé par Pole emploi</label>
+                        <input type="checkbox" id="i_pole_emploi" name="reponse[]" value="Demandeur d'emploi indemnisé par Pole emploi">Demandeur d'emploi indemnisé par Pole emploi</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="ni_pole_emploi" name="ni_pole_emploi" value="ni_pole_emploi">
-                        <label for="ni_pole_emploi">Demandeur d'emploi non indemnisé par Pole emploi</label>
+                        <input type="checkbox" id="ni_pole_emploi" name="reponse[]" value="Demandeur d'emploi non indemnisé par Pole emploi">Demandeur d'emploi non indemnisé par Pole emploi</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="RSA" name="RSA" value="RSA">
-                        <label for="RSA">Allocataire RSA</label>
+                        <input type="checkbox" id="RSA" name="reponse[]" value="Allocataire RSA">Allocataire RSA</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="ASS" name="ASS" value="ASS">
-                        <label for="ASS">Allocataire ASS</label>
+                        <input type="checkbox" id="ASS" name="reponse[]" value="Allocataire ASS">Allocataire ASS</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="ASH" name="ASH" value="ASH">
-                        <label for="ASH">Allocataire ASH</label>
+                        <input type="checkbox" id="ASH" name="reponse[]" value="Allocataire ASH">Allocataire ASH</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="other" name="other" value="other">
-                        <label for="other">Autre</label>
+                        <input type="checkbox" id="other" name="reponse[]" value="Autre">Autre</input>
                     </div>
                 </div>
 

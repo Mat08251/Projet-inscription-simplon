@@ -8,10 +8,6 @@ $reponse6 = !empty($_POST['reponse6']) ? $_POST['reponse6'] : NULL;
 $reponse7 = !empty($_POST['reponse7']) ? $_POST['reponse7'] : NULL;
 $reponse8 = !empty($_POST['reponse8']) ? $_POST['reponse8'] : NULL;
 
-// SELECT dans la db WHERE id_candidat = $id AND id_question = id de ta question
-// Tu fais la méthode $count = $req->rowCount(); si il y a 0 lignes : insert car ça existe pas
-// Else : UPDATE
-
 $rep1 = $bdd->prepare("SELECT * FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 5");
 $rep1->execute();
 
