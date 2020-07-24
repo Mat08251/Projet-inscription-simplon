@@ -52,5 +52,6 @@ sr.reveal('.cadre_inscription_pied_page', {
 sr.reveal('#precedent_submit', {
     origin: 'bottom',
     distance: '80px',
-    duration: 2500
+    duration: 2500,
+    delay: 500
 });

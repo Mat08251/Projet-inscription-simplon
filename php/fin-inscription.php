@@ -79,8 +79,7 @@ $id = $_SESSION['id_candidat'];  ?>
 <?php include ('../includes/footer.php'); ?>
 
 <script src="https://unpkg.com/scrollreveal"></script>
-
-
+<script src="../js/fin-inscription.js"></script>
 </body>
 
 </html>
