@@ -36,7 +36,7 @@
                     <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
                 </div>
 
-                <div class="div_formulaire">
+                <div class="div_formulaire pt-1">
                     <h2>FORMULAIRE D'INSCRIPTION EN LIGNE</h2>
                 </div>
                 <a class="information_champs_inscription">Veuillez remplir tous les champs s'il vous plaît</a>
@@ -150,7 +150,7 @@
 
 
                 <div class="cadre_inscription_pied_page">
-                    <div class="validation_inscription">Cliquez sur le lien ci-dessous pour finaliser votre inscription.
+                    <div class="validation_inscription pt-2">Cliquez sur le lien ci-dessous pour finaliser votre inscription.
                     </div>
                 </div>
 
