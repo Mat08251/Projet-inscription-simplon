@@ -80,11 +80,11 @@
             
             </div>
             <div class="bouton">
-                <a href="../php/page2-formulaire.php" class="bouton-suivant align-items-center"><button type="button" class="btn  btn-lg">Précédent</button></a>
+                <a href="../php/page2-formulaire.php" class="bouton-precedent align-items-center"><button type="button" class="btn  btn-lg pt-1">Précédent</button></a>
                 
 
                     
-                <a href="../php/page4-formulaire.php" class="bouton-suivant align-items-center"><button type="submit" class="btn  btn-lg">Suivant</button></a>
+                <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
             </div>
         </form>
     </div>

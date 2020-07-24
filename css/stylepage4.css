@@ -9,11 +9,11 @@ body
     
 }
 h1 {
-    font-size: 64px !important;
+    font-size: 45px !important;
 }
 h2 
 {
-    font-size:40px !important;
+    font-size:28px !important;
 }
 h2 .formulaire
 {
@@ -33,17 +33,17 @@ h3
 
 .div_titre_formation {
     grid-column:1/49;
-    grid-row: 1/8;
+    grid-row: 1/6;
     background-color: rgb(219, 9, 9);
     color: white;
-    box-shadow: 0px 4px 10px gray;
+    box-shadow: 10px 10px 10px 5px gray;
 }
 .div_formulaire {
     grid-column: 2/47;
-    grid-row: 10/13;
+    grid-row: 10/11;
     background-color:#514D4D;
     color:white;
-    box-shadow: 0px 4px 10px  grey;
+    box-shadow: 10px 10px 10px  black;
 }
 .information_champs_inscription 
 {
