@@ -177,6 +177,8 @@ $id = $_SESSION['id_candidat'];  ?>
     </div>
 
     <?php include ('../includes/footer.php'); ?>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 
 </html>

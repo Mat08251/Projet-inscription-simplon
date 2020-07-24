@@ -15,7 +15,7 @@
                         <span class="icon"><i class="fas fa-user"></i></span><?= $_SESSION['pseudo']; ?>
                     </li>
                     <li class="nav-item">
-                        <a href="traitement/deconnexion_session.php">Deconnexion</a>
+                        <a href="../traitement/deconnexion_session.php">Deconnexion</a>
                     </li>
                     <?php }else{ ?>
                     <li class="nav-item">
