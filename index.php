@@ -74,7 +74,7 @@
             <?php }}
             ?>
             </center>
-            <img class="image" src="images/team-work-business-startup 1.png" alt="image-accueil">
+            <img class="image" src="images/simplon.jpg" alt="image-accueil">
             <h5 class="titre-accueil card-title col-xm-6">BIENVENUE</h5>
     </div>
 
@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <div class="parallax" data-parallax="scroll" data-z-index="" data-image-src="images/team-work-business-startup 1.png"></div>
+    <div class="parallax" data-parallax="scroll" data-z-index="" data-image-src="images/simplon-accueil.jpg"></div>
 
 
     <!--card des formations-->
@@ -162,7 +162,7 @@
         </div>
     </div>
 
-    <div class="parallax" data-parallax="scroll" data-z-index="2" data-image-src="images/team-work-business-startup 1.png"></div>
+    <div class="parallax" data-parallax="scroll" data-z-index="2" data-image-src="images/simplon2.jpg"></div>
 
     <!--card des formations-->
     <div class="formation card  justify-center" >
