@@ -95,7 +95,7 @@ $id = $_SESSION['id_candidat'];  ?>
                       $message->closeCursor();?>
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 6");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 3");
                             $req->execute();
 
                             $donnees = $req->fetch();
@@ -116,7 +116,7 @@ $id = $_SESSION['id_candidat'];  ?>
                       $message->closeCursor();?>
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 7");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 4");
                             $req->execute();
 
                             $donnees = $req->fetch();
