@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+require('../traitement/connectbdd.php');
+session_start();
+$id = $_SESSION['id_candidat'];  ?>
 <!Doctype html>
 <html lang="en">
 
@@ -28,7 +31,7 @@
     <?php include ('../includes/navbar.php'); ?>
 
     <div class="form_contact">
-        <form id="form_contact" method="post" action="traitement/insert_contact.php">
+        <form id="form_contact" method="post" action="../traitement/insert_page4.php">
 
             <div class="div_container">
                 <div class="div_navbar"></div>
@@ -46,105 +49,128 @@
                     <h2>ETAPE 4</h2>
                 </div>
 
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 9");
+                            $req->execute();
 
+                            $donnees = $req->fetch();
+                       ?>
 
                 <div class="cadre1">
-                    <p class="question">Quel est votre niveau d'anglais ?</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
 
                     <hr>
-                    <div>
-                        <input type="checkbox" id="tb" name="tb" value="tb">
-                        <label for="tb">Tres bien</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="b" name="b" value="b">
-                        <label for="b">Bien</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="i" name="i" value="i">
-                        <label for="i">Intermédiare</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="d" name="d" value="d">
-                        <label for="d">Débutant</label>
-                    </div>
+                    <select class="reponse9" name="reponse9" id="reponse9" required>
+                     <option value="" disabled selected>Sélectionnez votre niveau</option>
+                        <option name="langue1" value="Tres bien">Tres bien</option>
+                        <option name="langue2" value="Bien">Bien</option>
+                        <option name="langue3" value="Intermédiare">Intermédiare</option>
+                        <option name="langue4" value="Débutant">Débutant</option>
+                     </select>
                 </div>
 
+
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 10");
+                            $req->execute();
+
+                            $donnees = $req->fetch();
+                       ?>
+
                 <div class="cadre2">
-                    <p class="question">Quel est le dernier diplome que vous ayez obtenu ?</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
                     <hr>
 
-                    <select>
-                        <option>Sans diplôme</option>
-                        <option>Brevet des collèges</option>
-                        <option>CAP / BEP</option>
-                        <option>BAC</option>
+                    <select class="reponse10" name="reponse10" id="reponse10">
+                    <option value="" disabled selected>Sélectionnez votre diplôme</option>
+                        <option name="diplome1" value="Sans diplôme">Sans diplôme</option>
+                        <option name="diplome2" value="Brevet des collèges">Brevet des collèges</option>
+                        <option name="diplome3" value="CAP / BEP">CAP / BEP</option>
+                        <option name="diplome4" value="BAC">BAC</option>
                     </select>
                 </div>
 
+
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 11");
+                            $req->execute();
+
+                            $donnees = $req->fetch();
+                       ?>
+
                 <div class="cadre3">
-                    <p class="question">Etes vous disponible a temps plein des la pré-rentrée ?</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
 
                     <hr>
-
+                    
                     <div>
-                        <input type="checkbox" id="o" name="o" value="o">
+                        <input type="radio" id="o" name="reponse11" value="oui">
                         <label for="o">Oui</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="n" name="n" value="n">
+                        <input type="radio" id="n" name="reponse11" value="non">
                         <label for="n">Non</label>
                     </div>
 
 
                 </div>
 
+
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 12");
+                            $req->execute();
+
+                            $donnees = $req->fetch();
+                       ?>
+
                 <div class="cadre4">
-                    <p class="question">Sinon, quelles sont vos contraintes ?</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
                     <hr>
 
 
                     <div class="content-cadre4">
-                        <textarea id="info4" rows=11 cols=50 name="info4" placeholder="Votre réponse" required
+                        <textarea id="info4" rows=11 name="reponse12" cols=50 name="info4" placeholder="Votre réponse" required
                             index=4></textarea>
                     </div>
                 </div>
+
+
+                <?php
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 13");
+                            $req->execute();
+
+                            $donnees = $req->fetch();
+                       ?>
+
                 <div class="cadre5">
-                    <p class="question">Statut (plusieurs réponses possibles)</p><br>
+                    <p class="question"><?= $donnees['question'] ?></p><br>
                     <hr>
 
 
                     <div>
-                        <input type="checkbox" id="eleve_etudiant" name="eleve_etudiant" value="eleve_etudiant">
-                        <label for="eleve_etudiant">Eleve ou étudiant</label>
+                        <input type="checkbox" id="eleve_etudiant" name="reponse[]" value="Eleve ou étudiant">Eleve ou étudiant</input>
+                        
                     </div>
                     <div>
-                        <input type="checkbox" id="Salarie" name="Salarie" value="Salarie">
-                        <label for="Salarie">Salarié</label>
+                        <input type="checkbox" id="Salarie" name="reponse[]" value="Salarie">Salarie</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="i_pole_emploi" name="i_pole_emploi" value="i_pole_emploi">
-                        <label for="i_pole_emploi">Demandeur d'emploi indemnisé par Pole emploi</label>
+                        <input type="checkbox" id="i_pole_emploi" name="reponse[]" value="Demandeur d'emploi indemnisé par Pole emploi">Demandeur d'emploi indemnisé par Pole emploi</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="ni_pole_emploi" name="ni_pole_emploi" value="ni_pole_emploi">
-                        <label for="ni_pole_emploi">Demandeur d'emploi non indemnisé par Pole emploi</label>
+                        <input type="checkbox" id="ni_pole_emploi" name="reponse[]" value="Demandeur d'emploi non indemnisé par Pole emploi">Demandeur d'emploi non indemnisé par Pole emploi</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="RSA" name="RSA" value="RSA">
-                        <label for="RSA">Allocataire RSA</label>
+                        <input type="checkbox" id="RSA" name="reponse[]" value="Allocataire RSA">Allocataire RSA</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="ASS" name="ASS" value="ASS">
-                        <label for="ASS">Allocataire ASS</label>
+                        <input type="checkbox" id="ASS" name="reponse[]" value="Allocataire ASS">Allocataire ASS</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="ASH" name="ASH" value="ASH">
-                        <label for="ASH">Allocataire ASH</label>
+                        <input type="checkbox" id="ASH" name="reponse[]" value="Allocataire ASH">Allocataire ASH</input>
                     </div>
                     <div>
-                        <input type="checkbox" id="other" name="other" value="other">
-                        <label for="other">Autre</label>
+                        <input type="checkbox" id="other" name="reponse[]" value="Autre">Autre</input>
                     </div>
                 </div>
 
