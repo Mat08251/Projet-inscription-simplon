@@ -112,7 +112,7 @@ session_start(); ?>
             </div>
             <div class="bouton">
                 <a href="../php/page1-formulaire.php" class="bouton-suivant align-items-center"><button type="button"
-                        class="btn  btn-lg">Précédent</button></a>
+                        class="btn  btn-lg"><span class="texte-bouton text-center">Précédent</span></button></a>
 
 
 

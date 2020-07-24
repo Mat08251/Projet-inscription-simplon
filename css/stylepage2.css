@@ -125,21 +125,25 @@ hr
     
 .bouton {
     margin-left: 28%;
-    margin-top: -4%!important;
+    margin-top: -6%!important;
     margin-bottom: 100px;
+}
+
+.texte-bouton {
+    margin-top: -80px!important;
 }
 
 .bouton-suivant {
     display: inline;
     margin-left: 14.5%;
-    padding: 0.4%;
+    padding: 0.6%;
     border: 1px solid black;
     border-radius: 8px 8px;
     box-shadow: 2px 4px 0px 0px rgb(153, 153, 153);
 }
 
 .bouton-suivant:hover {
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(240, 240, 240);
 }
 
 .containers {
