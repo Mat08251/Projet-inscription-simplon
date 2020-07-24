@@ -42,7 +42,7 @@ $id_candidat = $_SESSION['id_candidat'];
 
                     <div class="background_image"></div>
 
-
+            
                     <label for="champ_nom" class="champ_nom">Nom</label>
                     <input placeholder="Nom" type="text" name="nom" id="nom" required autofocus tabindex="1">
 
@@ -127,6 +127,7 @@ $id_candidat = $_SESSION['id_candidat'];
     <?php include ('../includes/footer.php'); ?>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../js/page1-formulaire.js"></script>
 </body>
 
 

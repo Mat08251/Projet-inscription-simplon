@@ -179,6 +179,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <?php include ('../includes/footer.php'); ?>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../js/page3-formulaire.js"></script>
 </body>
 
 </html>
