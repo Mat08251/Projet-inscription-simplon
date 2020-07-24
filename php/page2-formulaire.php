@@ -1,6 +1,7 @@
 <?php 
 require('../traitement/connectbdd.php');
-session_start(); ?>
+session_start();
+$id = $_SESSION['id_candidat'];  ?>
 <!Doctype html>
 <html lang="en">
 
@@ -30,7 +31,7 @@ session_start(); ?>
     <?php include ('../includes/navbar.php'); ?>
 
     <div class="form_contact">
-        <form id="form_contact" method="post" action="traitement/insert_contact.php">
+        <form id="form_contact" method="post" action="../traitement/insert_page2.php">
 
             <div class="div_container">
                 <div class="div_navbar"></div>
@@ -59,10 +60,18 @@ session_start(); ?>
                 <div class="cadre1">
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
+                    <?php
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 1");
+                            $message->execute();
 
-                    <textarea id="info1" rows=6 name="info1" placeholder="Votre réponse" required index=4></textarea>
+                            $msg = $message->fetch();
+                       ?>
+                    <textarea id="info1" name="reponse1" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
+                    <?php  ?>
                 </div>
-                <?php $req->closeCursor(); ?>
+                <?php $req->closeCursor(); 
+                      $message->closeCursor();?>
+
 
                 <?php
                             $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 2");
@@ -74,10 +83,16 @@ session_start(); ?>
                 <div class="cadre2">
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
+                    <?php
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 2");
+                            $message->execute();
 
-                    <textarea id="info1" rows=6 name="info1" placeholder="Votre réponse" required index=4></textarea>
+                            $msg = $message->fetch();
+                       ?>
+                    <textarea id="info1" name="reponse2" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
-                <?php $req->closeCursor(); ?>
+                <?php $req->closeCursor(); 
+                      $message->closeCursor();?>
 
                 <?php
                             $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 6");
@@ -89,10 +104,16 @@ session_start(); ?>
                 <div class="cadre3">
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
+                    <?php
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 3");
+                            $message->execute();
 
-                    <textarea id="info1" rows=6 name="info1" placeholder="Votre réponse" required index=4></textarea>
+                            $msg = $message->fetch();
+                       ?>
+                    <textarea id="info1" name="reponse3" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
-                <?php $req->closeCursor(); ?>
+                <?php $req->closeCursor();
+                      $message->closeCursor();?>
 
                 <?php
                             $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 7");
@@ -104,10 +125,16 @@ session_start(); ?>
                 <div class="cadre4">
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
+                    <?php
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 4");
+                            $message->execute();
 
-                    <textarea id="info1" rows=6 name="info1" placeholder="Votre réponse" required index=4></textarea>
+                            $msg = $message->fetch();
+                       ?>
+                    <textarea id="info1" name="reponse4" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
-                <?php $req->closeCursor(); ?>
+                <?php $req->closeCursor(); 
+                      $message->closeCursor();?>
                         
             </div>
             <div class="bouton">
@@ -116,8 +143,8 @@ session_start(); ?>
 
 
 
-                <a href="../php/page3-formulaire.php" class="bouton-suivant align-items-center"><button type="submit"
-                        class="btn  btn-lg">Suivant</button></a>
+                <button type="submit"
+                        class="bouton-suivant btn-lg">Suivant</button>
             </div>
         </form>
     </div>
