@@ -20,8 +20,8 @@
 <body>
 <?php include ('../includes/navbar.php'); ?>
 
-            <div class="div_container">
-                <div class="div_titre_formation"><br>
+            <div class="div_container pb-4">
+                <div class="div_titre_formation pb-1"><br>
                     <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
                 </div>
 
@@ -55,6 +55,7 @@
 
                     <h2 class="message_fin">Vous allez être redirigé automatiquement vers notre site </h2>
                     <p> (si rien ne se produit, veuillez cliquer sur le lien de redirection)</p>
+                    <a href="../index.php"><button type="button" class="btn bouton-renvois  btn-lg text-center"><span  class="lien-redirection text-center">cliquer ici</span></button></a>
                 </div>
             </div>
 
@@ -70,6 +71,8 @@
 
 
 <?php include ('../includes/footer.php'); ?>
+
+<script src="https://unpkg.com/scrollreveal"></script>
 </body>
 
 </html>
