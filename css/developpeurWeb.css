@@ -7,6 +7,14 @@ body {
     width: 16%;
 }
 
+.entete-table {
+    background-color: rgb(233, 21, 21)!important;
+}
+
+.liste-formation {
+    background-color: rgb(216, 216, 216);
+}
+
 
 .coloneLien {
     padding-right: 66px!important;
