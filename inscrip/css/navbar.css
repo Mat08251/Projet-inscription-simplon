@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 50px!important;
+}
+
+nav {
+    width: 100%!important;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    opacity: 0.8;
+}
+
+.navbar-nav {
+    width: 100%;
+    margin-left: 72%;
+}
+
+.nav-item1, .nav-item {
+    font-size: 14px;
+}
+
+.nav-link{
+    width: 100%;
+    font-weight: bold;
+}
+
+.nav-item1 {
+    margin-right: 14%;
+}
+
+.icon {
+    color: rgb(255, 0, 0);
+    margin-right: 4%;
+}
+
+@media only screen and (min-width: 300px) and (max-width:812px) {
+    .nav  {
+        width: auto;
+    }
+    
+    .navbar-nav {
+        margin-left: 0%;
+    }
+}

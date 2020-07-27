@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.confirmation {
+    font-size: 50px;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+.barre-confirmation {
+    background-color: rgb(134, 134, 134)!important;
+    margin-left: 34%!important;
+    margin-right: 34%!important;
+    height: 2px!important;
+    margin-bottom: 70px;
+}
+
+.mot-cle {
+    font-weight: bold;
+}
+
+.texte-final {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
