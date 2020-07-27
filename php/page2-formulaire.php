@@ -51,7 +51,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 1");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 5");
                             $req->execute();
 
                             $donnees = $req->fetch();
@@ -61,7 +61,7 @@ $id = $_SESSION['id_candidat'];  ?>
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 1");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 5");
                             $message->execute();
 
                             $msg = $message->fetch();
@@ -74,7 +74,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 2");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 6");
                             $req->execute();
 
                             $donnees = $req->fetch();
@@ -84,7 +84,7 @@ $id = $_SESSION['id_candidat'];  ?>
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 2");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 6");
                             $message->execute();
 
                             $msg = $message->fetch();
@@ -95,7 +95,7 @@ $id = $_SESSION['id_candidat'];  ?>
                       $message->closeCursor();?>
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 3");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 7");
                             $req->execute();
 
                             $donnees = $req->fetch();
@@ -105,7 +105,7 @@ $id = $_SESSION['id_candidat'];  ?>
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 3");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 7");
                             $message->execute();
 
                             $msg = $message->fetch();
@@ -116,7 +116,7 @@ $id = $_SESSION['id_candidat'];  ?>
                       $message->closeCursor();?>
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 4");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 8");
                             $req->execute();
 
                             $donnees = $req->fetch();
@@ -126,7 +126,7 @@ $id = $_SESSION['id_candidat'];  ?>
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 4");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 8");
                             $message->execute();
 
                             $msg = $message->fetch();
