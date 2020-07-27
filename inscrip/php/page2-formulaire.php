@@ -10,7 +10,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <title>Formulaire d'inscription</title>
     <meta name="description" content="Creation formulaire d'inscription à une formation" />
     <meta http-equiv="content-language" content="fr" />
-    <link href="../css/stylepage3.css" rel='stylesheet' type='text/css' />
+    <link href="../css/stylepage2.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -31,7 +31,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <?php include ('../includes/navbar.php'); ?>
 
     <div class="form_contact">
-        <form id="form_contact" method="post" action="../traitement/insert_page3.php">
+        <form id="form_contact" method="post" action="../traitement/insert_page2.php">
 
             <div class="div_container">
                 <div class="div_navbar"></div>
@@ -46,122 +46,105 @@ $id = $_SESSION['id_candidat'];  ?>
 
                 <div class="blocFormulaire"></div>
                 <div class="etape2">
-                    <h2>ETAPE 3</h2>
+                    <h2>ETAPE 2</h2>
                 </div>
 
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 9");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 5");
                             $req->execute();
 
                             $donnees = $req->fetch();
                        ?>
+
                 <div class="cadre1">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
-
-
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 9");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 5");
                             $message->execute();
 
                             $msg = $message->fetch();
                        ?>
-                    <textarea id="info1" rows=6 name="reponse5" placeholder="Votre réponse"
-                        index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
+                    <textarea id="info1" name="reponse1" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
+                    <?php  ?>
                 </div>
                 <?php $req->closeCursor(); 
                       $message->closeCursor();?>
 
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 10");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 6");
                             $req->execute();
 
                             $donnees = $req->fetch();
                        ?>
+
                 <div class="cadre2">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
-
-
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 10");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 6");
                             $message->execute();
 
                             $msg = $message->fetch();
                        ?>
-                    <textarea id="info2" rows=11 name="reponse6" placeholder="Votre réponse"
-                        index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
+                    <textarea id="info1" name="reponse2" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
                 <?php $req->closeCursor(); 
                       $message->closeCursor();?>
 
-
-
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 11");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 7");
                             $req->execute();
 
                             $donnees = $req->fetch();
                        ?>
+
                 <div class="cadre3">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
-
-
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 11");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 7");
                             $message->execute();
 
                             $msg = $message->fetch();
                        ?>
-                    <textarea id="info3" rows=11 name="reponse7" placeholder="Votre réponse"
-                        index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
-
+                    <textarea id="info1" name="reponse3" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
-                <?php $req->closeCursor(); 
+                <?php $req->closeCursor();
                       $message->closeCursor();?>
 
-
-
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 12");
+                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 8");
                             $req->execute();
 
                             $donnees = $req->fetch();
                        ?>
+
                 <div class="cadre4">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
-
-
-                    <div class="content-cadre4">
-
-
-                        <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 12");
+                    <?php
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 8");
                             $message->execute();
 
                             $msg = $message->fetch();
                        ?>
-                        <textarea id="info4" rows=11 cols=50 name="reponse8" placeholder="Votre réponse"
-                            index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
-                    </div>
-                    <?php $req->closeCursor(); 
-                      $message->closeCursor();?>
+                    <textarea id="info1" name="reponse4" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
-
-
-
-
+                <?php $req->closeCursor(); 
+                      $message->closeCursor();?>
+                        
             </div>
             <div class="bouton">
-                <a href="../php/page2-formulaire.php" class="bouton-precedent align-items-center"><button type="button" class="btn  btn-lg pt-1">Précédent</button></a>
-                
+                <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"
+                        class="btn  btn-lg pt-1"><span class="texte-bouton text-center">Précédent</span></button></a>
 
-                    
-                <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
+
+
+                <button type="submit"
+                        class="bouton-suivant btn-lg">Suivant</button>
             </div>
         </form>
     </div>
@@ -170,7 +153,7 @@ $id = $_SESSION['id_candidat'];  ?>
         <ul class="progressbar ">
             <li class="active">Etape 1</li>
             <li class="active">Etape 2</li>
-            <li class="active">Etape 3</li>
+            <li class="">Etape 3</li>
             <li>Etape 4</li>
             <li>Etape 5</li>
         </ul>
@@ -179,7 +162,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <?php include ('../includes/footer.php'); ?>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="../js/page3-formulaire.js"></script>
+    <script src="../js/page2-formulaire.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,25 @@
+body {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.logo {
+    width: 16%;
+}
+
+.entete-table {
+    background-color: rgb(233, 21, 21)!important;
+}
+
+.liste-formation {
+    background-color: rgb(216, 216, 216);
+}
+
+
+.coloneLien {
+    padding-right: 66px!important;
+}
+
+.btn {
+    margin-left: 80px;
+}

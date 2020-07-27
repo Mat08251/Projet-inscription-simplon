@@ -57,7 +57,7 @@ $id = $_SESSION['id_candidat'];  ?>
                             $donnees = $req->fetch();
                        ?>
                 <div class="cadre1">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
 
 
@@ -81,7 +81,7 @@ $id = $_SESSION['id_candidat'];  ?>
                             $donnees = $req->fetch();
                        ?>
                 <div class="cadre2">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
 
 
@@ -106,7 +106,7 @@ $id = $_SESSION['id_candidat'];  ?>
                             $donnees = $req->fetch();
                        ?>
                 <div class="cadre3">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
 
 
@@ -132,7 +132,7 @@ $id = $_SESSION['id_candidat'];  ?>
                             $donnees = $req->fetch();
                        ?>
                 <div class="cadre4">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
 
 
