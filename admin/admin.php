@@ -19,8 +19,7 @@ include('../traitement/connectbdd.php');
     <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
     <center><a href="inscriptions.php" class="text-black-50 mt-5 mb-5">Accès aux inscriptions</a></center>
     <div class="container mt-2">
-       
-    <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Témoignages</center></h3>
+    <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Liste Participants</center></h3>
 
     <center><a href="" class="text-black-50">Ajouter un témoignage <i class="fas fa-plus-circle mb-4"></i></a></center>
 
@@ -37,22 +36,20 @@ include('../traitement/connectbdd.php');
 
 
         <?php
-            $readtestimonials = $bdd->prepare("SELECT * FROM ");
-            $readtestimonials->execute();
+            $azerty = $bdd->prepare("SELECT * FROM candidat");
+            $azerty->execute();
 
-            while ($donnees = $readtestimonials->fetch())
+            while ($donnees = $azerty->fetch())
         { ?>
         <tr>
-          <th scope="row"><?= $donnees['first_name']; ?></th>
-          <td><?= substr($donnees['text'], 0, 60); ?>...</td>
-
-          <!-- <td><a href="admincrud/update/testimonials.php?id= $donnees['id_testimonial'];" class="text-muted"><i
-                class="fas fa-user-edit"></i></a></td> -->
-          <td><button type="button" class="btn btn-danger">Danger</button></td>
+          <th scope="row"><?= $donnees['nom']; ?></th>
+          <td><?= $donnees['prenom']; ?></td>
+          <td>azerty</td>
+          <td><a href="plusdinfo.php?id=<?= $donnees['id_candidat'];?>" class="text-muted">Plus D'infos</a></td>
         </tr>
         <?php
 }
-$readtestimonials->closecursor();
+$azerty->closecursor();
 ?>
       </tbody>
     </table>
