@@ -2,7 +2,7 @@
 session_start();
 $id = $_SESSION['id_candidat'];  ?>
 <!Doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
