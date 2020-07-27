@@ -7,6 +7,7 @@ include('../traitement/connectbdd.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partie Administrateur</title>
+    <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -15,21 +16,23 @@ include('../traitement/connectbdd.php');
 
 <body class="bg-light">
     
-<h1 class="text-center font-weight-light font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</h1>
+<img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</h1>
     <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
     <center><a href="inscriptions.php" class="text-black-50 mt-5 mb-5">Accès aux inscriptions</a></center>
-    <div class="container mt-2">
-    <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Liste Participants</center></h3>
+    <div class=" mt-2">
+    <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Liste de formations</center></h3>
 
-    <center><a href="" class="text-black-50">Ajouter un témoignage <i class="fas fa-plus-circle mb-4"></i></a></center>
 
-    <div class="container mt-2">
+    <div class="info-forma container-fluid mt-2">
     <table class="table">
       <thead class="thead-light">
         <tr>
-          <th scope="col">Nom, Prénom</th>
-          <th scope="col">Email</th>
-          <th scope="col">Avis sur l'apprenant</th>
+          <th class="entete-table text-center" scope="col">Nom de la formation</th>
+          <th class="entete-table text-center" scope="col">Date de début de l'inscription</th>
+          <th class="entete-table text-center" scope="col">Date de fin de l'inscription</th>
+          <th class="entete-table text-center" scope="col">Début de la formation</th>
+          <th class="coloneImage entete-table text-center" scope="col">Image</th>
+          <th class="coloneLien entete-table text-center" scope="col">Lien d'acces</th>
         </tr>
       </thead>
       <tbody>
@@ -41,11 +44,13 @@ include('../traitement/connectbdd.php');
 
             while ($donnees = $azerty->fetch())
         { ?>
-        <tr>
-          <th scope="row"><?= $donnees['nom']; ?></th>
-          <td><?= $donnees['prenom']; ?></td>
-          <td>azerty</td>
-          <td><a href="plusdinfo.php?id=<?= $donnees['id_candidat'];?>" class="text-muted">Plus D'infos</a></td>
+        <tr class="liste-formation">
+          <th class="text-center" scope="row">Developpeur web</th>
+          <td class="text-center">1/1/2020</td>
+          <td class="text-center"> 2/1/2020</td>
+          <td class="text-center"> 2/1/2020</td>
+          <td><img src="../images/codage.jpg" class="card-img" alt="..."></td>
+          <td><button type="button" class="btn btn-success "><span class="texteButton">Voir la formation</span></button></td>
         </tr>
         <?php
 }

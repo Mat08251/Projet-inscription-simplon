@@ -1,0 +1,38 @@
+body {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.logo {
+    width: 16%;
+}
+
+.entete-table {
+    background-color: rgb(233, 21, 21)!important;
+}
+
+.liste-formation {
+    background-color: rgb(216, 216, 216);
+}
+
+.coloneImage {
+    width: 350px!important;
+}
+
+.coloneLien {
+    padding-right: 66px!important;
+}
+
+.card-img {
+    width: 30%!important;
+    margin-left: 120px;
+}
+
+.btn {
+    margin-right: 50px;
+}
+
+
+
+
+

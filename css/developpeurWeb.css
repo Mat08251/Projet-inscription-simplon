@@ -1,0 +1,17 @@
+body {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.logo {
+    width: 16%;
+}
+
+
+.coloneLien {
+    padding-right: 66px!important;
+}
+
+.btn {
+    margin-left: 80px;
+}
