@@ -1,0 +1,228 @@
+
+body
+{
+    background-color: white;
+    width: 100%;
+    height: 110%;
+    margin: 0px;
+    margin-bottom: 100px;
+    
+}
+h1 {
+    font-size:45px;
+}
+h2 .formulaire
+{
+    font-size:28px;
+}
+h3 
+{
+    font-size: 20px;    
+}
+.div_container {
+    display: grid;
+    grid-template-columns:repeat(48, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+    text-align: center;
+}
+ 
+
+.div_titre_formation {
+    grid-column:1/49;
+    grid-row: 1/6;
+    background-color: rgb(219, 9, 9);
+    color: white;
+    box-shadow: 10px 10px 10px 5px gray;
+}
+.div_formulaire {
+    grid-column: 2/47;
+    grid-row: 10/11;
+    background-color:#514D4D;
+    color:white;
+    box-shadow: 10px 10px 10px  black;
+}
+.information_champs_inscription 
+{
+    grid-column:10/40;
+    grid-row: 12/13;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    column-span: all;
+}
+
+hr 
+{
+    width:50%;
+    margin-top: 70px auto;
+    border: 1px dashed black;
+}
+
+.blocFormulaire
+{
+    grid-column: 4/46;
+    grid-row: 17/125;
+    border: 2px solid red; 
+  
+}
+
+.etape2
+{
+    width: 150px;
+    grid-column: 9/13;
+    grid-row: 16/18;
+    background: white;
+    z-index: 100;
+}
+
+.cadre1,
+.cadre2,
+.cadre3,
+.cadre4
+{
+    box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.75);
+    border-top: none;
+    border-top: 5px solid red;
+    border-radius: 0px 0px 5px 5px;
+    grid-column: 8/42;
+    padding:30px;
+    font-size: 13px;   
+}
+
+.cadre1
+{
+    grid-row: 20/35;   
+}
+.cadre2
+{
+    grid-row: 38/63;
+}
+.cadre3
+{
+    grid-row: 66/91;
+}
+.cadre4
+{
+    grid-row: 94/119;
+}
+
+ 
+
+    
+  
+    textarea
+{       
+        margin-top: 20px;
+        padding: auto;
+        width: 90%;
+        padding :20px;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid red;
+        font-size: 20px;
+        
+      }
+    
+.bouton {
+    margin-left: 28%;
+    margin-top: -6%!important;
+    margin-bottom: 100px;
+}
+
+
+
+.bouton-precedent {
+    display: inline;
+    margin-left: 12.5%;
+    padding: 0.6%;
+    border: 1px solid black;
+    border-radius: 8px 8px;
+    box-shadow: 2px 4px 0px 0px rgb(153, 153, 153);
+}
+
+.bouton-suivant {
+   display: inline;
+    margin-left: 12.5%;
+    padding: 0.2%!important;
+    width: 128px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px 8px;
+    box-shadow: 2px 4px 0px 0px rgb(153, 153, 153);
+}
+
+.bouton-precedent:hover, .bouton-suivant:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.containers {
+    width: 100%;
+    margin-left: 220px!important;
+    margin-top: 50px;
+}
+.progressbar {
+     counter-reset: step;
+     display: flex;
+     margin-left: -90px;
+}
+.progressbar li {
+    list-style-type: none;
+    float: left;
+    width: 15%;
+    position: relative;
+    text-align: center;
+}
+.progressbar li::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px; 
+    border: 2px solid #ddd;
+    display:block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    line-height: 30px;
+    background-color: white;
+
+}
+.progressbar li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+.progressbar li:first-child::after{
+    content: none; 
+}
+.progressbar li.active {
+    color: red;
+}
+.progressbar li.active::before {
+    border-color: red;
+}
+.progressbar li.active + li::after {
+    background-color: red;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .progressbar {
+        margin-left: 70px!important;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .containers {
+        width: auto;
+        margin-left: 90px!important;
+    }
+
+    .bouton {
+        margin-left: 20%;
+        margin-top: -8%!important;
+    }
+}
