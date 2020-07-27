@@ -3,7 +3,7 @@ require('../traitement/connectbdd.php');
 session_start();
 $id = $_SESSION['id_candidat'];  ?>
 <!Doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -50,18 +50,19 @@ $id = $_SESSION['id_candidat'];  ?>
                 </div>
 
 
-                <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 1");
-                            $req->execute();
+                <?php 
+                $req=$bdd->prepare("SELECT * FROM question");
+                $req->execute();
 
-                            $donnees = $req->fetch();
-                       ?>
-
-                <div class="cadre1">
+                while ($donnees = $req->fetch())
+                      { 
+                          $id_question1 = $donnees['id_question'];?>
+                
+                <div class="cadre1 w-75 mx-auto mb-5">
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = 1");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = '$id_question1'");
                             $message->execute();
 
                             $msg = $message->fetch();
@@ -69,73 +70,11 @@ $id = $_SESSION['id_candidat'];  ?>
                     <textarea id="info1" name="reponse1" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                     <?php  ?>
                 </div>
-                <?php $req->closeCursor(); 
+                      <?php }
+                      $req->closeCursor(); 
                       $message->closeCursor();?>
 
-
-                <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 2");
-                            $req->execute();
-
-                            $donnees = $req->fetch();
-                       ?>
-
-                <div class="cadre2">
-                    <h2><?= $donnees['question'] ?></h2><br>
-                    <hr>
-                    <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 2");
-                            $message->execute();
-
-                            $msg = $message->fetch();
-                       ?>
-                    <textarea id="info1" name="reponse2" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
-                </div>
-                <?php $req->closeCursor(); 
-                      $message->closeCursor();?>
-
-                <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 3");
-                            $req->execute();
-
-                            $donnees = $req->fetch();
-                       ?>
-
-                <div class="cadre3">
-                    <h2><?= $donnees['question'] ?></h2><br>
-                    <hr>
-                    <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 3");
-                            $message->execute();
-
-                            $msg = $message->fetch();
-                       ?>
-                    <textarea id="info1" name="reponse3" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
-                </div>
-                <?php $req->closeCursor();
-                      $message->closeCursor();?>
-
-                <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 4");
-                            $req->execute();
-
-                            $donnees = $req->fetch();
-                       ?>
-
-                <div class="cadre4">
-                    <h2><?= $donnees['question'] ?></h2><br>
-                    <hr>
-                    <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = $id AND id_question = 4");
-                            $message->execute();
-
-                            $msg = $message->fetch();
-                       ?>
-                    <textarea id="info1" name="reponse4" rows=6 name="info1" placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
-                </div>
-                <?php $req->closeCursor(); 
-                      $message->closeCursor();?>
-                        
+               
             </div>
             <div class="bouton">
                 <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"

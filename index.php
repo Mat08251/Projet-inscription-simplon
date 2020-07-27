@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+require('traitement/connectbdd.php');
+session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -103,20 +105,26 @@
         </div>
     </div>
 
+<?php 
+  $formulaire=$bdd->prepare("SELECT * FROM formulaire");
+  $formulaire->execute();
+
+  while ($donnees = $formulaire->fetch())
+        { ?>
     <!--card des formations-->
     <div class="formation card " >
         <div class="row no-gutters">
             <div class="image-card col-md-4">
-            <img src="images/codage.jpg" class="card-img" alt="...">
+            <img src="images/<?=$donnees['img']?>" class="card-img" alt="...">
             </div>
             <div class="cadre col-md-8">
                 <div class="card-body">
                     <div class="gauche text-center">
-                        <h5 class="titre-card card-title">DEVELOPPEUR WEB</h5>
-                        <p class="card-text">Début d'inscription : 1/1/2020<br>
-                                            Fin d'inscription : 2/1/2020</p>
-                        <p class="card-text">Début de la formation : 5/1/2020</p>
-                        <p class="card-text">Durée de la formation : 6mois</p>
+                        <h5 class="titre-card card-title"><?=$donnees['titre']?></h5>
+                        <p class="card-text">Début d'inscription : <?=$donnees['debut_insc']?><br>
+                                            Fin d'inscription : <?=$donnees['fin_insc']?></p>
+                        <p class="card-text">Début de la formation : <?=$donnees['debut_form']?></p>
+                        <p class="card-text">Durée de la formation : <?=$donnees['dure']?></p>
                         <button type="button" class="btn  btn-lg" style="background-color: #F01616">En savoir plus >></button>
                     </div>                    
                 </div>
@@ -124,7 +132,13 @@
                     <div class="droite text-center">
                         <p class="card-text">La création d’un compte est obligatoire pour<br>
                                             pretendre a l’inscription de la formation </p>
-                        <a href="php/condition-gene.php"><button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button></a>
+                        <?php if(isset($_SESSION['mail'])){ ?>
+                        <a href="php/page1-formulaire.php"><button type="button" class="btn  btn-lg" style="background-color: #F01616">DEBUT DU QUIZZ >></button></a>
+                        <?php }else{?>
+                        <a href="php/inscription.php"><button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button></a>
+                        <a href="#connexion" rel="modal:open"><button type="button" class="btn  btn-lg pt-2" style="background-color: #F01616">CONNEXION >></button></a>
+                    
+                        <?php } ?>
                     </div>                    
                 </div>
             </div>
@@ -133,65 +147,7 @@
 
     <div class="parallax" data-parallax="scroll" data-z-index="" data-image-src="images/simplon-accueil.jpg"></div>
 
-
-    <!--card des formations-->
-    <div class="formation card  justify-center" >
-        <div class="row no-gutters">
-            <div class="image-card col-md-4">
-            <img src="images/codage.jpg" class="card-img" alt="...">
-            </div>
-            <div class="cadre col-md-8">
-                <div class="card-body">
-                    <div class="gauche text-center">
-                    <h5 class="titre-card card-title">DEVELOPPEUR WEB</h5>
-                    <p class="card-text">Début d'inscription : 1/1/2020<br>
-                                        Fin d'inscription : 2/1/2020</p>
-                    <p class="card-text">Début de la formation : 5/1/2020</p>
-                    <p class="card-text">Durée de la formation : 6mois</p>
-                    <button type="button" class="btn  btn-lg" style="background-color: #F01616">En savoir plus >></button>
-                    </div>                    
-                </div>
-                <div class="card-body">
-                    <div class="droite text-center">
-                    <p class="card-text">La création d’un compte est obligatoire pour<br>
-                                         pretendre a l’inscription de la formation </p>
-                    <button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button>
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="parallax" data-parallax="scroll" data-z-index="2" data-image-src="images/simplon2.jpg"></div>
-
-    <!--card des formations-->
-    <div class="formation card  justify-center" >
-        <div class="row no-gutters">
-            <div class="image-card col-md-4">
-            <img src="images/codage.jpg" class="card-img" alt="...">
-            </div>
-            <div class="cadre col-md-8">
-                <div class="card-body">
-                    <div class="gauche text-center">
-                    <h5 class="titre-card card-title">DEVELOPPEUR WEB</h5>
-                    <p class="card-text">Début d'inscription : 1/1/2020<br>
-                                        Fin d'inscription : 2/1/2020</p>
-                    <p class="card-text">Début de la formation : 5/1/2020</p>
-                    <p class="card-text">Durée de la formation : 6mois</p>
-                    <button type="button" class="btn  btn-lg" style="background-color: #F01616">En savoir plus >></button>
-                    </div>                    
-                </div>
-                <div class="card-body">
-                    <div class="droite text-center">
-                    <p class="card-text">La création d’un compte est obligatoire pour<br>
-                                         pretendre a l’inscription de la formation </p>
-                    <button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button>
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </div>
-
+        <?php } ?>
     <!--footer-->
     <div class="footer container-fluid text-center">
        <div class="row">

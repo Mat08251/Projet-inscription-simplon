@@ -1,3 +1,6 @@
+<?php
+include('../traitement/connectbdd.php');
+?>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +10,9 @@
 <body>
     <?php
 
-    $affiche=$bdd->prepare('SELECT * FROM candidat');
+    $id_candidat = $_GET['id'];
+
+    $affiche=$bdd->prepare("SELECT * FROM candidat WHERE id_candidat = '$id_candidat'");
     $affiche->execute();
 
     $data=$affiche->fetch();
