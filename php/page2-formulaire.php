@@ -50,16 +50,30 @@ $id = $_SESSION['id_candidat'];  ?>
                 </div>
 
 
-                <?php 
-                $req=$bdd->prepare("SELECT * FROM question");
-                $req->execute();
+                <?php
 
-                while ($donnees = $req->fetch())
-                      { 
-                          $id_question1 = $donnees['id_question'];?>
+$page = (!empty($_GET['page']) ? $_GET['page'] : 1);
+$limite = 5;
+
+// Partie "Requête"
+/* On calcule donc le numéro du premier enregistrement */
+$debut = ($page - 1) * $limite;
+/* On ajoute le marqueur pour spécifier le premier enregistrement */
+$query = 'SELECT * FROM `question` LIMIT :limite OFFSET :debut';
+$query = $bdd->prepare($query);
+$query->bindValue('limite', $limite, PDO::PARAM_INT);
+/* On lie aussi la valeur */
+$query->bindValue('debut', $debut, PDO::PARAM_INT);
+$query->execute();
+
+// Partie "Boucle"
+while ($element = $query->fetch()) {
+    // C'est là qu'on affiche les données  :)
+
+                          $id_question1 = $element['id_question'];?>
                 
                 <div class="cadre1 w-75 mx-auto mb-5">
-                    <h2><?= $donnees['question'] ?></h2><br>
+                    <h2><?= $element['question'] ?></h2><br>
                     <hr>
                     <?php
                     $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = '$id_question1'");
@@ -71,19 +85,15 @@ $id = $_SESSION['id_candidat'];  ?>
                     <?php  ?>
                 </div>
                       <?php }
-                      $req->closeCursor(); 
-                      $message->closeCursor();?>
 
-               
-            </div>
-            <div class="bouton">
-                <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"
-                        class="btn  btn-lg pt-1"><span class="texte-bouton text-center">Précédent</span></button></a>
-
-
-
-                <button type="submit"
-                        class="bouton-suivant btn-lg">Suivant</button>
+// Partie "Liens"
+/* Notez que les liens ainsi mis vont bien faire rester sur le même script en passant
+ * le numéro de page en paramètre */
+?>
+                <a href="?page=<?php echo $page - 1; ?>">Page précédente</a>
+                —
+                <a href="?page=<?php echo $page + 1; ?>">Page suivante</a>
+     
             </div>
         </form>
     </div>
