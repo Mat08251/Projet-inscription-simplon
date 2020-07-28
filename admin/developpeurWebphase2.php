@@ -16,12 +16,12 @@
     Developpeur Web</h1>
         <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
         <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
-        <center><button type="button" class="bouton-cloture btn btn-danger btn-lg">Cloturer l'inscription</button></center>
+        
         <div class=" mt-2">
           <div class="bouton-phase">
             <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Liste des apprenants</center></h3>
-            <a href="developpeurWebphase2.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
-            <button type="button" class="boutonPhase btn btn-outline-info">Phase3</button>
+            <a href="developpeurWeb.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
+            <a href="developpeurWebPhase3.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
           </div>
 
     <div class="info-forma container-fluid mt-2">
@@ -33,8 +33,8 @@
           <th class="entete-table text-center" scope="col">Âge</th>
           <th class="entete-table text-center" scope="col">Téléphone</th>
           <th class="entete-table text-center" scope="col">Email</th>
-          <th class="coloneLien entete-table text-center" scope="col">Accepter l'apprenant</th>
-          <th class="coloneLien entete-table text-center" scope="col">Refuser l'apprenant</th>
+          <th class="coloneLien entete-table text-center" scope="col">Note</th>
+          <th class="coloneLien entete-table text-center" scope="col">Avis sur l'apprenant</th>
         </tr>
       </thead>
       <tbody>
@@ -47,8 +47,13 @@
           <td class="text-center"> 27</td>
           <td class="text-center"> 0625428695</td>
           <td class="text-center">m.duguet808@laposte.net</td>
-          <td><button type="button" class="bouton-ajout btn btn-success "><span class="texteButton">Accepter</span></button></td>
-          <td><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></td>
+          <td class="text-center">18</td>
+          <td>
+            <FORM>
+              <TEXTAREA class="zone-texte" name="nom" rows=4 cols=40>Valeur par défaut</TEXTAREA>
+            </FORM>
+          </td>
+          
         </tr>
   
       </tbody>
