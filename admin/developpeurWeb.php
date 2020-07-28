@@ -1,3 +1,7 @@
+<?php 
+include('../traitement/connectbdd.php');
+$id=$_GET['id'];?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -35,22 +39,44 @@
           <th class="entete-table text-center" scope="col">Email</th>
           <th class="coloneLien entete-table text-center" scope="col">Accepter l'apprenant</th>
           <th class="coloneLien entete-table text-center" scope="col">Refuser l'apprenant</th>
+          <th class="coloneLien entete-table text-center" scope="col">En Attente</th>
+          <th class="coloneLien entete-table text-center" scope="col">Resulatats Questions</th>
         </tr>
       </thead>
       <tbody>
 
+<?php $data=$bdd->prepare("SELECT * FROM candidat WHERE id_formulaire = '$id'");
+      $data->execute();
+
+      while($donnees = $data->fetch()) {?>
 
        
         <tr class="liste-formation">
-          <th class="text-center" scope="row">Duguet</th>
-          <td class="text-center">Mathieu</td>
-          <td class="text-center"> 27</td>
-          <td class="text-center"> 0625428695</td>
-          <td class="text-center">m.duguet808@laposte.net</td>
-          <td><button type="button" class="bouton-ajout btn btn-success "><span class="texteButton">Accepter</span></button></td>
-          <td><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></td>
+          <th class="text-center" scope="row"><?=$donnees['nom']?></th>
+          <td class="text-center"><?=$donnees['prenom']?></td>
+          <td class="text-center"><?=$donnees['dateNaissance']?></td>
+          <td class="text-center"><?=$donnees['telFixe']?></td>
+          <td class="text-center"><?=$donnees['mail']?></td>
+          <?php if($donnees['statut'] == 1){
+            echo '<td class="text-center">Accepter</td>';
+            echo '<td class="text-center"></td>';
+            echo '<td class="text-center"></td>';
+          }elseif($donnees['statut'] == 2){
+            echo '<td class="text-center"></td>';
+            echo '<td class="text-center">Refuser</td>';
+            echo '<td class="text-center"></td>';
+          }elseif($donnees['statut'] == 3){
+            echo '<td class="text-center"></td>';
+            echo '<td class="text-center"></td>';
+            echo '<td class="text-center">En Attente</td>';
+        }else{?>
+          <td><a href="traitement/update/statut_ok.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-success "><span class="texteButton">Accepter</span></button></a></td>
+          <td><a href="traitement/update/statut_no.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></a></td>
+          <td><a href="traitement/update/statut_att.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-warning "><span class="texteButton">En Attente</span></button></a></td>
+          <?php } ?>
+          <td class='text-center'><a href="plusdinfo.php?id_candidat=<?=$donnees['id_candidat'];?>">Resultats Questions</a></td>
         </tr>
-  
+      <?php } ?>
       </tbody>
     </table>
   </div>

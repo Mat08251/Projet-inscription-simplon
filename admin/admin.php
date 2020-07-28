@@ -39,18 +39,18 @@ include('../traitement/connectbdd.php');
 
 
         <?php
-            $azerty = $bdd->prepare("SELECT * FROM candidat");
+            $azerty = $bdd->prepare("SELECT * FROM formulaire");
             $azerty->execute();
 
             while ($donnees = $azerty->fetch())
         { ?>
         <tr class="liste-formation">
-          <th class="text-center" scope="row">Developpeur web</th>
-          <td class="text-center">1/1/2020</td>
-          <td class="text-center"> 2/1/2020</td>
-          <td class="text-center"> 2/1/2020</td>
-          <td><img src="../images/codage.jpg" class="card-img" alt="..."></td>
-          <td><a href="developpeurWeb.php"><button type="button" class="btn btn-success "><span class="texteButton">Voir la formation</span></button></a></td>
+          <th class="text-center" scope="row"><?=$donnees['titre']?></th>
+          <td class="text-center"><?=$donnees['debut_insc']?></td>
+          <td class="text-center"><?=$donnees['fin_insc']?></td>
+          <td class="text-center"><?=$donnees['debut_form']?></td>
+          <td><img src="../images/<?=$donnees['img']?>" class="card-img" alt="..."></td>
+          <td><a href="developpeurWeb.php?id=<?=$donnees['id_formulaire']?>"><button type="button" class="btn btn-success "><span class="texteButton">Voir la formation</span></button></a></td>
         </tr>
         <?php
 }
