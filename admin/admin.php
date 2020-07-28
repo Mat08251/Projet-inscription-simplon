@@ -50,7 +50,7 @@ include('../traitement/connectbdd.php');
           <td class="text-center"> 2/1/2020</td>
           <td class="text-center"> 2/1/2020</td>
           <td><img src="../images/codage.jpg" class="card-img" alt="..."></td>
-          <td><a href="developpeurWeb.php"<button type="button" class="btn btn-success "><span class="texteButton">Voir la formation</span></button></a></td>
+          <td><a href="developpeurWeb.php"><button type="button" class="btn btn-success "><span class="texteButton">Voir la formation</span></button></a></td>
         </tr>
         <?php
 }
