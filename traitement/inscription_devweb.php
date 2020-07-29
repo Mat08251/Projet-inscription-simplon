@@ -36,7 +36,8 @@ while($data = $thisnationalite->fetch()) {
 
 $insc_user = $bdd->prepare("UPDATE candidat SET nom = :nom, prenom = :prenom, nomJeuneFille = :nomJeuneFille, dateNaissance = :dateNaissance,
                                         sexe = :sexe, rue = :rue, numeroRue = :numeroRue, complementAdresse = :complementAdresse, ville = :ville,
-                                        codePostal = :codePostal, telFixe = :telFixe, mobile = :mobile, mail = :mail, last_log = :last_log, id_pays = :id_pays, id_nationalite = :id_nationalite WHERE id_candidat = $id_candidat");
+                                        codePostal = :codePostal, telFixe = :telFixe, mobile = :mobile, mail = :mail, last_log = :last_log, id_pays = :id_pays, id_nationalite = :id_nationalite,
+                                        id_formulaire = :id_formulaire WHERE id_candidat = $id_candidat");
 
 $insc_user->execute(array(
     ':nom' => $nom,
@@ -54,7 +55,8 @@ $insc_user->execute(array(
     ':mail' => $mail,
     ':id_pays' => $pays,
     'id_nationalite' => $nationalite,
-    ':last_log' => $time
+    ':last_log' => $time,
+    'id_formulaire' => 5
 ));
 
 header('location: ../php/page2-formulaire.php');
