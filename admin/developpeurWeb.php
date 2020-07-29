@@ -15,7 +15,7 @@ $id=$_GET['id'];?>
     <title>Partie Administrateur Developpeur Web</title>
 </head>
 <body>
-
+<div class="fond">
     <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</br>
     Developpeur Web</h1>
         <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
@@ -23,11 +23,11 @@ $id=$_GET['id'];?>
         <center><button type="button" class="bouton-cloture btn btn-danger btn-lg">Cloturer l'inscription</button></center>
         <div class=" mt-2">
           <div class="bouton-phase">
-            <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Liste des apprenants</center></h3>
+            <h3 class=" mt-4 mb-5"><center>Liste des apprenants</center></h3>
             <a href="developpeurWebphase2.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
             <button type="button" class="boutonPhase btn btn-outline-info">Phase3</button>
           </div>
-
+</div>
     <div class="info-forma container-fluid mt-2">
     <table class="table">
       <thead class="thead-light">
@@ -40,7 +40,7 @@ $id=$_GET['id'];?>
           <th class="coloneLien entete-table text-center" scope="col">Accepter l'apprenant</th>
           <th class="coloneLien entete-table text-center" scope="col">Refuser l'apprenant</th>
           <th class="coloneLien entete-table text-center" scope="col">En Attente</th>
-          <th class="coloneLien entete-table text-center" scope="col">Resulatats Questions</th>
+          <th class="coloneLien entete-table text-center" scope="col">Resultats Questions</th>
         </tr>
       </thead>
       <tbody>
