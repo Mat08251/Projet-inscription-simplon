@@ -1,5 +1,8 @@
 <?php
 include('../traitement/connectbdd.php');
+session_start();
+$pseudo = $_SESSION['pseudo'];
+$statut = $_SESSION['statut'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,13 +16,16 @@ include('../traitement/connectbdd.php');
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
 </head>
-
+<?php 
+if(isset($pseudo)){?>
 <body class="bg-light">
     
 <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</h1>
     <center><a href="../index.php" class="lien-admin text-black-50 mb-5">Revenir à l'accueil</a></center>
     <center><a href="admin.php" class="lien-admin text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
     <div class=" mt-2">
+    <h3 class="  mt-4 "><center><?=$pseudo?></center></h3>
+        <a href="traitement/deco_admin.php"><button type="button" class="boutonPhase btn btn-outline-info">Deconnexion</button></a>
     <h3 class="  mt-4 mb-5"><center>Liste des formations</center></h3>
 
 
@@ -62,4 +68,7 @@ $azerty->closecursor();
 
   
 </body>
+<?php }else{
+  header('location: index.php');
+}?>
 </html>
