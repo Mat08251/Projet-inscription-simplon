@@ -17,10 +17,10 @@ include('../traitement/connectbdd.php');
 <body class="bg-light">
     
 <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</h1>
-    <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
-    <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
+    <center><a href="../index.php" class="lien-admin text-black-50 mb-5">Revenir à l'accueil</a></center>
+    <center><a href="admin.php" class="lien-admin text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
     <div class=" mt-2">
-    <h3 class="font-weight-light text-black-50 mt-4 mb-5"><center>Liste de formations</center></h3>
+    <h3 class="  mt-4 mb-5"><center>Liste des formations</center></h3>
 
 
     <div class="info-forma container-fluid mt-2">

@@ -7,8 +7,23 @@ body {
     width: 16%;
 }
 
+h1 {
+    text-shadow: 4px 4px 8px rgba(110, 110, 110, 0.938);
+}
+
+.lien-admin {
+    
+}
+
+h3 {
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.514);
+   color: rgb(248, 68, 68) !important;
+}
+
 .entete-table {
     background-color: rgb(233, 21, 21)!important;
+    color: rgb(207, 207, 207) !important;
+    text-shadow: 2px 2px 4px black;
 }
 
 .liste-formation {
@@ -20,7 +35,7 @@ body {
 }
 
 .coloneLien {
-    padding-right: 66px!important;
+    padding-right: 78px!important;
 }
 
 .card-img {
@@ -30,6 +45,7 @@ body {
 
 .btn {
     margin-right: 50px;
+    box-shadow: 2px 4px 8px black;
 }
 
 
