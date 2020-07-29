@@ -30,26 +30,28 @@ $id = $_SESSION['id_candidat'];  ?>
 <body>
     <?php include ('../includes/navbar.php'); ?>
 
-    <div class="form_contact">
-        <form id="form_contact" method="post" action="../traitement/insert_page2.php">
+    
 
             <div class="div_container">
                 <div class="div_navbar"></div>
                 <div class="div_titre_formation"><br>
-                    <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
+                    <h1 class="titreDebut">DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
                 </div>
 
-                <div class="div_formulaire">
+                <div class="div_formulaire text-center">
                     <h2>FORMULAIRE D'INSCRIPTION EN LIGNE<h2>
                 </div>
-                <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
-
-                <div class="blocFormulaire"></div>
-                <div class="etape2">
-                    <h2>ETAPE 2</h2>
+                <div class="information_champs_inscription">
+                    <p>Veuillez remplir tout les champs svp</p>
                 </div>
 
+                <div class="blocFormulaire">
+                    <div class="etape2">
+                        <h2>ETAPE 2</h2>
+                    </div>
 
+                <div class="form_contact">
+                    <form id="form_contact" method="post" action="../traitement/insert_page2.php">
                 <?php 
                 $req=$bdd->prepare("SELECT * FROM question WHERE etape = 1 ORDER BY position ");
                 $req->execute();
@@ -74,22 +76,23 @@ $id = $_SESSION['id_candidat'];  ?>
                       $req->closeCursor(); 
                       $message->closeCursor();?>
 
-               
-            </div>
-            <div class="bouton">
-                <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"
-                        class="btn  btn-lg pt-1"><span class="texte-bouton text-center">Précédent</span></button></a>
+                </div> 
+            
+                <div class="bouton">
+                    <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"
+                            class="btn  btn-lg pt-1"><span class="texte-bouton text-center">Précédent</span></button></a>
 
 
 
-                <button type="submit"
-                        class="bouton-suivant btn-lg">Suivant</button>
+                    <button type="submit"
+                            class="bouton-suivant btn-lg">Suivant</button>
+                </div>
             </div>
         </form>
     </div>
 
-    <div class="containers">
-        <ul class="progressbar ">
+    <div class="barreDeProgression">
+        <ul class="progressbar">
             <li class="active">Etape 1</li>
             <li class="active">Etape 2</li>
             <li class="">Etape 3</li>
