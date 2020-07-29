@@ -10,7 +10,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <title>Formulaire d'inscription</title>
     <meta name="description" content="Creation formulaire d'inscription à une formation" />
     <meta http-equiv="content-language" content="fr" />
-    <link href="../css/stylepage4.css" rel="stylesheet" type="text/css" />
+    <link href="../css/stylepage3.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -31,7 +31,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <?php include ('../includes/navbar.php'); ?>
 
     <div class="form_contact">
-        <form id="form_contact" method="post" action="../traitement/insert_page4.php">
+        <form id="form_contact" method="post" action="../traitement/insert_page3.php">
 
             <div class="div_container">
                 <div class="div_navbar"></div>
@@ -39,157 +39,55 @@ $id = $_SESSION['id_candidat'];  ?>
                     <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
                 </div>
 
-                <div class="div_formulaire pt-1">
-                    <h2>FORMULAIRE D'INSCRIPTION EN LIGNE</h2>
+                <div class="div_formulaire">
+                    <h2>FORMULAIRE D'INSCRIPTION EN LIGNE<h2>
                 </div>
-                <a class="information_champs_inscription">Veuillez remplir tous les champs s'il vous plaît</a>
+                <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
 
                 <div class="blocFormulaire"></div>
                 <div class="etape2">
-                    <h2>ETAPE 4</h2>
-                </div>
-
-                <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 9");
-                            $req->execute();
-
-                            $donnees = $req->fetch();
-                       ?>
-
-                <div class="cadre1">
-                    <p class="question"><?= $donnees['question'] ?></p><br>
-
-                    <hr>
-                    <select class="reponse9" name="reponse9" id="reponse9" required>
-                     <option value="" disabled selected>Sélectionnez votre niveau</option>
-                        <option name="langue1" value="Tres bien">Tres bien</option>
-                        <option name="langue2" value="Bien">Bien</option>
-                        <option name="langue3" value="Intermédiare">Intermédiare</option>
-                        <option name="langue4" value="Débutant">Débutant</option>
-                     </select>
+                    <h2>ETAPE 3</h2>
                 </div>
 
 
                 <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 10");
+                            $req=$bdd->prepare("SELECT * FROM question WHERE etape = 3 AND id_formulaire = 1 ORDER BY position ");
                             $req->execute();
 
-                            $donnees = $req->fetch();
-                       ?>
-
-                <div class="cadre2">
-                    <p class="question"><?= $donnees['question'] ?></p><br>
-                    <hr>
-
-                    <select class="reponse10" name="reponse10" id="reponse10">
-                    <option value="" disabled selected>Sélectionnez votre diplôme</option>
-                        <option name="diplome1" value="Sans diplôme">Sans diplôme</option>
-                        <option name="diplome2" value="Brevet des collèges">Brevet des collèges</option>
-                        <option name="diplome3" value="CAP / BEP">CAP / BEP</option>
-                        <option name="diplome4" value="BAC">BAC</option>
-                    </select>
-                </div>
-
-
-                <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 11");
-                            $req->execute();
-
-                            $donnees = $req->fetch();
-                       ?>
-
-                <div class="cadre3">
-                    <p class="question"><?= $donnees['question'] ?></p><br>
-
-                    <hr>
-                    
-                    <div>
-                        <input type="radio" id="o" name="reponse11" value="oui">
-                        <label for="o">Oui</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="n" name="reponse11" value="non">
-                        <label for="n">Non</label>
-                    </div>
-
-
-                </div>
-
-
-                <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 12");
-                            $req->execute();
-
-                            $donnees = $req->fetch();
-                       ?>
-
-                <div class="cadre4">
-                    <p class="question"><?= $donnees['question'] ?></p><br>
+                            while ($donnees = $req->fetch())
+                                { 
+                          $id_question = $donnees['id_question'];?>
+                <div class="cadre1 w-75 mx-auto mb-5">
+                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
                     <hr>
 
 
-                    <div class="content-cadre4">
-                        <textarea id="info4" rows=11 name="reponse12" cols=50 name="info4" placeholder="Votre réponse" required
-                            index=4></textarea>
-                    </div>
-                </div>
+                    <?php
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = '$id_question'");
+                            $message->execute();
 
-
-                <?php
-                            $req = $bdd->prepare("SELECT * FROM question WHERE id_question = 13");
-                            $req->execute();
-
-                            $donnees = $req->fetch();
+                            $msg = $message->fetch();
                        ?>
-
-                <div class="cadre5">
-                    <p class="question"><?= $donnees['question'] ?></p><br>
-                    <hr>
-
-
-                    <div>
-                        <input type="checkbox" id="eleve_etudiant" name="reponse[]" value="Eleve ou étudiant">Eleve ou étudiant</input>
-                        
-                    </div>
-                    <div>
-                        <input type="checkbox" id="Salarie" name="reponse[]" value="Salarie">Salarie</input>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="i_pole_emploi" name="reponse[]" value="Demandeur d'emploi indemnisé par Pole emploi">Demandeur d'emploi indemnisé par Pole emploi</input>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="ni_pole_emploi" name="reponse[]" value="Demandeur d'emploi non indemnisé par Pole emploi">Demandeur d'emploi non indemnisé par Pole emploi</input>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="RSA" name="reponse[]" value="Allocataire RSA">Allocataire RSA</input>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="ASS" name="reponse[]" value="Allocataire ASS">Allocataire ASS</input>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="ASH" name="reponse[]" value="Allocataire ASH">Allocataire ASH</input>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="other" name="reponse[]" value="Autre">Autre</input>
-                    </div>
+                    <textarea id="info1" rows=6 name="reponse[<?=$id_question?>]" placeholder="Votre réponse"
+                        index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
                 </div>
-
-
-                <div class="cadre_inscription_pied_page">
-                    <div class="validation_inscription pt-2">Cliquez sur le lien ci-dessous pour finaliser votre inscription.
-                    </div>
+                                <?php } 
+                                $req->closeCursor(); 
+                                $message->closeCursor();?>
                 </div>
 
 
 
-                <div class="button fbtn"></div>
-                <button name="precedent_submit" type="submit" id="precedent_submit" data submit="...Sending">Je
-                    m'inscrit à cette formation</button>
 
             </div>
+            <div class="bouton">
+                <a href="../php/page2-formulaire.php" class="bouton-precedent align-items-center"><button type="button" class="btn  btn-lg pt-1">Précédent</button></a>
+                
 
-    </div>
-    </form>
+                    
+                <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
+            </div>
+        </form>
     </div>
 
     <div class="containers">
@@ -205,7 +103,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <?php include ('../includes/footer.php'); ?>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="../js/page4-formulaire.js"></script>
+    <script src="../js/page3-formulaire.js"></script>
 </body>
 
 </html>

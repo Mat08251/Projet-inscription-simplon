@@ -25,7 +25,7 @@ $id_candidat = $_SESSION['id_candidat'];
 
 
     <div class="form_contact">
-        <form id="form_contact"action="../traitement/inscription.php?id=<?=$id_candidat?>" method="post" >
+        <form id="form_contact"action="../traitement/inscription_devweb.php?id=<?=$id_candidat?>" method="post" >
 
             <div class="div_container">
                 <div class="div_titre_formation">

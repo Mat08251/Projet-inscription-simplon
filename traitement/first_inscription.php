@@ -28,7 +28,7 @@ if($count==0) {
         'pseudo' => $pseudo,
         'mail' => $mail,
         'mdp' => $mdp,
-        'last_log' => $time
+        'last_log' => $time,
     ));
     $thisusers = $bdd->prepare("SELECT id_candidat FROM candidat WHERE pseudo='$pseudo'");
     $thisusers->execute();

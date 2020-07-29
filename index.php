@@ -106,7 +106,7 @@ session_start(); ?>
     </div>
 
 <?php 
-  $formulaire=$bdd->prepare("SELECT * FROM formulaire");
+  $formulaire=$bdd->prepare("SELECT * FROM formulaire WHERE statut = 0");
   $formulaire->execute();
 
   while ($donnees = $formulaire->fetch())
