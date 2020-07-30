@@ -10,7 +10,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <title>Formulaire d'inscription</title>
     <meta name="description" content="Creation formulaire d'inscription à une formation" />
     <meta http-equiv="content-language" content="fr" />
-    <link href="../css/stylepage3.css" rel='stylesheet' type='text/css' />
+    <link href="../css/stylepage4.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -30,13 +30,12 @@ $id = $_SESSION['id_candidat'];  ?>
 <body>
     <?php include ('../includes/navbar.php'); ?>
 
-    <div class="form_contact">
-        <form id="form_contact" method="post" action="../traitement/insert_page3.php">
+    
 
             <div class="div_container">
                 <div class="div_navbar"></div>
                 <div class="div_titre_formation"><br>
-                    <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
+                    <h1 class="titreDebut">DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
                 </div>
 
                 <div class="div_formulaire">
@@ -44,53 +43,52 @@ $id = $_SESSION['id_candidat'];  ?>
                 </div>
                 <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
 
-                <div class="blocFormulaire"></div>
-                <div class="etape2">
-                    <h2>ETAPE 3</h2>
-                </div>
+                <div class="blocFormulaire">
+                    <div class="etape2">
+                        <h2>ETAPE 4</h2>
+                    </div>
 
-
-                <?php
-                            $req=$bdd->prepare("SELECT * FROM question WHERE etape = 3 AND id_formulaire = 1 ORDER BY position ");
-                            $req->execute();
-
-                            while ($donnees = $req->fetch())
-                                { 
-                          $id_question = $donnees['id_question'];?>
-                <div class="cadre1 w-75 mx-auto mb-5">
-                    <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
-                    <hr>
-
-
+                    <div class="form_contact">
+                        <form id="form_contact" method="post" action="../traitement/insert_page3.php">
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = '$id_question'");
-                            $message->execute();
+                                $req=$bdd->prepare("SELECT * FROM question WHERE etape = 3 AND id_formulaire = 1 ORDER BY position ");
+                                $req->execute();
 
-                            $msg = $message->fetch();
-                       ?>
-                    <textarea id="info1" rows=6 name="reponse[<?=$id_question?>]" placeholder="Votre réponse"
-                        index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
+                                while ($donnees = $req->fetch())
+                                    { 
+                            $id_question = $donnees['id_question'];?>
+                    <div class="cadre1 w-75 mx-auto mb-5">
+                        <h2 class="question-formulaire"><?= $donnees['question'] ?></h2><br>
+                        <hr>
+
+
+                        <?php
+                        $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = '$id_question'");
+                                $message->execute();
+
+                                $msg = $message->fetch();
+                        ?>
+                        <textarea id="info1" rows=6 name="reponse[<?=$id_question?>]" placeholder="Votre réponse"
+                            index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
+                    </div>
+                                    <?php } 
+                                    $req->closeCursor(); 
+                                    $message->closeCursor();?>
+                    </div>
+
                 </div>
-                                <?php } 
-                                $req->closeCursor(); 
-                                $message->closeCursor();?>
+                <div class = "cadre_inscription_pied_page">
+                    <div class = "validation_inscription">Cliquez sur le lien ci-dessous pour finaliser votre inscription.</div>
                 </div>
-
-
-
 
             </div>
-            <div class="bouton">
-                <a href="../php/page2-formulaire.php" class="bouton-precedent align-items-center"><button type="button" class="btn  btn-lg pt-1">Précédent</button></a>
-                
-
-                    
-                <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
+            <div class="bouton text-center">
+                <a href="../php/page2-formulaire.php" class="precedent_submit "><button type="button" class="bouton-inscription btn  btn-lg ">Je m'inscrit à cette formation</button></a>
             </div>
         </form>
     </div>
 
-    <div class="containers">
+    <div class="barreDeProgression">
         <ul class="progressbar ">
             <li class="active">Etape 1</li>
             <li class="active">Etape 2</li>
@@ -103,7 +101,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <?php include ('../includes/footer.php'); ?>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="../js/page3-formulaire.js"></script>
+    <script src="../js/page4-formulaire.js"></script>
 </body>
 
 </html>
