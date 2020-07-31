@@ -1,7 +1,6 @@
 <?php session_start(); 
 require('../traitement/connectbdd.php');
-$id = $_SESSION['id_candidat'];
-?>
+$id= $_SESSION['id_candidat'];?>
 <!Doctype html>
 <html lang="en">
 
@@ -34,43 +33,133 @@ $id = $_SESSION['id_candidat'];
                 <div class="div_formulaire">
                     <h2>FORMULAIRE D'INSCRIPTION EN LIGNE
                 </div>
+<<<<<<< HEAD
                 <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
+=======
+                <a class="information_champs_inscription"><span class="asterisque">(*)</span>Veuillez remplir tout les champs svp</a>
+>>>>>>> b8866cfb664962841ac263a2538773a684be33da
 
             </div>
 
+            <div class="blocFormulaire">
+                    <div class="etape2">
+                        <h2>ETAPE 1</h2>
+                    </div>
             
          <div class="form_contact w-75 mx-auto ml-3">
-            <form id="form_contact"action="../traitement/inscription.php?id=<?=$id?>" method="post" >
+            <form id="form_contact"action="../traitement/inscription_devweb.php "method="post">
             
             <?php 
-            $req=$bdd->prepare("SELECT * FROM question_infos");
+            $req=$bdd->prepare("SELECT * FROM candidat WHERE id_candidat ='$id'");
             $req->execute();
-            while ($donnees =$req->fetch())
-            {
+            $donnees =$req->fetch();
+            
                 
             ?>
             <div class="form-group row">
-                <label for="Nom" class="col-sm-6 col-form-label"><?=$donnees['question'];?><span class="asterisque">*</span></label>
+                <label for="Nom" class="col-sm-6 col-form-label">Nom<span class="asterisque">*</span></label>
                     <div class="col-sm-6">
-                    <?php
-                    $rer = $bdd->prepare("SELECT id_question_infos FROM infos_reponses");
-                    $rer->execute();
-
-                    $id_question = $rer->fetch();
-
-                    $idquestion = $id_question['id_question_infos'];
-
-
-                    $ruq = $bdd->prepare("SELECT reponse FROM infos_reponses WHERE id_candidat = '$id' AND id_question_infos = '$idquestion'");
-                    $ruq->execute();
-
-                    $reponse = $ruq->fetch();
-               ?>
-                    <input type="text" class="entree form-control" id="nom" placeholder="<?=$reponse['reponse'];?>">
+                    <input type="text" class="entree form-control" id="nom" name="nom" value="<?= isset($donnees['nom']) ? $donnees['nom'] : "" ?>"><br>
                 </div>
             </div>   
-            <?php } ?>
+            <div class="form-group row">
+                <label for="Prénom" class="col-sm-6 col-form-label">Prénom<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="prenom" value="<?= isset($donnees['prenom']) ? $donnees['prenom'] : "" ?>"><br>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Nom" class="col-sm-6 col-form-label">Nom de Jeune Fille</label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="nom_jeune_fille" value="<?= isset($donnees['nomJeuneFille']) ? $donnees['nomJeuneFille'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Prénom" class="col-sm-6 col-form-label">Date de Naissance<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="date_de_naissance" value="<?= isset($donnees['dateNaissance']) ? $donnees['dateNaissance'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Nom" class="col-sm-6 col-form-label">nationalité<pan class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="nationalite" value="<?= isset($donnees['id_nationalite']) ? $donnees['id_nationalite'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Prénom" class="col-sm-6 col-form-label">Pays<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="pays" value="<?= isset($donnees['id_pays']) ? $donnees['id_pays'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Nom" class="col-sm-6 col-form-label">Sexe<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="sexe" value="<?= isset($donnees['sexe']) ? $donnees['sexe'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Prénom" class="col-sm-6 col-form-label">Rue<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="adresse" value="<?= isset($donnees['rue']) ? $donnees['rue'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Nom" class="col-sm-6 col-form-label">Numéro de Rue<pan class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="ligne2" value="<?= isset($donnees['numeroRue']) ? $donnees['numeroRue'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Prénom" class="col-sm-6 col-form-label">Complément d'adresse</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="ligne" value="<?= isset($donnees['complementAdresse']) ? $donnees['complementAdresse'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Nom" class="col-sm-6 col-form-label">Ville<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="ville" value="<?= isset($donnees['ville']) ? $donnees['ville'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Prénom" class="col-sm-6 col-form-label">Code Postal<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="code_postal" value="<?= isset($donnees['codePostal']) ? $donnees['codePostal'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Nom" class="col-sm-6 col-form-label">Téléphone Fixe</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="telephone" value="<?= isset($donnees['telFixe']) ? $donnees['telFixe'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Prénom" class="col-sm-6 col-form-label">Mobil<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="mobile" value="<?= isset($donnees['mobil']) ? $donnees['mobil'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Nom" class="col-sm-6 col-form-label">Mail<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="mail" value="<?= isset($donnees['mail']) ? $donnees['mail'] : "" ?>"><br>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="Prénom" class="col-sm-6 col-form-label">Pseudo<span class="asterisque">*</span></label>
+                    <div class="col-sm-6">
+                    <input type="text" class="entree form-control" id="nom" name="pseudo" value="<?= isset($donnees['pseudo']) ? $donnees['pseudo'] : "" ?>"><br>
+                </div>
+            </div>   
             
+
+            </div>
+
+            <div class="bouton">
+            <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
+            </div>
+            </div>
             </form>       
         </div>  
         

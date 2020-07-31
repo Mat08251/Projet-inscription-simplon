@@ -37,10 +37,21 @@ nav {
     margin-right: 4%;
 }
 
-@media only screen and (min-width: 300px) and (max-width:812px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
     .nav  {
         width: auto;
     }
     
     
+}
+
+@media all and (max-width: 1024px) {
+    .logo {
+        width: 40%;
+        height: 30px!important;
+    }
+
+    .navbar-nav {
+        padding-left: 0%!important;
+    }
 }

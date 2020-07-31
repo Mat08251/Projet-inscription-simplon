@@ -18,29 +18,7 @@ sr.reveal('.cadre1', {
     duration: 3000
 });
 
-sr.reveal('.cadre2', {
-    scale: 0.8,
-    interval: 500,
-    duration: 3000
-});
 
-sr.reveal('.cadre3', {
-    scale: 0.8,
-    interval: 500,
-    duration: 3000
-});
-
-sr.reveal('.cadre4', {
-    scale: 0.8,
-    interval: 500,
-    duration: 3000
-});
-
-sr.reveal('.cadre5', {
-    scale: 0.8,
-    interval: 500,
-    duration: 3000
-});
 
 sr.reveal('.cadre_inscription_pied_page', {
     scale: 0.8,
@@ -49,7 +27,7 @@ sr.reveal('.cadre_inscription_pied_page', {
     delay: 200,
 });
 
-sr.reveal('#precedent_submit', {
+sr.reveal('.bouton', {
     origin: 'bottom',
     distance: '80px',
     duration: 2500,
