@@ -1,6 +1,7 @@
 <?php session_start(); 
 require('../traitement/connectbdd.php');
-$id= $_SESSION['id_candidat'];?>
+$id= $_SESSION['id_candidat'];
+?>
 <!Doctype html>
 <html lang="en">
 
@@ -33,11 +34,7 @@ $id= $_SESSION['id_candidat'];?>
                 <div class="div_formulaire">
                     <h2>FORMULAIRE D'INSCRIPTION EN LIGNE
                 </div>
-<<<<<<< HEAD
-                <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
-=======
                 <a class="information_champs_inscription"><span class="asterisque">(*)</span>Veuillez remplir tout les champs svp</a>
->>>>>>> b8866cfb664962841ac263a2538773a684be33da
 
             </div>
 
