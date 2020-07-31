@@ -83,7 +83,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
             </div>
             <div class="bouton text-center">
-                <a href="../php/page2-formulaire.php" class="precedent_submit "><button type="button" class="bouton-inscription btn  btn-lg ">Je m'inscrit à cette formation</button></a>
+                <a href="../php/fin-inscription.php" class="precedent_submit "><button type="button" class="bouton-inscription btn  btn-lg ">Je m'inscrit à cette formation</button></a>
             </div>
         </form>
     </div>

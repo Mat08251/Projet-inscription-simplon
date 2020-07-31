@@ -2,8 +2,6 @@
 body
 {
     background-color: white;
-    width: 100%;
-    height: auto;
     margin: 0;
 }
 h1 {
@@ -168,11 +166,19 @@ h2.message_fin
     .progressbar {
         margin-left: 70px!important;
     }
+
+    .pied-de-page {
+        padding-top: 198px!important;
+    }
 }
 
 @media all and (max-width: 1024px) {
     .containers {
         width: auto;
         margin-left: 90px!important;
+    }
+
+    .pied-de-page {
+        padding-top: 670px!important;
     }
 }

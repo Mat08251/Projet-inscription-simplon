@@ -9,7 +9,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <title>Formulaire d'inscription</title>
     <meta name="description" content="Creation formulaire d'inscription à une formation" />
     <meta http-equiv="content-language" content="fr" />
-    <META HTTP-EQUIV="Refresh" CONTENT="30;URL=../index.php">
+    <!--META HTTP-EQUIV="Refresh" CONTENT="18;URL=../index.php"-->
     <link href="../css/style-fin-inscription.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -38,7 +38,7 @@ $id = $_SESSION['id_candidat'];  ?>
                 $nom = $nom_user->fetch();
                 ?>
                 <div class="cadre1">
-                    <h2>Merci Monsieur</h2><h1><?=$nom['nom']?>,</h1>
+                    <h2>Merci Monsieur</h2><h1><?=$nom['nom']?>, <?=$nom['prenom']?></h1>
                     <h3> Nous vous confirmons la validation de votre inscription
                         à la formation “ Développeur - se Web & web mobile ”.<br>
                     </h3>
@@ -75,8 +75,9 @@ $id = $_SESSION['id_candidat'];  ?>
         </ul>
     </div>
 
-
-<?php include ('../includes/footer.php'); ?>
+<div class="pied-de-page">
+    <?php include ('../includes/footer.php'); ?>
+</div>
 
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="../js/fin-inscription.js"></script>
