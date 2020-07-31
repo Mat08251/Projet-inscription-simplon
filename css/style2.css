@@ -65,32 +65,19 @@ h3 {
 
 .blocFormulaire
 {
-<<<<<<< HEAD
-    grid-column: 4/46;
-    grid-row: 10/80;
-    border: 2px solid red; 
-  
-=======
     border: 2px solid red; 
     width: 90%;
     margin: auto;
     padding-bottom: 2%;
->>>>>>> b8866cfb664962841ac263a2538773a684be33da
 }
 
 .etape2
 {
-<<<<<<< HEAD
-    width: 150px;
-    grid-column: 9/13;
-    grid-row: 9/11;
-=======
     position: relative;
     top: -20px;
     margin-left: 200px;
     margin-bottom: 20px;
     width: 150px;
->>>>>>> b8866cfb664962841ac263a2538773a684be33da
     background: white;
     z-index: 100;
 }
