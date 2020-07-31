@@ -1,7 +1,8 @@
 <?php 
 require('../traitement/connectbdd.php');
 session_start();
-$id = $_SESSION['id_candidat'];  ?>
+$id = $_SESSION['id_candidat'];  
+if(isset($id)){?>
 <!Doctype html>
 <html lang="fr">
 
@@ -58,7 +59,8 @@ $id = $_SESSION['id_candidat'];  ?>
 
                 while ($donnees = $req->fetch())
                       { 
-                          $id_question = $donnees['id_question'];?>
+                          $id_question = $donnees['id_question'];
+                          $type = $donnees['type'];?>
                 
                 <div class="cadre1 w-75 mx-auto mb-5">
                     <h2><?= $donnees['question'] ?></h2><br>
@@ -68,9 +70,9 @@ $id = $_SESSION['id_candidat'];  ?>
                             $message->execute();
 
                             $msg = $message->fetch();
-                       ?>
+                            if($type == 2){?>
                     <textarea id="info1" name="reponse[<?=$id_question?>]" rows=6 placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
-                    <?php  ?>
+                            <?php } ?>
                 </div>
                       <?php }
                       $req->closeCursor(); 
@@ -108,3 +110,4 @@ $id = $_SESSION['id_candidat'];  ?>
 </body>
 
 </html>
+                            <?php }else{header('location: ../index.php');}

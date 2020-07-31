@@ -1,6 +1,6 @@
 <?php session_start(); 
 require('../traitement/connectbdd.php');
-$id = $_SESSION['id_candidat'];
+$id_candidat = $_SESSION['id_candidat'];
 ?>
 <!Doctype html>
 <html lang="en">
@@ -10,7 +10,7 @@ $id = $_SESSION['id_candidat'];
     <title>Formulaire d'inscription</title>
     <meta name="description" content="Creation formulaire d'inscription à une formation" />
     <meta http-equiv="content-language" content="fr" />
-    <link href="../css/style2.css" rel='stylesheet' type='text/css' />
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -24,65 +24,34 @@ $id = $_SESSION['id_candidat'];
 <?php include ('../includes/navbar.php'); ?>
 
 
-    
+    <div class="form_contact">
+        <form id="form_contact"action="../traitement/inscription_devweb.php?id=<?=$id_candidat?>" method="post" >
 
             <div class="div_container">
                 <div class="div_titre_formation">
                     <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
                 </div>
             
-                <div class="div_formulaire">
-                    <h2>FORMULAIRE D'INSCRIPTION EN LIGNE
-                </div>
-                <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
+                    <div class="div_formulaire">
+                        <h2>FORMULAIRE D'INSCRIPTION EN LIGNE
+                    </div>
+                    <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
 
+                    <div class="blocFormulaire"></div>
+                    <div class="etape2"><h2>ETAPE 1</h2></div>
+
+                    <div class="background_image"></div>        
+
+<?php $req=$bdd->prepare("SELECT * FROM question_infos");
+      $req->execute();
+      while($donnees=$req->fetch()){?>
+                    <label for="champ_prenom" class="champ_prenom"><?=$donnees['question'];?></label>
+                    <input placeholder="Prenom" type="text" name="prenom" id="prenom" tabindex="2" required autofocus>             
+      <?php } ?>
             </div>
-
-            
-         <div class="form_contact w-75 mx-auto ml-3">
-            <form id="form_contact"action="../traitement/inscription.php?id=<?=$id?>" method="post" >
-            
-            <?php 
-            $req=$bdd->prepare("SELECT * FROM question_infos");
-            $req->execute();
-            while ($donnees =$req->fetch())
-            {
-                
-            ?>
-            <div class="form-group row">
-                <label for="Nom" class="col-sm-6 col-form-label"><?=$donnees['question'];?><span class="asterisque">*</span></label>
-                    <div class="col-sm-6">
-                    <?php
-                    $rer = $bdd->prepare("SELECT id_question_infos FROM infos_reponses");
-                    $rer->execute();
-
-                    $id_question = $rer->fetch();
-
-                    $idquestion = $id_question['id_question_infos'];
-
-
-                    $ruq = $bdd->prepare("SELECT reponse FROM infos_reponses WHERE id_candidat = '$id' AND id_question_infos = '$idquestion'");
-                    $ruq->execute();
-
-                    $reponse = $ruq->fetch();
-               ?>
-                    <input type="text" class="entree form-control" id="nom" placeholder="<?=$reponse['reponse'];?>">
-                </div>
-            </div>   
-            <?php } ?>
-            
-            </form>       
-        </div>  
-        
-            
+            <a class="bouton-suivant align-items-center"><button type="submit" class="btn align-items-center">Suivant >></button></a>
+        </form>
     </div>
-
-                    
-
-            
-       
-    
-    
 
  
     <div class="containers">

@@ -51,7 +51,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
 
                 <?php
-                            $req=$bdd->prepare("SELECT * FROM question WHERE etape = 3 AND id_formulaire = 1 ORDER BY position ");
+                            $req=$bdd->prepare("SELECT * FROM question WHERE etape = 4 AND id_formulaire = 1 ORDER BY position ");
                             $req->execute();
 
                             while ($donnees = $req->fetch())
@@ -73,7 +73,7 @@ $id = $_SESSION['id_candidat'];  ?>
                 </div>
                                 <?php } 
                                 $req->closeCursor(); 
-                                $message->closeCursor();?>
+                                ?>
                 </div>
 
 
