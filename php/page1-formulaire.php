@@ -39,7 +39,7 @@ $id= $_SESSION['id_candidat'];
             </div>
 
             <div class="blocFormulaire">
-                    <div class="etape2">
+                    <div class="etape2 text-center">
                         <h2>ETAPE 1</h2>
                     </div>
             

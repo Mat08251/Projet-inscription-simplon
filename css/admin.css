@@ -11,8 +11,19 @@ h1 {
     text-shadow: 4px 4px 8px rgba(110, 110, 110, 0.938);
 }
 
-.lien-admin {
-    
+.boutonPhase {
+    margin-left: 50px;
+    margin-top: 30px;
+    background-color: rgb(235, 61, 96)!important;
+    color: white!important;
+}
+
+.boutonPhase:hover {
+    background-color: rgb(197, 48, 48)!important;
+}
+
+.titreFormaAdmin {
+    margin-left: 20px;
 }
 
 h3 {
