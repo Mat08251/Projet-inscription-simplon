@@ -21,22 +21,10 @@ date_default_timezone_set('Europe/Paris');
 $time = date("d M Y H:i:s");
 $id_candidat = $_SESSION['id_candidat'];
 
-$thispays = $bdd->prepare("SELECT id_pays FROM pays WHERE pays='$pays'");
-$thispays->execute();
-while($data = $thispays->fetch()) {
-    $pays = $data['id_pays'];
-};
-
-$thisnationalite = $bdd->prepare("SELECT id_nationalite FROM nationalite WHERE nationalite='$nationalite'");
-$thisnationalite->execute();
-while($data = $thisnationalite->fetch()) {
-    $pays = $data['id_nationalite'];
-};
-
 
 $insc_user = $bdd->prepare("UPDATE candidat SET nom = :nom, prenom = :prenom, nomJeuneFille = :nomJeuneFille, dateNaissance = :dateNaissance,
                                         sexe = :sexe, rue = :rue, numeroRue = :numeroRue, complementAdresse = :complementAdresse, ville = :ville,
-                                        codePostal = :codePostal, telFixe = :telFixe, mobile = :mobile, mail = :mail, last_log = :last_log, id_pays = :id_pays, id_nationalite = :id_nationalite,
+                                        codePostal = :codePostal, telFixe = :telFixe, mobile = :mobile, mail = :mail, last_log = :last_log, pays = :pays, nationalite = :nationalite,
                                         id_formulaire = :id_formulaire WHERE id_candidat = $id_candidat");
 
 $insc_user->execute(array(
@@ -53,8 +41,8 @@ $insc_user->execute(array(
     ':telFixe' => $telephone,
     ':mobile' => $tel,
     ':mail' => $mail,
-    ':id_pays' => $pays,
-    'id_nationalite' => $nationalite,
+    ':pays' => $pays,
+    'nationalite' => $nationalite,
     ':last_log' => $time,
     'id_formulaire' => 5
 ));
