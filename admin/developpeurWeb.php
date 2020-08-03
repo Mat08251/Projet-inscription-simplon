@@ -83,7 +83,7 @@ $statut = $_SESSION['statut'];?>
           <td><a href="traitement/update/statut_no.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></a></td>
           <td><a href="traitement/update/statut_att.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-warning "><span class="texteButton">En Attente</span></button></a></td>
           <?php } ?>
-          <td class='text-center'><a href="plusdinfo.php?id_candidat=<?=$donnees['id_candidat'];?>">Resultats Questions</a></td>
+          <td class='text-center'><a href="plusdinfo.php?id_candidat=<?=$donnees['id_candidat'];?>"><button type="button" class="btn btn-info btn-sm">Resultats Questions</button></a></td>
         </tr>
       <?php } ?>
       </tbody>
