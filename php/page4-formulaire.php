@@ -77,8 +77,14 @@ $id = $_SESSION['id_candidat'];  ?>
                     </div>
 
                 </div>
+<<<<<<< HEAD
+                                <?php } 
+                                $req->closeCursor(); 
+                                ?>
+=======
                 <div class = "cadre_inscription_pied_page">
                     <div class = "validation_inscription">Cliquez sur le lien ci-dessous pour finaliser votre inscription.</div>
+>>>>>>> b8866cfb664962841ac263a2538773a684be33da
                 </div>
 
             </div>
