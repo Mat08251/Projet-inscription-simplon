@@ -72,6 +72,16 @@ if(isset($id)){?>
                             $msg = $message->fetch();
                             if($type == 2){?>
                     <textarea id="info1" name="reponse[<?=$id_question?>]" rows=6 placeholder="Votre réponse" required index=4><?php if(isset($msg['message'])){echo $msg['message'];}else{}?></textarea>
+                            <?php }elseif($type == 1){?>
+                                <input style="border-color:red;" type="text" class="entree form-control" id="info1" name="reponse[<?=$id_question?>]" value="<?php if(isset($msg['message'])){echo $msg['message'];}else{}?>"><br>
+                            <?php }elseif($type == 3){?>
+                                <select class="custom-select" name="etablissement" id="etablissement-font-2" required>
+                                <option value="" disabled selected>Veuillez choisir un Pays</option>
+                                <option value="pays">France</option>
+                                <option value="pays">Luxembourg</option>
+                                <option value="pays">Belgique</option>
+                                <option value="pays">Angleterre</option>
+                              </select>
                             <?php } ?>
                 </div>
                       <?php }
