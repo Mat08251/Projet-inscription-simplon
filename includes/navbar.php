@@ -11,12 +11,14 @@
                 <a class="nav-link mr-sm-2" href="../index.php"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
             </li>
                 <?php if(isset($_SESSION['mail'])){ ?>
+                    <div class="deconnexion">
                         <li class="nav-item">
                         <span class="icon"><i class="fas fa-user"></i></span><?= $_SESSION['pseudo']; ?>
                     </li>
                     <li class="nav-item">
-                        <a href="../traitement/deconnexion_session.php">Deconnexion</a>
+                        <a class="nav-link mr-sm-2" href="../traitement/deconnexion_session.php">Deconnexion</a>
                     </li>
+                    </div>
                     <?php }else{ ?>
                     <li class="nav-item">
                         <a class="nav-link mr-sm-2" href="#connexion" rel="modal:open"><span class="icon"><i class="fas fa-user"></i></span>SE CONNECTER</a>

@@ -25,6 +25,17 @@ h3 {
     box-shadow: 2px 4px 4px black;
 }
 
+.boutonPhase1 {
+    margin-left: 0px;
+    margin-top: 30px;
+    background-color: rgb(235, 61, 96)!important;
+    color: white!important;
+}
+
+.boutonPhase1:hover {
+    background-color: rgb(197, 48, 48)!important;
+}
+
 .entete-table {
     background-color: rgb(233, 21, 21)!important;
     color: rgb(207, 207, 207) !important;
@@ -53,7 +64,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 200px;
+    margin-left: 110px;
 }
 
 .boutonPhase {
@@ -61,7 +72,7 @@ h3 {
     background-color: rgb(253, 60, 60) !important;
     color: white !important;
     border: 1px black !important;
-    box-shadow: 2px 4px 4px black;
+    box-shadow: 2px 4px 4px black!important;
 }
 
 .boutonPhase:hover {
@@ -70,4 +81,8 @@ h3 {
 
 .zone-texte {
     margin-left: 110px;
+}
+
+.btn {
+    box-shadow: 2px 4px 8px black;
 }

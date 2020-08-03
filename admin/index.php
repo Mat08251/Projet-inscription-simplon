@@ -28,8 +28,9 @@
             <?php }} ?>
 
                     <center><img src="../images/logo-simplon_23.png" class="w-75 mb-4"></center>
+                    <center><a class="lienAccueil" href="../index.php">Revenir à l'accueil</a></center>
                     <form action="traitement/select/co_admin.php" method="post">
-                        <div class="form-group"><label class="text-secondary">Pseudo</label><input class="form-control" id="pseudo" name="pseudo" type="text" required=""></div>
+                        <div class="form-group mt-4"><label class="text-secondary">Pseudo</label><input class="form-control" id="pseudo" name="pseudo" type="text" required=""></div>
                         <div class="form-group"><label class="text-secondary">Mot de passe</label><input class="form-control" id="mdp" name="mdp" type="password" required=""></div><center>
                         <button class="btn btn-lg mt-2" style="background-color: #F01616" type="submit">Log In</button></center></form>
                 </div>

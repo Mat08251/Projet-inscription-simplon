@@ -16,11 +16,15 @@ nav {
 .navbar-nav {
     
     width: 100%;
-    padding-left: 80%!important;
+    padding-left: 66%!important;
 }
 
-.nav-item1, .nav-item {
+.nav-item1, .nav-item, .nav-itemadmin {
     font-size: 14px;
+}
+
+.deconnexion {
+    padding-top: 2%!important;
 }
 
 .nav-link{
@@ -28,8 +32,16 @@ nav {
     font-weight: bold;
 }
 
+.nav-link:hover {
+    color: rgb(247, 66, 66)!important;
+}
+
 .nav-item1 {
     margin-right: 14%;
+}
+
+.nav-itemadmin {
+    margin-left: 10px;
 }
 
 .icon {
@@ -40,6 +52,10 @@ nav {
 @media all and (min-width: 768px) and (max-width: 1024px) {
     .nav  {
         width: auto;
+    }
+
+    .icon {
+        margin-right: 2%;
     }
     
     

@@ -24,9 +24,10 @@ $statut = $_SESSION['statut'];?>
         <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
         <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
         <center><a href="traitement/update/cloture_devweb.php"><button type="button" class="bouton-cloture btn btn-danger btn-lg">Cloturer l'inscription</button></a></center>
+        <center><a href="traitement/deco_admin.php"><button type="button" class="boutonPhase1 btn btn-outline">Deconnexion</button></a></center>
         <div class=" mt-2">
         <h3 class="  mt-4 "><center><?=$pseudo?></center></h3>
-        <a href="traitement/deco_admin.php"><button type="button" class="boutonPhase btn btn-outline-info">Deconnexion</button></a>
+        
           <div class="bouton-phase">
           
             <h3 class=" mt-4 mb-5"><center>Liste des apprenants</center></h3>
@@ -82,7 +83,7 @@ $statut = $_SESSION['statut'];?>
           <td><a href="traitement/update/statut_no.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></a></td>
           <td><a href="traitement/update/statut_att.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-warning "><span class="texteButton">En Attente</span></button></a></td>
           <?php } ?>
-          <td class='text-center'><a href="plusdinfo.php?id_candidat=<?=$donnees['id_candidat'];?>">Resultats Questions</a></td>
+          <td class='text-center'><a href="plusdinfo.php?id_candidat=<?=$donnees['id_candidat'];?>"><button type="button" class="btn btn-info btn-sm">Resultats Questions</button></a></td>
         </tr>
       <?php } ?>
       </tbody>
