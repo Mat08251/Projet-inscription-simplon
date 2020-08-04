@@ -41,7 +41,10 @@ $id = $_SESSION['id_candidat'];  ?>
                 <div class="div_formulaire">
                     <h2>FORMULAIRE D'INSCRIPTION EN LIGNE<h2>
                 </div>
-                <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
+                
+                <div class="information_champs_inscription">
+                    <p>Veuillez remplir tout les champs svp</p>
+                </div>
 
                 <div class="blocFormulaire">
                     <div class="etape2">

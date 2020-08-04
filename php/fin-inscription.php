@@ -9,7 +9,7 @@ $id = $_SESSION['id_candidat'];  ?>
     <title>Formulaire d'inscription</title>
     <meta name="description" content="Creation formulaire d'inscription à une formation" />
     <meta http-equiv="content-language" content="fr" />
-    <!--META HTTP-EQUIV="Refresh" CONTENT="18;URL=../index.php"-->
+    <META HTTP-EQUIV="Refresh" CONTENT="18;URL=../index.php">
     <link href="../css/style-fin-inscription.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">

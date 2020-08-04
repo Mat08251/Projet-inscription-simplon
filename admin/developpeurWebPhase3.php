@@ -34,9 +34,9 @@
           <th class="entete-table text-center" scope="col">Âge</th>
           <th class="entete-table text-center" scope="col">Téléphone</th>
           <th class="entete-table text-center" scope="col">Email</th>
-          <th class="coloneLien entete-table text-center" scope="col">Accepter l'apprenant</th>
-          <th class="coloneLien entete-table text-center" scope="col">Refuser l'apprenant</th>
-          <th class="coloneLien entete-table text-center" scope="col">En attente</th>
+          <th class="coloneLien2 entete-table text-center" scope="col">Accepter l'apprenant</th>
+          <th class="coloneLien2 entete-table text-center" scope="col">Refuser l'apprenant</th>
+          <th class="coloneLien2 entete-table text-center" scope="col">En attente</th>
         </tr>
       </thead>
       <tbody>

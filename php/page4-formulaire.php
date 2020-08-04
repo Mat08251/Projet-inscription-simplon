@@ -41,7 +41,9 @@ $id = $_SESSION['id_candidat'];  ?>
                 <div class="div_formulaire">
                     <h2>FORMULAIRE D'INSCRIPTION EN LIGNE<h2>
                 </div>
-                <a class="information_champs_inscription">Veuillez remplir tout les champs svp</a>
+                <div class="information_champs_inscription">
+                    <p>Veuillez remplir tout les champs svp</p>
+                </div>
 
                 <div class="blocFormulaire">
                     <div class="etape2">
@@ -77,14 +79,8 @@ $id = $_SESSION['id_candidat'];  ?>
                     </div>
 
                 </div>
-<<<<<<< HEAD
-                                <?php } 
-                                $req->closeCursor(); 
-                                ?>
-=======
                 <div class = "cadre_inscription_pied_page">
                     <div class = "validation_inscription">Cliquez sur le lien ci-dessous pour finaliser votre inscription.</div>
->>>>>>> b8866cfb664962841ac263a2538773a684be33da
                 </div>
 
             </div>
