@@ -3,7 +3,8 @@ include('../traitement/connectbdd.php');
 $id=$_GET['id'];
 session_start();
 $pseudo = $_SESSION['pseudo'];
-$statut = $_SESSION['statut'];?>
+$statut = $_SESSION['statut'];
+$id_admin = $_SESSION['id_admin'];?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,9 +32,9 @@ $statut = $_SESSION['statut'];?>
           <div class="bouton-phase">
           
             <h3 class=" mt-4 mb-5"><center>Liste des apprenants</center></h3>
-            <a href="developpeurWebphase2.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
+            <a href="developpeurWebphase2.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
             <?php if($statut==1){?>
-            <button type="button" class="boutonPhase btn btn-outline-info">Phase3</button>
+              <a href="developpeurWebphase3.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
             <?php }else{}?>
           </div>
 </div>

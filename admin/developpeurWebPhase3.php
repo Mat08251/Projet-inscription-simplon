@@ -1,3 +1,11 @@
+<?php 
+include('../traitement/connectbdd.php');
+$id=$_GET['id'];
+session_start();
+$pseudo = $_SESSION['pseudo'];
+$statut = $_SESSION['statut'];
+$id_admin = $_SESSION['id_admin'];?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,8 +29,8 @@
         <div class=" mt-2">
           <div class="bouton-phase">
             <h3 class=" mt-4 mb-5"><center>Liste des apprenants</center></h3>
-            <a href="developpeurWeb.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
-            <a href="developpeurWebphase2.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
+            <a href="developpeurWeb.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
+            <a href="developpeurWebphase2.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
           </div>
           </div>
     <div class="info-forma container-fluid mt-2">
