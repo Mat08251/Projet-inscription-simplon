@@ -16,8 +16,10 @@
     <title>Condition-général</title>
 </head>
 <body>
+    <!--Navbar-->
      <?php include ('../includes/navbar.php'); ?>
 
+     <!--Titre du formulaire-->
      <div class="row">
          <div class="col-md-12 text-center">
              <h1>Formation Développeur(se) Web & web mobile :<br>
@@ -25,6 +27,7 @@
          </div>
      </div>
 
+     <!--Bloc des cards des informations-->
      <div class="card w-75">
         <div class="card-body">
             <p class="card-text text-center"> FERMETURE DU FORMULAIRE LE 17 AOÛT 2020 (MINUIT) - ENTRETIENS FINAUX PREVUS A PARTIR DU 20 AOÛT 2020 </p>
@@ -80,11 +83,12 @@
     </div>
     <a href="../php/page1-formulaire.php" class="bouton-suivant align-items-center"><button type="button" class="btn align-items-center">Suivant >></button></a>
     </form>
-
+    <!--Fin du bloc des informations-->
     
-
+    <!--Footer-->
      <?php include ('../includes/footer.php'); ?>
 
+     <!--Javascript-->
      <script src="https://unpkg.com/scrollreveal"></script>
      <script src="../js/condition-gene.js"></script>
 </body>

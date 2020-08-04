@@ -29,10 +29,11 @@ if(isset($id)){?>
 </head>
 
 <body>
+    <!--Navbar-->
     <?php include ('../includes/navbar.php'); ?>
 
     
-
+            <!--Titre du formulaire-->
             <div class="div_container">
                 <div class="div_navbar"></div>
                 <div class="div_titre_formation"><br>
@@ -46,6 +47,7 @@ if(isset($id)){?>
                     <p>Veuillez remplir tout les champs svp</p>
                 </div>
 
+                <!--Début du bloc du formulaire-->
                 <div class="blocFormulaire">
                     <div class="etape2">
                         <h2>ETAPE 2</h2>
@@ -90,19 +92,20 @@ if(isset($id)){?>
 
                 </div> 
             
+                <!--Bouton d'envoie formulaire--> 
                 <div class="bouton">
                     <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"
                             class="btn  btn-lg pt-1"><span class="texte-bouton text-center">Précédent</span></button></a>
-
-
-
+          
                     <button type="submit"
                             class="bouton-suivant btn-lg">Suivant</button>
                 </div>
             </div>
         </form>
     </div>
-
+    <!--Fin du bloc du formulaire-->
+    
+    <!--Progressbar bas de page-->  
     <div class="barreDeProgression">
         <ul class="progressbar">
             <li class="active">Etape 1</li>
@@ -113,8 +116,10 @@ if(isset($id)){?>
         </ul>
     </div>
 
+    <!--Footer--> 
     <?php include ('../includes/footer.php'); ?>
-
+    
+    <!--Javascript-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../js/page2-formulaire.js"></script>
 </body>

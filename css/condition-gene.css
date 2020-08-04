@@ -3,6 +3,7 @@ body {
     padding: 0%;
 }
 
+/*cards des informations*/
 .card {
     margin-bottom: 2%;
     margin-top: 2%;
@@ -11,6 +12,7 @@ body {
     box-shadow: 4px 5px 8px 0px rgba(153, 153, 153, 0.658);;
 }
 
+/*Barre de séparation*/
 .barre-deco {
     margin-left: 12.6%;
     margin-right: 76%; 
@@ -18,8 +20,7 @@ body {
 }
 
 
-
-
+/*case à cocher*/
 .form-check {
     margin-left: 13%;
 }
@@ -32,6 +33,7 @@ body {
     color: #F01616;
 }
 
+/*Bouton d'envoie*/
 .bouton-suivant {
     display: block;
     width: 8%;
@@ -49,7 +51,7 @@ body {
 
 
 
-
+/*media responsive tablette*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
     .bouton-suivant {
         width: 15%!important;
@@ -58,6 +60,7 @@ body {
 
 }
 
+/*media responsive smartphone*/
 @media all and (max-width: 1024px) {
     .bouton-suivant {
         margin-left: 37%;

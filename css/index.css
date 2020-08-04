@@ -3,7 +3,7 @@ html, body {
     padding: 0;
 }
 
-
+/*Titre Bienvenue*/
 .titre-accueil {
     background-color: white!important;
     position: relative;
@@ -15,17 +15,19 @@ html, body {
     margin-left: -1%;
 }
 
-
+/*image haut de page*/
 .image {
     width: 100%;
     height: 88vh!important;
     z-index: 3;
 }
 
+/*image à l'intérieur des cards*/
 .image-card {
     margin-top: 55px;
 }
 
+/*textes de présentation haut de page*/
 .texte1 {
     margin-top: 6%;
 }
@@ -43,6 +45,7 @@ html, body {
     color: #FA1919;
 }
 
+/*Titre Formation*/
 .titre-formation {
     width: 18%;
     margin-left: auto;
@@ -55,6 +58,7 @@ html, body {
     color: white;
 }
 
+/*Cards des formations*/
 .formation {
     margin-left: 9%;
     width: 80%;
@@ -74,6 +78,7 @@ html, body {
     
 }
 
+/*bouton des cards*/
 .btn {
     color: white!important;
     margin-top: 50px;box-shadow: 2px 3px 4px rgba(95, 95, 95, 0.829);
@@ -83,6 +88,7 @@ html, body {
     background-color: rgb(190, 21, 21)!important;
 }
 
+/*Titre des formations cards*/
 .titre-card  {
     font-size: 30px;
     background-color: #333333;
@@ -99,6 +105,7 @@ html, body {
     font-size: 17px;
 }
 
+/*texte dans les cards*/
 .gauche {
     margin-top: 28px;
 }
@@ -107,6 +114,7 @@ html, body {
     margin-top: 220px;
 }
 
+/*media responsive tablette*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
     .titre-accueil {
         width: 10%!important;
@@ -130,6 +138,7 @@ html, body {
     }
 }
 
+/*media responsive smartphone*/
 @media all and (max-width: 1024px)
 {
     .formation {

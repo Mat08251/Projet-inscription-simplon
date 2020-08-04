@@ -28,11 +28,12 @@ $id= $_SESSION['id_candidat'];
 </head>
 
 <body>
+    <!--Navbar-->
     <?php include ('../includes/navbar.php'); ?>
 
 
 
-
+    <!--Titre du formulaire-->
     <div class="div_container">
         <div class="div_titre_formation">
             <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
@@ -46,6 +47,7 @@ $id= $_SESSION['id_candidat'];
 
     </div>
 
+    <!--Début du bloc du formulaire-->
     <div class="blocFormulaire">
         <div class="etape2">
             <h2>ETAPE 1</h2>
@@ -197,28 +199,21 @@ $id= $_SESSION['id_candidat'];
             </div>
         </div>
         </div>
+        <!--Bouton d'envoie formulaire-->
         <div class="bouton">
             <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
         </div>
 
     </div>
+    <!--Fin du bloc du formulaire-->
+        </div>
+            </form>
+        </div>
 
-    
+
     </div>
-    </form>
-    </div>
 
-
-    </div>
-
-
-
-
-
-
-
-
-
+    <!--Progressbar bas de page-->                                        
     <div class="containers">
         <ul class="progressbar ">
             <li class="active">Etape 1</li>
@@ -229,16 +224,11 @@ $id= $_SESSION['id_candidat'];
         </ul>
     </div>
 
-
+    <!--Footer-->                                        
     <?php include ('../includes/footer.php'); ?>
 
+    <!--Javascript-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../js/page1-formulaire.js"></script>
 </body>
-
-
-
-
-
-
 </html>

@@ -23,6 +23,7 @@ session_start(); ?>
     <title>page d'accueil</title>
 </head>
 <body>
+    <!--Navbar-->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <a class="navbar-brand" href="index.php"><img class="logo" src="images/logo-simplon_23.png"></a>
@@ -57,11 +58,13 @@ session_start(); ?>
         </nav>
     </header>
 
+    <!--Modal de connexion/inscription-->
     <?php
        include('php/modal.php');
     ?>
     
 
+    <!--message d'alert et haut de page-->
     <div class="accueil">
     <!-- alert -->
         <center>
@@ -86,7 +89,7 @@ session_start(); ?>
     </div>
 
 
-
+    <!--Texte de bienvenue de la page-->
     <div class="container">
         <div class="row">
             <div class="texte col-md-12 text-center">
@@ -103,7 +106,7 @@ session_start(); ?>
         </div>
     </div>
 
-
+    <!--Début du bloc des formations proposées-->
     <div class="accueil-formation">
         <div class="col-md text-center">
             <p class="titre-formation">FORMATIONS</p>
@@ -154,6 +157,9 @@ session_start(); ?>
     
 
         <?php } ?>
+    <!--Fin du bloc des formations proposées-->
+
+
     <!--footer-->
     <div class="footer container-fluid text-center">
        <div class="row ml-2">
@@ -177,6 +183,7 @@ session_start(); ?>
                </div>
            </div>
        </div>
+       <!--Copyright-->
        <div class="row">
            <div class="copyright col-md text-center">
               <i class="far fa-copyright"></i><span class="copy"><span class="lettre">S</span>implon-Charleville.fr2020</span>
@@ -184,6 +191,7 @@ session_start(); ?>
        </div>
    </div>
 
+   <!--Javascript-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/index.js"></script>
 </body>

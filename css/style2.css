@@ -5,6 +5,7 @@ body {
     margin: 0;
 }
 
+/*Titre haut du formulaire*/
 h1 {
     font-size: 45px!important;
    margin-top: 20px!important;
@@ -19,7 +20,7 @@ h3 {
     font-size: 20px;    
 }
 
-
+/*Bloc Titre haut du formulaire*/
 .div_container {
     display: grid;
     grid-template-columns:repeat(48, 2fr);
@@ -27,11 +28,7 @@ h3 {
     text-align: center;
 }
 
-
-
-
-
-
+/*Titre du formaulaire*/
 .div_titre_formation {
     grid-column:1/49;
     grid-row: 1/5;
@@ -40,7 +37,7 @@ h3 {
     box-shadow: 10px 10px 10px 5px gray;
 }
     
-
+/*Sous Titre formulaire*/
 .div_formulaire {
     margin-top: 30px;
     padding-top: 10px;
@@ -52,7 +49,7 @@ h3 {
     box-shadow: 10px 10px 10px  black;
 }
 
-
+/*Info pour le formulaire*/
 .information_champs_inscription {
     grid-column:16/35;
     grid-row: 8/12;
@@ -63,6 +60,7 @@ h3 {
 
 }
 
+/*Début bloc du formulaire*/
 .blocFormulaire
 {
     border: 2px solid red; 
@@ -156,10 +154,10 @@ input:hover {
 .row-resize {
     cursor: row-resize;
 }
+/*Fin bloc du formulaire*/
 
 
-
-
+/*Bouton d'envoie*/
 .bouton-suivant {
     display: block;
     width: 8%;
@@ -175,7 +173,7 @@ input:hover {
 }
 
 
-
+/*Progressbar bas de page*/
 .containers {
     width: 100%;
     margin-left: auto!important;
@@ -230,6 +228,7 @@ input:hover {
     background-color: red;
 }
 
+/*media responsive tablette*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
     .progressbar {
         margin-left: 70px!important;
@@ -241,6 +240,7 @@ input:hover {
     }
 }
 
+/*media responsive smartphone*/
 @media all and (max-width: 1024px) {
     .containers {
         width: auto;
