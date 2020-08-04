@@ -90,7 +90,7 @@ $id= $_SESSION['id_candidat'];
                             value="<?= isset($donnees['dateNaissance']) ? $donnees['dateNaissance'] : "" ?>"><br>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group mb-5 row">
                     <label for="Nom" class="col-sm-6 col-form-label">nationalité<pan class="asterisque">*</span></label>
                     <div class="col-sm-6">
                         <select class="custom-select" name="nationalite" id="etablissement-font-2" required>
@@ -107,9 +107,9 @@ $id= $_SESSION['id_candidat'];
                                         ?>
                         </select></div>
                 </div>
-        </div>
-        <div class="form-group row">
-            <label for="Prénom" class="col-sm-6 col-form-label">Pays<span class="asterisque">*</span></label>
+        
+        <div class="form-group mb-5 row">
+            <label for="Prénom" class="col-sm-6  col-form-label">Pays<span class="asterisque">*</span></label>
             <div class="col-sm-6">
                 <select class="custom-select" name="pays" id="etablissement-font-2" required>
                     <option value="" disabled selected>Selectionnez Votre Pays</option>
@@ -196,13 +196,14 @@ $id= $_SESSION['id_candidat'];
                     value="<?= isset($donnees['pseudo']) ? $donnees['pseudo'] : "" ?>"><br>
             </div>
         </div>
-
+        </div>
+        <div class="bouton">
+            <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
+        </div>
 
     </div>
 
-    <div class="bouton">
-        <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
-    </div>
+    
     </div>
     </form>
     </div>

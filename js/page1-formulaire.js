@@ -15,13 +15,13 @@ sr.reveal('.etape2', {
 });
 
 sr.reveal('label', {
-    interval: 500,
-    duration: 2500
+    interval: 300,
+    duration: 2200
 });
 
 sr.reveal('input', {
-    interval: 500,
-    duration: 2500
+    interval: 300,
+    duration: 2200
 });
 
 sr.reveal('select', {

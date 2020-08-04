@@ -124,7 +124,7 @@ input {
     border: 1px solid black !important;
     box-shadow: 10px 5px 5px gray;
     cursor: pointer;
-    width:100%;    
+    width:100%!important;    
 }
 
 .entree
@@ -146,6 +146,11 @@ input:hover {
     background:rgb(205, 199, 199);
     cursor: pointer blue;
     
+}
+
+.custom-select {
+    margin-left: -15px !important;
+    box-shadow: 10px 5px 5px gray;
 }
 
 .row-resize {
