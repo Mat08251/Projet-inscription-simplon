@@ -46,7 +46,7 @@ $statut = $_SESSION['statut'];?>
       </thead>
       <tbody>
 
-<?php $data=$bdd->prepare("SELECT * FROM candidat WHERE id_formulaire = '$id'");
+<?php $data=$bdd->prepare("SELECT * FROM candidat WHERE id_formulaire = '$id' AND statut_final = 1");
       $data->execute();
 
       while($donnees = $data->fetch()) {?>

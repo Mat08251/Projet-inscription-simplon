@@ -64,7 +64,7 @@ if(isset($pseudo)){?>
           <td class="text-center"><?=$donnees['debut_form']?></td>
           <td><img src="../images/<?=$donnees['img']?>" class="card-img" alt="..."></td>
           <td><a href="developpeurWeb.php?id=<?=$donnees['id_formulaire']?>"><button type="button" class="btn btn-success "><span class="texteButton">Voir la formation</span></button></a></td>
-          <td><a href="nouvellePromo.php"><button type="button" class="btn btn-success "><span class="texteButton">Voir la promo</span></button></a></td>
+          <td><a href="nouvellePromo.php?id=<?=$donnees['id_formulaire']?>"><button type="button" class="btn btn-success "><span class="texteButton">Voir la promo</span></button></a></td>
         </tr>
         <?php
 }
