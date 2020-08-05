@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+<!--Navbar-->
 <?php include ('../includes/navbar.php'); ?>
 
 
@@ -63,7 +63,7 @@
     </div>
 
   
-
+<!--Footer-->
 <?php include ('../includes/footer.php'); ?>
 </body>
 
