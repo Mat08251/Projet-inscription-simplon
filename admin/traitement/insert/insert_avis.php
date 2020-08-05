@@ -19,3 +19,5 @@ $notes->execute(array(
     'id_candidat' => $id_candidat,
     'id_formulaire' => $id_form
 ));
+
+header("location: ../../developpeurWebphase2.php?id=$id_form");

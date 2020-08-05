@@ -55,7 +55,7 @@ $id_admin = $_SESSION['id_admin'];?>
 
         $test = $donnees['id_candidat'];
 
-        $avis=$bdd->prepare("SELECT avis FROM avis_admin WHERE id_candidat = '$test'");
+        $avis=$bdd->prepare("SELECT avis FROM avis_admin WHERE id_candidat = '$test' AND id_admin = '$id_admin'");
         $avis->execute(); 
         $count = $avis->rowCount();
 
