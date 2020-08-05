@@ -24,19 +24,11 @@ $statut = $_SESSION['statut'];?>
     Developpeur Web</h1>
         <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
         <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
-        <center><a href="traitement/update/cloture_devweb.php"><button type="button" class="bouton-cloture btn btn-danger btn-lg">Cloturer l'inscription</button></a></center>
         <center><a href="traitement/deco_admin.php"><button type="button" class="boutonPhase1 btn btn-outline">Deconnexion</button></a></center>
         <div class=" mt-2">
         <h3 class="  mt-4 "><center><?=$pseudo?></center></h3>
-        
-          <div class="bouton-phase">
+        <h3 class=" mt-4 mb-5 ml-2"><center>Liste des apprenants</center></h3>
           
-            <h3 class=" mt-4 mb-5"><center>Liste des apprenants</center></h3>
-            <a href="developpeurWebphase2.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
-            <?php if($statut==1){?>
-              <a href="developpeurWebphase3.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
-            <?php }else{}?>
-          </div>
 </div>
 <!--fin bloc navbar-->
 
@@ -50,10 +42,6 @@ $statut = $_SESSION['statut'];?>
           <th class="entete-table text-center" scope="col">Âge</th>
           <th class="entete-table text-center" scope="col">Téléphone</th>
           <th class="entete-table text-center" scope="col">Email</th>
-          <th class="coloneLien entete-table text-center" scope="col">Accepter l'apprenant</th>
-          <th class="coloneLien entete-table text-center" scope="col">Refuser l'apprenant</th>
-          <th class="coloneLien entete-table text-center" scope="col">En Attente</th>
-          <th class="coloneLien entete-table text-center" scope="col">Resultats Questions</th>
         </tr>
       </thead>
       <tbody>
@@ -70,24 +58,6 @@ $statut = $_SESSION['statut'];?>
           <td class="text-center"><?=$donnees['dateNaissance']?></td>
           <td class="text-center"><?=$donnees['telFixe']?></td>
           <td class="text-center"><?=$donnees['mail']?></td>
-          <?php if($donnees['statut'] == 1){
-            echo '<td class="text-center">Accepter</td>';
-            echo '<td class="text-center"></td>';
-            echo '<td class="text-center"></td>';
-          }elseif($donnees['statut'] == 2){
-            echo '<td class="text-center"></td>';
-            echo '<td class="text-center">Refuser</td>';
-            echo '<td class="text-center"></td>';
-          }elseif($donnees['statut'] == 3){
-            echo '<td class="text-center"></td>';
-            echo '<td class="text-center"></td>';
-            echo '<td class="text-center">En Attente</td>';
-        }else{?>
-          <td><a href="traitement/update/statut_ok.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-success "><span class="texteButton">Accepter</span></button></a></td>
-          <td><a href="traitement/update/statut_no.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></a></td>
-          <td><a href="traitement/update/statut_att.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-warning "><span class="texteButton">En Attente</span></button></a></td>
-          <?php } ?>
-          <td class='text-center'><a href="plusdinfo.php?id_candidat=<?=$donnees['id_candidat'];?>"><button type="button" class="btn btn-info btn-sm">Resultats Questions</button></a></td>
         </tr>
       <?php } ?>
       </tbody>
