@@ -1,3 +1,11 @@
+<?php 
+include('../traitement/connectbdd.php');
+$id=$_GET['id'];
+session_start();
+$pseudo = $_SESSION['pseudo'];
+$statut = $_SESSION['statut'];
+$id_admin = $_SESSION['id_admin'];?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,8 +30,8 @@
         <div class=" mt-2">
           <div class="bouton-phase">
             <h3 class=" mt-4 mb-5"><center>Liste des apprenants</center></h3>
-            <a href="developpeurWeb.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
-            <a href="developpeurWebphase2.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
+            <a href="developpeurWeb.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
+            <a href="developpeurWebphase2.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
           </div>
           </div>
  <!--fin bloc navbar-->
@@ -46,17 +54,36 @@
       <tbody>
 
 
-       <!--bloc info apprenant-->
+      <?php $data=$bdd->prepare("SELECT * FROM candidat WHERE id_formulaire = '$id'");
+      $data->execute();
+
+      while($donnees = $data->fetch()) {?>
+
         <tr class="liste-formation">
-          <th class="text-center" scope="row">Duguet</th>
-          <td class="text-center">Mathieu</td>
-          <td class="text-center"> 27</td>
-          <td class="text-center"> 0625428695</td>
-          <td class="text-center">m.duguet808@laposte.net</td>
-          <td><button type="button" class="bouton-ajout btn btn-success "><span class="texteButton">Accepter</span></button></td>
-          <td><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></td>
-          <td><button type="button" class="bouton-ajout btn btn-warning "><span class="texteButton">En attente</span></button></td>
-        </tr>
+          <th class="text-center" scope="row"><?=$donnees['nom']?></th>
+          <td class="text-center"><?=$donnees['prenom']?></td>
+          <td class="text-center"><?=$donnees['dateNaissance']?></td>
+          <td class="text-center"> <?=$donnees['telFixe']?></td>
+          <td class="text-center"><?=$donnees['mail']?></td>
+          <?php if($donnees['statut_final'] == 1){
+            echo '<td class="text-center">Accepter</td>';
+            echo '<td class="text-center"></td>';
+            echo '<td class="text-center"></td>';
+          }elseif($donnees['statut_final'] == 2){
+            echo '<td class="text-center"></td>';
+            echo '<td class="text-center">Refuser</td>';
+            echo '<td class="text-center"></td>';
+          }elseif($donnees['statut_final'] == 3){
+            echo '<td class="text-center"></td>';
+            echo '<td class="text-center"></td>';
+            echo '<td class="text-center">En Attente</td>';
+        }else{?>
+          <td><a href="traitement/update/statut_ok_final.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-success "><span class="texteButton">Accepter</span></button></a></td>
+          <td><a href="traitement/update/statut_no_final.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></a></td>
+          <td><a href="traitement/update/statut_att_final.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-warning "><span class="texteButton">En Attente</span></button></a></td>
+          <?php } ?>
+          </tr>
+        <?php } ?>
   
       </tbody>
     </table>

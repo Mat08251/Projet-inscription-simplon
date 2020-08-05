@@ -3,6 +3,7 @@ include('../traitement/connectbdd.php');
 session_start();
 $pseudo = $_SESSION['pseudo'];
 $statut = $_SESSION['statut'];
+$id_admin = $_SESSION['id_admin'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">

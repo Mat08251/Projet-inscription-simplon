@@ -1,3 +1,11 @@
+<?php 
+include('../traitement/connectbdd.php');
+$id=$_GET['id'];
+session_start();
+$pseudo = $_SESSION['pseudo'];
+$statut = $_SESSION['statut'];
+$id_admin = $_SESSION['id_admin'];?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,8 +30,8 @@
         <div class=" mt-2">
           <div class="bouton-phase">
             <h3 class=" mt-4 mb-5"><center>Liste des apprenants</center></h3>
-            <a href="developpeurWeb.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
-            <a href="developpeurWebPhase3.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
+            <a href="developpeurWeb.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
+            <a href="developpeurWebPhase3.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
           </div>
           </div>
   <!--fin bloc navbar-->
@@ -40,26 +48,34 @@
           <th class="entete-table text-center" scope="col">Email</th>
           <th class="coloneLien entete-table text-center" scope="col">Note</th>
           <th class="coloneLien entete-table text-center" scope="col">Avis sur l'apprenant</th>
+          <th class="coloneLien entete-table text-center" scope="col">Valider</th>
         </tr>
       </thead>
       <tbody>
+      <?php $data=$bdd->prepare("SELECT * FROM candidat WHERE id_formulaire = '$id'");
+      $data->execute();
 
+      while($donnees = $data->fetch()) {
 
-       <!--bloc info apprenant-->
-        <tr class="liste-formation">
-          <th class="text-center" scope="row">Duguet</th>
-          <td class="text-center">Mathieu</td>
-          <td class="text-center"> 27</td>
-          <td class="text-center"> 0625428695</td>
-          <td class="text-center">m.duguet808@laposte.net</td>
-          <td class="text-center">18</td>
-          <td>
-            <FORM>
-              <TEXTAREA class="zone-texte" name="nom" rows=4 cols=40>Valeur par défaut</TEXTAREA>
-            </FORM>
-          </td>
-          
-        </tr>
+        $test = $donnees['id_candidat'];
+
+        $avis=$bdd->prepare("SELECT avis FROM avis_admin WHERE id_candidat = '$test' AND id_admin = '$id_admin'");
+        $avis->execute(); 
+        $count = $avis->rowCount();
+
+        if($count == 0){?><form action="traitement/insert/insert_avis.php?id_form=<?=$id?>&id_candidat=<?=$donnees['id_candidat']?>" method="post">
+          <tr class="liste-formation">
+            <th class="text-center" scope="row"><?=$donnees['nom']?></th>
+            <td class="text-center"><?=$donnees['prenom']?></td>
+            <td class="text-center"><?=$donnees['dateNaissance']?></td>
+            <td class="text-center"> <?=$donnees['telFixe']?></td>
+            <td class="text-center"><?=$donnees['mail']?></td>
+            <td class="text-center"><input type="number" id="note" name="note" min="0" max="20"></td>
+            <td><TEXTAREA class="zone-texte" name="avis" rows=4 cols=40>Valeur par défaut</TEXTAREA></td>
+            <td><button type="submit" class="boutonPhase1 btn btn-outline-info">Valider</button></td>
+          </tr>
+          </form><?php }
+        else{}} ?>
   
       </tbody>
     </table>
