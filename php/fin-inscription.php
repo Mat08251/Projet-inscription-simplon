@@ -21,8 +21,10 @@ $id = $_SESSION['id_candidat'];  ?>
 </head>
 
 <body>
-<?php include ('../includes/navbar.php'); ?>
+    <!--Navbar-->
+    <?php include ('../includes/navbar.php'); ?>
 
+            <!--Titre du formulaire-->
             <div class="div_container pb-4">
                 <div class="div_titre_formation pb-1"><br>
                     <h1>DEVELOPPEUR(se) WEB & WEB MOBILE</h1>
@@ -37,6 +39,8 @@ $id = $_SESSION['id_candidat'];  ?>
 
                 $nom = $nom_user->fetch();
                 ?>
+
+                <!--bloc information inscription utilisateur-->
                 <div class="cadre1">
                     <h2>Merci Monsieur</h2><h1><?=$nom['nom']?>, <?=$nom['prenom']?></h1>
                     <h3> Nous vous confirmons la validation de votre inscription
@@ -59,12 +63,14 @@ $id = $_SESSION['id_candidat'];  ?>
                         vous remercie et vous souhaite une agréable journée.
                     </h3>
 
+                    <!--section fin inscription et bouton envoie-->
                     <h2 class="message_fin">Vous allez être redirigé automatiquement vers notre site </h2>
                     <p> (si rien ne se produit, veuillez cliquer sur le lien de redirection)</p>
                     <a href="../index.php"><button type="button" class="btn bouton-renvois  btn-lg text-center"><span  class="lien-redirection text-center">cliquer ici</span></button></a>
                 </div>
             </div>
 
+    <!--Progressbar bas de page--> 
      <div class="containers">
         <ul class="progressbar ">
             <li class="active">Etape 1</li>
@@ -75,12 +81,14 @@ $id = $_SESSION['id_candidat'];  ?>
         </ul>
     </div>
 
-<div class="pied-de-page">
-    <?php include ('../includes/footer.php'); ?>
-</div>
+    <!--Footer--> 
+    <div class="pied-de-page">
+        <?php include ('../includes/footer.php'); ?>
+    </div>
 
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="../js/fin-inscription.js"></script>
+    <!--Javascript-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../js/fin-inscription.js"></script>
 </body>
 
 </html>

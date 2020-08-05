@@ -28,10 +28,11 @@ $id = $_SESSION['id_candidat'];  ?>
 </head>
 
 <body>
+     <!--Navbar-->
     <?php include ('../includes/navbar.php'); ?>
 
     
-
+            <!--Titre du formulaire-->
             <div class="div_container">
                 <div class="div_navbar"></div>
                 <div class="div_titre_formation"><br>
@@ -45,6 +46,7 @@ $id = $_SESSION['id_candidat'];  ?>
                     <p>Veuillez remplir tout les champs svp</p>
                 </div>
 
+                <!--Début du bloc du formulaire-->
                 <div class="blocFormulaire">
                     <div class="etape2">
                         <h2>ETAPE 4</h2>
@@ -79,17 +81,21 @@ $id = $_SESSION['id_candidat'];  ?>
                     </div>
 
                 </div>
+                <!--info fin inscription-->
                 <div class = "cadre_inscription_pied_page">
                     <div class = "validation_inscription">Cliquez sur le lien ci-dessous pour finaliser votre inscription.</div>
                 </div>
 
             </div>
+            <!--Bouton d'envoie formulaire--> 
             <div class="bouton text-center">
                 <a href="../php/fin-inscription.php" class="precedent_submit "><button type="button" class="bouton-inscription btn  btn-lg ">Je m'inscrit à cette formation</button></a>
             </div>
         </form>
     </div>
+    <!--Fin du bloc du formulaire-->
 
+    <!--Progressbar bas de page-->  
     <div class="barreDeProgression">
         <ul class="progressbar ">
             <li class="active">Etape 1</li>
@@ -100,8 +106,10 @@ $id = $_SESSION['id_candidat'];  ?>
         </ul>
     </div>
 
+    <!--Footer--> 
     <?php include ('../includes/footer.php'); ?>
 
+    <!--Javascript-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../js/page4-formulaire.js"></script>
 </body>

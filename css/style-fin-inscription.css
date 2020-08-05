@@ -4,17 +4,22 @@ body
     background-color: white;
     margin: 0;
 }
+/*Titre haut du formulaire*/
 h1 {
     font-size:45px;
 }
+
 h2 .formulaire
 {
     font-size:28px;
 }
+
 h3 
 {
     font-size: 20px;    
 }
+
+/*Bloc Titre haut du formulaire*/
 .div_container {
     display: grid;
     grid-template-columns:repeat(48, 1fr);
@@ -22,6 +27,7 @@ h3
     text-align: center;
 }
 
+/*Titre du formaulaire*/
 .div_titre_formation {
     grid-column:1/49;
     grid-row: 1/6;
@@ -30,6 +36,8 @@ h3
     box-shadow: 10px 10px 10px 5px gray;
     margin-bottom: 30px;
 }
+
+/*Sous Titre formulaire*/
 .div_formulaire {
     grid-column: 3/47;
     grid-row: 7/9;
@@ -38,6 +46,7 @@ h3
     box-shadow: 10px 10px 10px  black;
 }
 
+/*bloc information inscription utilisateur*/
 .cadre1
 {
     grid-column: 6/43;
@@ -52,6 +61,7 @@ h3
      
 }
 
+/*section fin inscription et bouton envoie*/
 h2.message_fin
 {
     text-decoration:underline;
@@ -74,6 +84,7 @@ h2.message_fin
 .bouton-renvois:hover {
     background-color: rgba(192, 4, 4, 0.863)!important;
 }
+
 
 @media screen and (min-width: 200px) and (max-width:1000px)
 {
@@ -107,6 +118,7 @@ h2.message_fin
 
 }
 
+/*Progressbar bas de page*/
 .containers {
     width: 100%;
     margin-left: 280px!important;
@@ -162,6 +174,7 @@ h2.message_fin
     background-color: red;
 }
 
+/*media responsive tablette*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
     .progressbar {
         margin-left: 70px!important;
@@ -172,6 +185,7 @@ h2.message_fin
     }
 }
 
+/*media responsive smartphone*/
 @media all and (max-width: 1024px) {
     .containers {
         width: auto;

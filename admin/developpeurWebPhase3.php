@@ -11,7 +11,8 @@
     <title>Partie Administrateur Developpeur Web</title>
 </head>
 <body>
-<div class="fond">
+  <!--début bloc navbar-->
+  <div class="fond">
     <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</br>
     Developpeur Web</h1>
         <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
@@ -25,6 +26,9 @@
             <a href="developpeurWebphase2.php"><button type="button" class="boutonPhase btn btn-outline-info">Phase2</button></a>
           </div>
           </div>
+ <!--fin bloc navbar-->
+
+          <!--info tableau-->
     <div class="info-forma container-fluid mt-2">
     <table class="table">
       <thead class="thead-light">
@@ -42,7 +46,7 @@
       <tbody>
 
 
-       
+       <!--bloc info apprenant-->
         <tr class="liste-formation">
           <th class="text-center" scope="row">Duguet</th>
           <td class="text-center">Mathieu</td>

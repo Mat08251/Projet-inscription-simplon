@@ -1,10 +1,11 @@
 const sr=ScrollReveal();
-
+//Titre formulaire
 sr.reveal('.div_formulaire', {
     scale: 0.5,
     duration: 2500
 });
 
+//Numéro étape
 sr.reveal('.etape2', {
     origin: 'left',
     distance: '150px',
@@ -12,6 +13,7 @@ sr.reveal('.etape2', {
     delay: 400
 });
 
+//cadre question formulaire
 sr.reveal('.cadre1', {
     scale: 0.8,
     interval: 500,
@@ -19,7 +21,7 @@ sr.reveal('.cadre1', {
 });
 
 
-
+//info fin inscription
 sr.reveal('.cadre_inscription_pied_page', {
     scale: 0.8,
     opacity: 0.1,
@@ -27,6 +29,7 @@ sr.reveal('.cadre_inscription_pied_page', {
     delay: 200,
 });
 
+//Bouton envoie
 sr.reveal('.bouton', {
     origin: 'bottom',
     distance: '80px',

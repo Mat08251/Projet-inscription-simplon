@@ -18,6 +18,7 @@ $statut = $_SESSION['statut'];
 </head>
 <?php 
 if(isset($pseudo)){?>
+<!--début bloc navbar-->
 <body class="bg-light">
     
 <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</h1>
@@ -28,8 +29,9 @@ if(isset($pseudo)){?>
     <h3 class="  mt-4 "><center><?=$pseudo?></center></h3>
         
     <h3 class="titreFormaAdmin  mt-4 mb-5"><center>Liste des formations</center></h3>
+<!--fin bloc navbar-->
 
-
+<!--info tableau-->
     <div class="info-forma container-fluid mt-2">
     <table class="table">
       <thead class="thead-light">
@@ -51,6 +53,8 @@ if(isset($pseudo)){?>
 
             while ($donnees = $azerty->fetch())
         { ?>
+
+        <!--Données des formations en cours-->
         <tr class="liste-formation">
           <th class="text-center" scope="row"><?=$donnees['titre']?></th>
           <td class="text-center"><?=$donnees['debut_insc']?></td>

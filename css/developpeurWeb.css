@@ -25,6 +25,7 @@ h3 {
     box-shadow: 2px 4px 4px black;
 }
 
+/*bouton de la phase 1*/
 .boutonPhase1 {
     margin-left: 0px;
     margin-top: 30px;
@@ -42,6 +43,7 @@ h3 {
     text-shadow: 2px 2px 4px black;
 }
 
+/*ligne des entrées du tableau*/
 .liste-formation {
     background-color: rgb(216, 216, 216);
 }

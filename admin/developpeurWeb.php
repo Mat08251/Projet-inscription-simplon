@@ -18,6 +18,7 @@ $statut = $_SESSION['statut'];?>
     <title>Partie Administrateur Developpeur Web</title>
 </head>
 <body>
+  <!--début bloc navbar-->
 <div class="fond">
     <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</br>
     Developpeur Web</h1>
@@ -37,6 +38,9 @@ $statut = $_SESSION['statut'];?>
             <?php }else{}?>
           </div>
 </div>
+<!--fin bloc navbar-->
+
+<!--info tableau-->
     <div class="info-forma container-fluid mt-2">
     <table class="table">
       <thead class="thead-light">
@@ -59,7 +63,7 @@ $statut = $_SESSION['statut'];?>
 
       while($donnees = $data->fetch()) {?>
 
-       
+       <!--bloc info apprenant-->
         <tr class="liste-formation">
           <th class="text-center" scope="row"><?=$donnees['nom']?></th>
           <td class="text-center"><?=$donnees['prenom']?></td>
