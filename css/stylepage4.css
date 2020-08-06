@@ -156,6 +156,7 @@ textarea
     width: 100%;
     margin-top: 50px;
 }
+
 .progressbar {
      counter-reset: step;
      display: flex;
@@ -171,6 +172,7 @@ textarea
     position: relative;
     text-align: center;
 }
+
 .progressbar li::before {
     content: counter(step);
     counter-increment: step;
@@ -185,6 +187,7 @@ textarea
     background-color: white;
 
 }
+
 .progressbar li::after {
     content: '';
     position: absolute;
@@ -195,21 +198,27 @@ textarea
     left: -50%;
     z-index: -1;
 }
+
 .progressbar li:first-child::after{
     content: none; 
 }
+
 .progressbar li.active {
     color: red;
 }
+
 .progressbar li.active::before {
     border-color: red;
 }
+
 .progressbar li.active + li::after {
     background-color: red;
 }
+
 p.question { 
     font-size: 36px !important;
 }
+
 .question::after {
     content: '*';
     color: red;

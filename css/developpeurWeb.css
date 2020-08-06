@@ -53,8 +53,12 @@ h3 {
     padding-left: 10px!important;
 }
 
+.coloneLienvalider {
+    padding-right: 50px!important;
+}
+
 .coloneLien2 {
-    padding-left: 50px!important;
+    padding-left: 10px!important;
 }
 
 .btn-warning {
@@ -86,7 +90,7 @@ h3 {
 }
 
 .zone-texte {
-    margin-left: 110px;
+    margin-left: 60px;
 }
 
 .btn {

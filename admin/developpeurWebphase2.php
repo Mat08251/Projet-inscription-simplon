@@ -25,7 +25,7 @@ $id_admin = $_SESSION['id_admin'];?>
     Developpeur Web</h1>
         <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
         <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
-        <center><a href="traitement/deco_admin.php"><button type="button" class="boutonPhase1 btn btn-outline-info">Deconnexion</button></a></center>
+        <center><a href="traitement/deco_admin.php"><button type="button" class="boutonPhase1 btn btn-outline">Deconnexion</button></a></center>
         
         <div class=" mt-2">
           <div class="bouton-phase">
@@ -33,7 +33,7 @@ $id_admin = $_SESSION['id_admin'];?>
             <a href="developpeurWeb.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
             <a href="developpeurWebPhase3.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
           </div>
-          </div>
+        </div>
   <!--fin bloc navbar-->
 
   <!--info tableau-->
@@ -48,7 +48,7 @@ $id_admin = $_SESSION['id_admin'];?>
           <th class="entete-table text-center" scope="col">Email</th>
           <th class="coloneLien entete-table text-center" scope="col">Note</th>
           <th class="coloneLien entete-table text-center" scope="col">Avis sur l'apprenant</th>
-          <th class="coloneLien entete-table text-center" scope="col">Valider</th>
+          <th class="coloneLienvalider entete-table text-center" scope="col">Valider</th>
         </tr>
       </thead>
       <tbody>
@@ -72,7 +72,7 @@ $id_admin = $_SESSION['id_admin'];?>
             <td class="text-center"><?=$donnees['mail']?></td>
             <td class="text-center"><input type="number" id="note" name="note" min="0" max="20"></td>
             <td><TEXTAREA class="zone-texte" name="avis" rows=4 cols=40>Valeur par défaut</TEXTAREA></td>
-            <td><button type="submit" class="boutonPhase1 btn btn-outline-info">Valider</button></td>
+            <td><button type="submit" class="boutonPhase1 btn btn-outline">Valider</button></td>
           </tr>
           </form><?php }
         else{}} ?>

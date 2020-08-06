@@ -33,17 +33,17 @@ session_start(); ?>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                <li class="nav-item1">
-                    <a class="nav-link mr-sm-2" href="index.php"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
-                </li>
+                    <li class="nav-item1">
+                        <a class="nav-link mr-sm-2" href="index.php"><span class="icon"><i class="fas fa-home"></i></span>ACCUEIL</a>
+                    </li>
                 <?php if(isset($_SESSION['mail'])){ ?>
                     <div class="deconnexion">
-                    <li class="nav-item">
-                        <span class="icon"><i class="fas fa-user"></i></span><?= $_SESSION['pseudo']; ?>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-sm-2" href="traitement/deconnexion_session.php">Deconnexion</a>
-                    </li>
+                        <li class="nav-item">
+                            <span class="icon"><i class="fas fa-user"></i></span><?= $_SESSION['pseudo']; ?>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-sm-2" href="traitement/deconnexion_session.php">Deconnexion</a>
+                        </li>
                     </div>
                 <?php }else{ ?>
                     <li class="nav-item ">

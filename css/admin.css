@@ -43,20 +43,20 @@ h3 {
 }
 
 .coloneImage {
-    width: 350px!important;
+    width: 200px!important;
 }
 
 .coloneLien {
-    padding-right: 78px!important;
+    padding-right: 70px!important;
 }
 
 .card-img {
-    width: 30%!important;
-    margin-left: 120px;
+    width: 80%!important;
+    margin-left: 20px;
 }
 
 .btn {
-    margin-right: 50px;
+    margin-right: 40px;
     box-shadow: 2px 4px 8px black;
 }
 
