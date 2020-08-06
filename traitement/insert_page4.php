@@ -1,7 +1,8 @@
 <?php
 require('connectbdd.php');
 session_start();
-$id = $_SESSION['id_candidat']; 
+$id = $_SESSION['id_candidat'];
+$id_form=$_GET['id_form']; 
 
 foreach($_POST['reponse'] as $key => $value) {
     $rep1 = $bdd->prepare("SELECT * FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = '$key'");

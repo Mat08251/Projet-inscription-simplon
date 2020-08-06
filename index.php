@@ -141,7 +141,7 @@ session_start(); ?>
                         <p class="card-text">La création d’un compte est obligatoire pour<br>
                                             pretendre a l’inscription de la formation </p>
                         <?php if(isset($_SESSION['mail'])){ ?>
-                        <a href="php/condition-gene.php"><button type="button" class="btn  btn-lg" style="background-color: #F01616">DEBUT DU QUIZZ >></button></a>
+                        <a href="php/condition-gene.php?id_form=<?=$donnees['id_formulaire']?>"><button type="button" class="btn  btn-lg" style="background-color: #F01616">DEBUT DU QUIZZ >></button></a>
                         <?php }else{?>
                         <a href="php/inscription.php"><button type="button" class="btn  btn-lg" style="background-color: #F01616">INSCRIPTION >></button></a>
                         <a href="#connexion" rel="modal:open"><button type="button" class="btn  btn-lg pt-2" style="background-color: #F01616">CONNEXION >></button></a>

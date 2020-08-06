@@ -1,7 +1,8 @@
 <?php
 require('connectbdd.php');
 session_start();
-$id = $_SESSION['id_candidat']; 
+$id = $_SESSION['id_candidat'];
+$id_form=$_GET['id_form']; 
 
 foreach($_POST['reponse'] as $key => $value) {
     $rep1 = $bdd->prepare("SELECT * FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = '$key'");
@@ -32,6 +33,6 @@ foreach($_POST['reponse'] as $key => $value) {
     }
 }
 
-header('location: ../php/page3-formulaire.php');
+header("location: ../php/page3-formulaire.php?id_form=$id_form");
 
 ?>

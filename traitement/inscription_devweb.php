@@ -1,6 +1,7 @@
 <?php
 require('connectbdd.php');
 session_start();
+$id_form=$_GET['id_form'];
 
 $nom = !empty($_POST['nom']) ? $_POST['nom'] : NULL;
 $prenom = !empty($_POST['prenom']) ? $_POST['prenom'] : NULL;
@@ -44,8 +45,8 @@ $insc_user->execute(array(
     ':pays' => $pays,
     'nationalite' => $nationalite,
     ':last_log' => $time,
-    'id_formulaire' => 5
+    'id_formulaire' => $id_form
 ));
 
-header('location: ../php/page2-formulaire.php');
+header("location: ../php/page2-formulaire.php?id_form=$id_form");
 ?>
