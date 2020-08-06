@@ -151,11 +151,13 @@ hr
     width: 100%;
     margin-top: 50px;
 }
+
 .progressbar {
      counter-reset: step;
      display: flex;
      margin-left: 250px;
 }
+
 .progressbar li {
     list-style-type: none;
     float: left;
@@ -163,6 +165,7 @@ hr
     position: relative;
     text-align: center;
 }
+
 .progressbar li::before {
     content: counter(step);
     counter-increment: step;
@@ -177,6 +180,7 @@ hr
     background-color: white;
 
 }
+
 .progressbar li::after {
     content: '';
     position: absolute;
@@ -187,15 +191,19 @@ hr
     left: -50%;
     z-index: -1;
 }
+
 .progressbar li:first-child::after{
     content: none; 
 }
+
 .progressbar li.active {
     color: red;
 }
+
 .progressbar li.active::before {
     border-color: red;
 }
+
 .progressbar li.active + li::after {
     background-color: red;
 }

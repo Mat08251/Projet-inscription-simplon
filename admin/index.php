@@ -19,7 +19,7 @@
             <div class="col-10 col-sm-8 col-md-6 col-lg-6 offset-1 offset-sm-2 offset-md-3 offset-lg-0 align-self-center d-lg-flex align-items-lg-center align-self-lg-stretch bg-white p-5 rounded rounded-lg-0 my-5 my-lg-0" id="login-block">
                 <div class="m-auto w-lg-75 w-xl-50">
                      <!-- alert -->
-        <center>
+        
             <?php if(isset($_GET['alert'])) {
                     if($_GET['alert'] == 1) {?>
                         <div class="alert alert-danger" role="alert">
@@ -31,8 +31,8 @@
                     <center><a class="lienAccueil" href="../index.php">Revenir à l'accueil</a></center>
                     <form action="traitement/select/co_admin.php" method="post">
                         <div class="form-group mt-4"><label class="text-secondary">Pseudo</label><input class="form-control" id="pseudo" name="pseudo" type="text" required=""></div>
-                        <div class="form-group"><label class="text-secondary">Mot de passe</label><input class="form-control" id="mdp" name="mdp" type="password" required=""></div><center>
-                        <button class="btn btn-lg mt-2" style="background-color: #F01616" type="submit">Log In</button></center></form>
+                        <div class="form-group"><label class="text-secondary">Mot de passe</label><input class="form-control" id="mdp" name="mdp" type="password" required=""></div>
+                        <center><button class="btn btn-lg mt-2" style="background-color: #F01616" type="submit">Log In</button></center></form>
                 </div>
             </div>
             <div class="col-lg-6 d-flex align-items-end" id="bg-block" style="background-image:url(&quot;../images/simplon-accueil.jpg&quot;);background-size:cover;background-position:center center;">

@@ -97,8 +97,7 @@ if(isset($id)){?>
                     <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"
                             class="btn  btn-lg pt-1"><span class="texte-bouton text-center">Précédent</span></button></a>
           
-                    <button type="submit"
-                            class="bouton-suivant btn-lg">Suivant</button>
+                    <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
                 </div>
             </div>
         </form>

@@ -58,13 +58,13 @@ if(isset($pseudo)){?>
 
         <!--Données des formations en cours-->
         <tr class="liste-formation">
-          <th class="text-center" scope="row"><?=$donnees['titre']?></th>
-          <td class="text-center"><?=$donnees['debut_insc']?></td>
-          <td class="text-center"><?=$donnees['fin_insc']?></td>
-          <td class="text-center"><?=$donnees['debut_form']?></td>
-          <td><img src="../images/<?=$donnees['img']?>" class="card-img" alt="..."></td>
-          <td><a href="developpeurWeb.php?id=<?=$donnees['id_formulaire']?>"><button type="button" class="btn btn-success "><span class="texteButton">Voir la formation</span></button></a></td>
-          <td><a href="nouvellePromo.php?id=<?=$donnees['id_formulaire']?>"><button type="button" class="btn btn-success "><span class="texteButton">Voir la promo</span></button></a></td>
+            <th class="text-center" scope="row"><?=$donnees['titre']?></th>
+            <td class="text-center"><?=$donnees['debut_insc']?></td>
+            <td class="text-center"><?=$donnees['fin_insc']?></td>
+            <td class="text-center"><?=$donnees['debut_form']?></td>
+            <td><img src="../images/<?=$donnees['img']?>" class="card-img" alt="..."></td>
+            <td><a href="developpeurWeb.php?id=<?=$donnees['id_formulaire']?>"><button type="button" class="btn btn-success "><span class="texteButton">Voir la formation</span></button></a></td>
+            <td><a href="nouvellePromo.php?id=<?=$donnees['id_formulaire']?>"><button type="button" class="btn btn-success "><span class="texteButton">Voir la promo</span></button></a></td>
         </tr>
         <?php
 }

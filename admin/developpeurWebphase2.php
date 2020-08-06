@@ -33,7 +33,7 @@ $id_admin = $_SESSION['id_admin'];?>
             <a href="developpeurWeb.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase1</button></a>
             <a href="developpeurWebPhase3.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
           </div>
-          </div>
+        </div>
   <!--fin bloc navbar-->
 
   <!--info tableau-->

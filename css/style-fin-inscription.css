@@ -4,6 +4,7 @@ body
     background-color: white;
     margin: 0;
 }
+
 /*Titre haut du formulaire*/
 h1 {
     font-size:45px;
@@ -124,12 +125,14 @@ h2.message_fin
     margin-left: 280px!important;
     margin-top: 50px;
 }
+
 .progressbar {
      counter-reset: step;
      display: flex;
      margin-left: -186px;
      margin-bottom: 190px;
 }
+
 .progressbar li {
     list-style-type: none;
     float: left;
@@ -137,6 +140,7 @@ h2.message_fin
     position: relative;
     text-align: center;
 }
+
 .progressbar li::before {
     content: counter(step);
     counter-increment: step;
@@ -151,6 +155,7 @@ h2.message_fin
     background-color: white;
 
 }
+
 .progressbar li::after {
     content: '';
     position: absolute;
@@ -161,15 +166,19 @@ h2.message_fin
     left: -50%;
     z-index: -1;
 }
+
 .progressbar li:first-child::after{
     content: none; 
 }
+
 .progressbar li.active {
     color: red;
 }
+
 .progressbar li.active::before {
     border-color: red;
 }
+
 .progressbar li.active + li::after {
     background-color: red;
 }

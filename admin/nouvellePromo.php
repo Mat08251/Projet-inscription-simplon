@@ -26,42 +26,41 @@ $statut = $_SESSION['statut'];?>
         <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
         <center><a href="traitement/deco_admin.php"><button type="button" class="boutonPhase1 btn btn-outline">Deconnexion</button></a></center>
         <div class=" mt-2">
-        <h3 class="  mt-4 "><center><?=$pseudo?></center></h3>
-        <h3 class=" mt-4 mb-5 ml-2"><center>Liste des apprenants</center></h3>
-          
-</div>
+          <h3 class="  mt-4 "><center><?=$pseudo?></center></h3>
+          <h3 class=" mt-4 mb-5 ml-2"><center>Liste des apprenants</center></h3>  
+        </div>
 <!--fin bloc navbar-->
 
 <!--info tableau-->
     <div class="info-forma container-fluid mt-2">
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th class="entete-table text-center" scope="col">Nom de l'apprenant</th>
-          <th class="entete-table text-center" scope="col">Prenom de l'apprenant</th>
-          <th class="entete-table text-center" scope="col">Âge</th>
-          <th class="entete-table text-center" scope="col">Téléphone</th>
-          <th class="entete-table text-center" scope="col">Email</th>
-        </tr>
-      </thead>
-      <tbody>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th class="entete-table text-center" scope="col">Nom de l'apprenant</th>
+            <th class="entete-table text-center" scope="col">Prenom de l'apprenant</th>
+            <th class="entete-table text-center" scope="col">Âge</th>
+            <th class="entete-table text-center" scope="col">Téléphone</th>
+            <th class="entete-table text-center" scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
 
 <?php $data=$bdd->prepare("SELECT * FROM candidat WHERE id_formulaire = '$id' AND statut_final = 1");
       $data->execute();
 
       while($donnees = $data->fetch()) {?>
 
-       <!--bloc info apprenant-->
-        <tr class="liste-formation">
-          <th class="text-center" scope="row"><?=$donnees['nom']?></th>
-          <td class="text-center"><?=$donnees['prenom']?></td>
-          <td class="text-center"><?=$donnees['dateNaissance']?></td>
-          <td class="text-center"><?=$donnees['telFixe']?></td>
-          <td class="text-center"><?=$donnees['mail']?></td>
-        </tr>
-      <?php } ?>
-      </tbody>
-    </table>
-  </div>
+        <!--bloc info apprenant-->
+          <tr class="liste-formation">
+            <th class="text-center" scope="row"><?=$donnees['nom']?></th>
+            <td class="text-center"><?=$donnees['prenom']?></td>
+            <td class="text-center"><?=$donnees['dateNaissance']?></td>
+            <td class="text-center"><?=$donnees['telFixe']?></td>
+            <td class="text-center"><?=$donnees['mail']?></td>
+          </tr>
+        <?php } ?>
+        </tbody>
+      </table>
+    </div>
 </body>
 </html>

@@ -179,11 +179,13 @@ input:hover {
     margin-left: auto!important;
     margin-top: 50px;
 }
+
 .progressbar {
      counter-reset: step;
      display: flex;
      margin-left: 250px;
 }
+
 .progressbar li {
     list-style-type: none;
     float: left;
@@ -191,6 +193,7 @@ input:hover {
     position: relative;
     text-align: center;
 }
+
 .progressbar li::before {
     content: counter(step);
     counter-increment: step;
@@ -205,6 +208,7 @@ input:hover {
     background-color: white;
 
 }
+
 .progressbar li::after {
     content: '';
     position: absolute;
@@ -215,15 +219,19 @@ input:hover {
     left: -50%;
     z-index: -1;
 }
+
 .progressbar li:first-child::after{
     content: none; 
 }
+
 .progressbar li.active {
     color: red;
 }
+
 .progressbar li.active::before {
     border-color: red;
 }
+
 .progressbar li.active + li::after {
     background-color: red;
 }

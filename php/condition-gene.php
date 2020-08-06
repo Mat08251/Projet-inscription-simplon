@@ -81,7 +81,7 @@
             Lu et Approuvé<span class="etoile">*</span>
         </label>    
     </div>
-    <a href="../php/page1-formulaire.php" class="bouton-suivant align-items-center"><button type="button" class="btn align-items-center">Suivant >></button></a>
+        <a href="../php/page1-formulaire.php" class="bouton-suivant align-items-center"><button type="button" class="btn align-items-center">Suivant >></button></a>
     </form>
     <!--Fin du bloc des informations-->
     

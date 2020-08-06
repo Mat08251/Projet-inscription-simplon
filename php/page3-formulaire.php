@@ -84,10 +84,7 @@ $id = $_SESSION['id_candidat'];  ?>
 
                  <!--Bouton d'envoie formulaire--> 
                     <div class="bouton">
-                        <a href="../php/page2-formulaire.php" class="bouton-precedent align-items-center"><button type="button" class="btn  btn-lg pt-1">Précédent</button></a>
-                        
-
-                            
+                        <a href="../php/page2-formulaire.php" class="bouton-precedent align-items-center"><button type="button" class="btn  btn-lg pt-1">Précédent</button></a>  
                         <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
                     </div>
                 </div>
