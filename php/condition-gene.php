@@ -20,7 +20,7 @@
      <?php include ('../includes/navbar.php'); ?>
 
      <!--Titre du formulaire-->
-     <div class="row">
+     <div class="">
          <div class="col-md-12 text-center">
              <h1>Formation Développeur(se) Web & web mobile :<br>
                  formulaire de candidature</h1>

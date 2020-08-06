@@ -3,6 +3,14 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+#inscription {
+    padding-bottom: 90px;
+}
+
+#form_inscription {
+    padding-bottom: 1%;
+}
 #inscription .titre_form {
     text-align: center;
     font-size: 32px;
@@ -52,4 +60,22 @@ body {
     padding-top: 30px;
     font-weight: 400;
     font-size: 36px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #inscription {
+        padding-bottom: 320px;
+    }
+    
+    #form_inscription {
+        width: 40%!important;
+        padding-bottom: 30px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    #form_inscription {
+        width: 70%!important;
+        padding-bottom: 20px;
+    }
 }
