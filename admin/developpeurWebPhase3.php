@@ -78,9 +78,9 @@ $id_admin = $_SESSION['id_admin'];?>
             echo '<td class="text-center"></td>';
             echo '<td class="text-center">En Attente</td>';
         }else{?>
-          <td><a href="traitement/update/statut_ok_final.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-success "><span class="texteButton">Accepter</span></button></a></td>
-          <td><a href="traitement/update/statut_no_final.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></a></td>
-          <td><a href="traitement/update/statut_att_final.php?id_candidat=<?=$donnees['id_candidat']?>"><button type="button" class="bouton-ajout btn btn-warning "><span class="texteButton">En Attente</span></button></a></td>
+          <td><a href="traitement/update/statut_ok_final.php?id_candidat=<?=$donnees['id_candidat']?>&id=<?=$id?>"><button type="button" class="bouton-ajout btn btn-success "><span class="texteButton">Accepter</span></button></a></td>
+          <td><a href="traitement/update/statut_no_final.php?id_candidat=<?=$donnees['id_candidat']?>&id=<?=$id?>"><button type="button" class="bouton-ajout btn btn-danger "><span class="texteButton">Refuser</span></button></a></td>
+          <td><a href="traitement/update/statut_att_final.php?id_candidat=<?=$donnees['id_candidat']?>&id=<?=$id?>"><button type="button" class="bouton-ajout btn btn-warning "><span class="texteButton">En Attente</span></button></a></td>
           <?php } ?>
           </tr>
         <?php } ?>
