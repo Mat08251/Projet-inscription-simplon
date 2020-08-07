@@ -4,7 +4,11 @@ body {
 }
 
 .fond {
-    background-color: rgb(233, 233, 233);
+    background-image: url('../images/simplonadmin.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 900px;
 }
 
 .logo {
@@ -43,11 +47,18 @@ h3 {
     text-shadow: 2px 2px 4px black;
 }
 
+.lien-retourAccueil {
+    
+}
+
 /*ligne des entrées du tableau*/
 .liste-formation {
     background-color: rgb(216, 216, 216);
 }
 
+.table {
+    padding-bottom: 20px!important;
+}
 
 .coloneLien {
     padding-left: 10px!important;
@@ -66,8 +77,12 @@ h3 {
 }
 
 .bouton-ajout {
-    margin-left: 80px;
+    margin-left: 36px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.705);
+}
+
+.btn-warning {
+  width: 64%; 
 }
 
 .bouton-phase {

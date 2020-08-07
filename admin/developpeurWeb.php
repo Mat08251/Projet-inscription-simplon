@@ -46,7 +46,7 @@ $id_admin = $_SESSION['id_admin'];?>
                 <a href="developpeurWebphase3.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
               <?php }else{}?>
             </div>
-  </div>
+          </div>
 <!--fin bloc navbar-->
 
 <!--info tableau-->
@@ -101,6 +101,7 @@ $id_admin = $_SESSION['id_admin'];?>
       <?php } ?>
       </tbody>
     </table>
+  </div>
   </div>
 </body>
 </html>
