@@ -136,6 +136,10 @@ html, body {
     .btn {
         margin-left: -50%!important; 
     }
+
+    .boutonConnexion {
+        margin-left: -120%!important; 
+    }
 }
 
 /*media responsive smartphone*/

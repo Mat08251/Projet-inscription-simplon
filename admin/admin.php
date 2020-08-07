@@ -20,11 +20,11 @@ $id_admin = $_SESSION['id_admin'];
 <?php 
 if(isset($pseudo)){?>
 <!--début bloc navbar-->
-<body class="bg-light">
+<body class="corps bg-light">
     
 <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</h1>
-    <center><a href="../index.php" class="lien-admin text-black-50 mb-5">Revenir à l'accueil</a></center>
-    <center><a href="admin.php" class="lien-admin text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
+    <center><a href="../index.php" class="lien-admin text-white-50 mb-5">Revenir à l'accueil</a></center>
+    <center><a href="admin.php" class="lien-admin text-white-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
     <center><a href="traitement/deco_admin.php"><button type="button" class="boutonPhase btn btn-outline">Deconnexion</button></a></center>
     <div class=" mt-2">
     <h3 class="  mt-4 "><center><?=$pseudo?></center></h3>

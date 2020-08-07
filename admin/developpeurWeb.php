@@ -23,8 +23,8 @@ $id_admin = $_SESSION['id_admin'];?>
   <div class="fond">
       <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</br>
       Developpeur Web</h1>
-          <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
-          <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
+          <center><a href="../index.php" class="lien-retourAccueil text-white-50 mb-5">Revenir à l'accueil</a></center>
+          <center><a href="admin.php" class="lien-retourAccueil text-white-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
           <center><a href="traitement/update/cloture_devweb.php"><button type="button" class="bouton-cloture btn btn-danger btn-lg">Cloturer l'inscription</button></a></center>
           <center><a href="traitement/deco_admin.php"><button type="button" class="boutonPhase1 btn btn-outline">Deconnexion</button></a></center>
           <div class=" mt-2">
@@ -38,7 +38,7 @@ $id_admin = $_SESSION['id_admin'];?>
                 <a href="developpeurWebphase3.php?id=<?=$id?>"><button type="button" class="boutonPhase btn btn-outline-info">Phase3</button></a>
               <?php }else{}?>
             </div>
-  </div>
+          </div>
 <!--fin bloc navbar-->
 
 <!--info tableau-->
@@ -93,6 +93,7 @@ $id_admin = $_SESSION['id_admin'];?>
       <?php } ?>
       </tbody>
     </table>
+  </div>
   </div>
 </body>
 </html>
