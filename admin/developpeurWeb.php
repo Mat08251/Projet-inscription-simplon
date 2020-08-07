@@ -26,14 +26,23 @@ $id_admin = $_SESSION['id_admin'];?>
           <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
           <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
 
-          <?php $req=$bdd->prepare("SELECT * FROM formulaire WHERE id_formulaire = '$id'");
+          <?php 
+          $requete=$bdd->prepare("SELECT * FROM administrateurs WHERE id_admin = '$id_admin'");
+          $requete->execute();
+          $donnees=$requete->fetch();
+
+          if($donnees['statut'] == 1){
+
+          $req=$bdd->prepare("SELECT * FROM formulaire WHERE id_formulaire = '$id'");
           $req->execute();
           $data=$req->fetch();
           if($data['statut'] == 1){?>
             <center><a href="traitement/update/ouvrire_devweb.php?id=<?=$id?>"><button type="button" class="bouton-cloture btn btn-danger btn-lg">Ouvrire l'inscription</button></a></center>
           <?php }else{ ?>
           <center><a href="traitement/update/cloture_devweb.php?id=<?=$id?>"><button type="button" class="bouton-cloture btn btn-danger btn-lg">Cloturer l'inscription</button></a></center>
-          <?php } ?>
+          <?php }
+          
+          }else{} ?>
           <center><a href="traitement/deco_admin.php"><button type="button" class="boutonPhase1 btn btn-outline">Deconnexion</button></a></center>
           <div class=" mt-2">
           <h3 class="  mt-4 "><center><?=$pseudo?></center></h3>
