@@ -1,6 +1,7 @@
 <?php session_start(); 
 require('../traitement/connectbdd.php');
 $id= $_SESSION['id_candidat'];
+$id_form=$_GET['id_form'];
 ?>
 <!Doctype html>
 <html lang="en">
@@ -54,7 +55,7 @@ $id= $_SESSION['id_candidat'];
         </div>
 
         <div class="form_contact w-75 mx-auto ml-3">
-            <form id="form_contact" action="../traitement/inscription_devweb.php " method="post">
+            <form id="form_contact" action="../traitement/inscription_devweb.php?id_form=<?=$id_form?> " method="post">
 
                 <?php 
             $req=$bdd->prepare("SELECT * FROM candidat WHERE id_candidat ='$id'");
@@ -178,10 +179,10 @@ $id= $_SESSION['id_candidat'];
             </div>
         </div>
         <div class="form-group row">
-            <label for="Prénom" class="col-sm-6 col-form-label">Mobil<span class="asterisque">*</span></label>
+            <label for="Prénom" class="col-sm-6 col-form-label">Mobile<span class="asterisque">*</span></label>
             <div class="col-sm-6">
                 <input type="text" class="entree form-control" id="nom" name="mobile"
-                    value="<?= isset($donnees['mobil']) ? $donnees['mobil'] : "" ?>"><br>
+                    value="<?= isset($donnees['mobile']) ? $donnees['mobile'] : "" ?>"><br>
             </div>
         </div>
         <div class="form-group row">

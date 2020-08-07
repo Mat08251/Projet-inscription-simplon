@@ -2,6 +2,7 @@
 require('../traitement/connectbdd.php');
 session_start();
 $id = $_SESSION['id_candidat'];  
+$id_form=$_GET['id_form'];
 if(isset($id)){?>
 <!Doctype html>
 <html lang="fr">
@@ -54,9 +55,9 @@ if(isset($id)){?>
                     </div>
 
                 <div class="form_contact">
-                    <form id="form_contact" method="post" action="../traitement/insert_page2.php">
+                    <form id="form_contact" method="post" action="../traitement/insert_page2.php?id_form=<?=$id_form?>">
                 <?php 
-                $req=$bdd->prepare("SELECT * FROM question WHERE etape = 1 ORDER BY position ");
+                $req=$bdd->prepare("SELECT * FROM question WHERE etape = 1 AND id_formulaire = '$id_form' ORDER BY position ");
                 $req->execute();
 
                 while ($donnees = $req->fetch())
@@ -77,12 +78,12 @@ if(isset($id)){?>
                             <?php }elseif($type == 1){?>
                                 <input style="border-color:red;" type="text" class="entree form-control" id="info1" name="reponse[<?=$id_question?>]" value="<?php if(isset($msg['message'])){echo $msg['message'];}else{}?>"><br>
                             <?php }elseif($type == 3){?>
-                                <select class="custom-select" name="etablissement" id="etablissement-font-2" required>
-                                <option value="" disabled selected>Veuillez choisir un Pays</option>
-                                <option value="pays">France</option>
-                                <option value="pays">Luxembourg</option>
-                                <option value="pays">Belgique</option>
-                                <option value="pays">Angleterre</option>
+                                <select class="custom-select" name="reponse[<?=$id_question?>]" id="etablissement-font-2" required>
+                                    <option value="" disabled selected>Veuillez choisir un Pays</option>
+                                    <option value="France">France</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                    <option value="Belgique">Belgique</option>
+                                    <option value="Angleterre">Angleterre</option>
                               </select>
                             <?php } ?>
                 </div>
@@ -94,7 +95,7 @@ if(isset($id)){?>
             
                 <!--Bouton d'envoie formulaire--> 
                 <div class="bouton">
-                    <a href="../php/page1-formulaire.php" class="bouton-precedent align-items-center"><button type="button"
+                    <a href="../php/page1-formulaire.php?id_form=<?=$id_form?>" class="bouton-precedent align-items-center"><button type="button"
                             class="btn  btn-lg pt-1"><span class="texte-bouton text-center">Précédent</span></button></a>
           
                     <button type="submit" class="bouton-suivant btn-lg">Suivant</button>

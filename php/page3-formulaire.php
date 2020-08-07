@@ -1,7 +1,8 @@
 <?php 
 require('../traitement/connectbdd.php');
 session_start();
-$id = $_SESSION['id_candidat'];  ?>
+$id = $_SESSION['id_candidat']; 
+$id_form=$_GET['id_form']; ?>
 <!Doctype html>
 <html lang="en">
 
@@ -54,9 +55,9 @@ $id = $_SESSION['id_candidat'];  ?>
                     </div>
 
                     <div class="form_contact">
-                        <form id="form_contact" method="post" action="../traitement/insert_page3.php">
+                        <form id="form_contact" method="post" action="../traitement/insert_page3.php?id_form=<?=$id_form?>">
                         <?php
-                                    $req=$bdd->prepare("SELECT * FROM question WHERE etape = 2 AND id_formulaire = 1 ORDER BY position ");
+                                    $req=$bdd->prepare("SELECT * FROM question WHERE etape = 2 AND id_formulaire = '$id_form' ORDER BY position ");
                                     $req->execute();
 
                                     while ($donnees = $req->fetch())
@@ -84,7 +85,10 @@ $id = $_SESSION['id_candidat'];  ?>
 
                  <!--Bouton d'envoie formulaire--> 
                     <div class="bouton">
-                        <a href="../php/page2-formulaire.php" class="bouton-precedent align-items-center"><button type="button" class="btn  btn-lg pt-1">Précédent</button></a>  
+                        <a href="../php/page2-formulaire.php?id_form=<?=$id_form?>" class="bouton-precedent align-items-center"><button type="button" class="btn  btn-lg pt-1">Précédent</button></a>
+                        
+
+                            
                         <button type="submit" class="bouton-suivant btn-lg">Suivant</button>
                     </div>
                 </div>

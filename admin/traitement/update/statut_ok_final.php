@@ -2,6 +2,7 @@
 
 include('../../../traitement/connectbdd.php');
 $id=$_GET['id_candidat'];
+$id_form=$_GET['id'];
 
 $test=$bdd->prepare("SELECT statut_final FROM candidat");
 $test->execute();
@@ -21,5 +22,5 @@ $statut = $bdd->prepare("UPDATE candidat SET statut_final = :statut_final WHERE 
                  'statut_final' => 1
              ));
 }
-header('location: ../../developpeurWebPhase3.php?id=5');
+header("location: ../../developpeurWebPhase3.php?id=$id_form");
 ?>

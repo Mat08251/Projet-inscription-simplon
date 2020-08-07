@@ -1,6 +1,7 @@
 <?php 
 require('../traitement/connectbdd.php');
-$id=$_GET['id_candidat'];?>
+$id_candidat=$_GET['id_candidat'];
+$id=$_GET['id'];?>
 <!Doctype html>
 <html lang="fr">
 
@@ -34,7 +35,7 @@ $id=$_GET['id_candidat'];?>
 
             <div class="div_container">
                 <?php 
-                $req=$bdd->prepare("SELECT * FROM question WHERE id_formulaire = 1 ORDER BY position ");
+                $req=$bdd->prepare("SELECT * FROM question WHERE id_formulaire = '$id' ORDER BY position ");
                 $req->execute();
 
                 while ($donnees = $req->fetch())
@@ -45,7 +46,7 @@ $id=$_GET['id_candidat'];?>
                     <h2><?= $donnees['question'] ?></h2><br>
                     <hr>
                     <?php
-                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id' AND id_question = '$id_question'");
+                    $message = $bdd->prepare("SELECT message FROM reponses_candidats WHERE id_candidat = '$id_candidat' AND id_question = '$id_question'");
                             $message->execute();
 
                             $msg = $message->fetch();
