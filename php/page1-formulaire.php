@@ -89,7 +89,7 @@ $id_form=$_GET['id_form'];
                     <label for="Prénom" class="col-sm-6 col-form-label">Date de Naissance<span
                             class="asterisque">*</span></label>
                     <div class="col-sm-6">
-                        <input type="text" class="entree form-control" id="nom" name="date_de_naissance"
+                        <input type="date" class="entree form-control" id="nom" name="date_de_naissance"
                             value="<?= isset($donnees['dateNaissance']) ? $donnees['dateNaissance'] : "" ?>"><br>
                     </div>
                 </div>
@@ -174,21 +174,21 @@ $id_form=$_GET['id_form'];
         <div class="form-group row">
             <label for="Nom" class="col-sm-6 col-form-label">Téléphone Fixe</span></label>
             <div class="col-sm-6">
-                <input type="text" class="entree form-control" id="nom" name="telephone"
+                <input type="tel" class="entree form-control" id="nom" name="telephone" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"
                     value="<?= isset($donnees['telFixe']) ? $donnees['telFixe'] : "" ?>"><br>
             </div>
         </div>
         <div class="form-group row">
             <label for="Prénom" class="col-sm-6 col-form-label">Mobile<span class="asterisque">*</span></label>
             <div class="col-sm-6">
-                <input type="text" class="entree form-control" id="nom" name="mobile"
+                <input type="tel" class="entree form-control" id="nom" name="mobile" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"
                     value="<?= isset($donnees['mobile']) ? $donnees['mobile'] : "" ?>"><br>
             </div>
         </div>
         <div class="form-group row">
             <label for="Nom" class="col-sm-6 col-form-label">Mail<span class="asterisque">*</span></label>
             <div class="col-sm-6">
-                <input type="text" class="entree form-control" id="nom" name="mail"
+                <input type="email" class="entree form-control" id="nom" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                     value="<?= isset($donnees['mail']) ? $donnees['mail'] : "" ?>"><br>
             </div>
         </div>
