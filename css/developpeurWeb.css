@@ -47,9 +47,7 @@ h3 {
     text-shadow: 2px 2px 4px black;
 }
 
-.lien-retourAccueil {
-    
-}
+
 
 /*ligne des entrées du tableau*/
 .liste-formation {
@@ -77,12 +75,12 @@ h3 {
 }
 
 .bouton-ajout {
-    margin-left: 36px;
+    margin-left: 30px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.705);
 }
 
 .btn-warning {
-  width: 64%; 
+  width: 70%; 
 }
 
 .bouton-phase {

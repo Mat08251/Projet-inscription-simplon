@@ -114,6 +114,8 @@ html, body {
     margin-top: 220px;
 }
 
+
+
 /*media responsive tablette*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
     .titre-accueil {

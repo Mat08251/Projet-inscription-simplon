@@ -23,8 +23,8 @@ $id_admin = $_SESSION['id_admin'];?>
   <div class="fond">
       <img class="logo" src="../images/logo-simplon_23.png"><h1 class="text-center font-weight-bold font-italic text-black-50 mt-4 mb-5">Bienvenue dans votre interface Administrateur</br>
       Developpeur Web</h1>
-          <center><a href="../index.php" class="text-black-50 mb-5">Revenir à l'accueil</a></center>
-          <center><a href="admin.php" class="text-black-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
+          <center><a href="../index.php" class="text-white-50 mb-5">Revenir à l'accueil</a></center>
+          <center><a href="admin.php" class="text-white-50 mt-5 mb-5">Accès à l'accueil admin</a></center>
 
           <?php $req=$bdd->prepare("SELECT * FROM formulaire WHERE id_formulaire = '$id'");
           $req->execute();
@@ -56,7 +56,7 @@ $id_admin = $_SESSION['id_admin'];?>
         <tr>
           <th class="entete-table text-center" scope="col">Nom de l'apprenant</th>
           <th class="entete-table text-center" scope="col">Prenom de l'apprenant</th>
-          <th class="entete-table text-center" scope="col">Âge</th>
+          <th class="entete-table text-center" scope="col">Date de naissance</th>
           <th class="entete-table text-center" scope="col">Téléphone</th>
           <th class="entete-table text-center" scope="col">Email</th>
           <th class="coloneLien entete-table text-center" scope="col">Accepter l'apprenant</th>

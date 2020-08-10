@@ -166,7 +166,7 @@ session_start(); ?>
            <div class="liens col-md-12 text-center mb-2 ">
                <a href="#">Accueil</a><span class="barre">|</span>
                <a href="#">Contact</a><span class="barre">|</span>
-               <a href="#">Connexion</a>
+               <a href="#connexion" rel="modal:open">Connexion</a>
            </div>
        </div>
        <div class="row">
