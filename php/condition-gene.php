@@ -1,4 +1,6 @@
-<?php session_start(); 
+<?php
+require('../traitement/connectbdd.php');
+ session_start(); 
 $id_form=$_GET['id_form'];?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,53 +38,42 @@ $id_form=$_GET['id_form'];?>
         </div>
     </div>
 
+
+    <?php 
+                $req=$bdd->prepare("SELECT * FROM condition_gene ");
+                $req->execute();
+
+                while ($condition = $req->fetch()) {
+                    $id_condition = $condition['id_condition'];
+                
+                ?>
     <div class="card w-75">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p class="card-text"><?= $condition['question'] ?></p>
         </div>
+                
    </div>
+   <hr class="barre-deco" style="background-color: #F01616"></hr>
+   <?php }
+            $req->closeCursor();
+        ?>
+   
+    
 
-    <div class="card w-75">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-    </div>
- 
-    <hr class="barre-deco" style="background-color: #F01616"></hr>
-
-    <div class="card w-75">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-    </div>
-
-    <div class="card w-75">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-    </div>
-
-    <hr class="barre-deco" style="background-color: #F01616"/>
-
-    <div class="card w-75 ">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-    </div>
-
-    <form class="envoyer">
+    <form class="envoyer" method="POST" action="">
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" style="width: 20px; height: 20px;">
+        <input class="form-check-input" type="checkbox" name="case" value="1" id="defaultCheck1" style="width: 20px; height: 20px;">
         <label class="form-check-label" for="defaultCheck1">
             Lu et Approuvé<span class="etoile">*</span>
         </label>    
     </div>
     <a href="../php/page1-formulaire.php?id_form=<?=$id_form?>" class="bouton-suivant align-items-center"><button type="button" class="btn align-items-center">Suivant >></button></a>
+    <?php 
+        if(isset($_POST['case'])=='1'){
+   echo '';
+} else {
+    header('location:condition-gene.php?success=2');
+} ?>
     </form>
     <!--Fin du bloc des informations-->
     

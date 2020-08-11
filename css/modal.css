@@ -18,6 +18,10 @@ body {
     background-position: right;
 }
 
+.section_bouton {
+    margin-left: 10px;
+}
+
 .retour {
     width: 30%!important;
     padding-bottom: 7%!important;

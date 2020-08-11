@@ -17,7 +17,7 @@
             <fieldset>
                 <a href="php/inscription.php">Crée un compte</a>
             </fieldset>
-            <fieldset>
+            <fieldset class="section_bouton">
             <form>
                 <a href="index.php"><input type = "button" value = "Retours"  onclick = "history.back()" class="retour mb-5"></a>
             </form> 
